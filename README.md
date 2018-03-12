@@ -1,6 +1,6 @@
 # MicroId
 
-## MicroId is a User Management Microservices With these capabilities
+## MicroId is a User Management Microservices with these capabilities
 
 1. Multitenant capabilities - Can be used to serve multiple clients and their uses.
 2. Basic User operations - Get, Add, Update, Delete, Change Password, Forgot Password
