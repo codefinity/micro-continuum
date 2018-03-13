@@ -5,7 +5,7 @@
 
 ## Table of contents
 
-  * [MicroId Capabilities](#capabilities)
+  * [Capabilities](#capabilities)
   * [Installation](#installation)
      * [Node projects](#node-projects)
      * [Web projects](#web-projects)
@@ -27,7 +27,7 @@
 
 
 
-## MicroId Capabilities
+## Capabilities
 
 1. Multitenant capabilities - Can be used to serve multiple clients and their uses.
 2. Basic User operations - Get, Add, Update, Delete, Change Password, Forgot Password
