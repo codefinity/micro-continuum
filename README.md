@@ -14,6 +14,7 @@
   * [Usage](#usage)
   * [Database Schema](#databaseschema)
   * [Examples](#examples)
+  * [Technologies Used](#technologiesused)
   * [Contributing](#contributing)
   * [License](#license)
   * [Special thanks](#special-thanks)
@@ -40,6 +41,8 @@
 ## Database Schema
 
 ## Examples
+
+## Technologies Used
 
 ## Contributing
 
