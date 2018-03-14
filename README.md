@@ -21,6 +21,7 @@
   * [Examples](#examples)
   * [Technologies Used](#technologies-used)
   * [Contributing](#contributing)
+  * [Developer Guidelines](#developer-guidelines)
   * [References](#references)
   * [License](#license)
   * [Special Thanks](#special-thanks)
@@ -52,12 +53,13 @@
 
 ## Technologies Used
 
-## Contributing
-
 ## References
 
+## Contributing
 You may contribute in several ways like creating new features, fixing bugs, improving documentation and examples
 or translating any document here to your language. [Find more information in CONTRIBUTING.md](CONTRIBUTING.md).
+
+## Developer Guidelines
 
 ## License
 
