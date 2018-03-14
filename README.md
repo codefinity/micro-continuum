@@ -1,5 +1,7 @@
 # MicroId
 
+[![Join the chat at https://gitter.im/micro-id/Lobby](https://badges.gitter.im/micro-id/Lobby.svg)](https://gitter.im/micro-id/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 <p align="center">
   MicroId is a User Management Microservice
 </p>
