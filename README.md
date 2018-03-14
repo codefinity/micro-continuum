@@ -61,6 +61,8 @@
 16. Create plugins for customizations
 17. User Communications
 18. Autoscalable
+19. Single Sign On
+20. Integration with messaging systems
 
 ## Getting Started
 
