@@ -12,12 +12,12 @@
 ## Table of contents
 
   * [Features](#features)
-  * [Setting It Up](#settingitup)
-  * [API Definition](#aipdefinition)
+  * [Setting It Up](#setting-i-tup)
+  * [API Definition](#aip-definition)
   * [Usage](#usage)
   * [Database Schema](#database-schema)
   * [Examples](#examples)
-  * [Technologies Used](#technologiesused)
+  * [Technologies Used](#technologies-used)
   * [Contributing](#contributing)
   * [License](#license)
   * [Special Thanks](#special-thanks)
