@@ -6,11 +6,7 @@
 
 
   
-[![Join the chat at https://gitter.im/micro-id/Lobby](https://badges.gitter.im/micro-id/Lobby.svg)](https://gitter.im/micro-id/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)  
-
-[![Book it At https://codefinity.gitbooks.io/micro-id-api-definitions/](https://img.shields.io/badge/GitBook-Enabled-yellow.svg)]  (https://codefinity.gitbooks.io/micro-id-api-definitions/)  
-
-<a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/license-MIT-blue.svg"></a>
+[![Join the chat at https://gitter.im/micro-id/Lobby](https://badges.gitter.im/micro-id/Lobby.svg)](https://gitter.im/micro-id/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)  <a href="https://codefinity.gitbooks.io/micro-id-api-definitions"><img src="https://img.shields.io/badge/GitBook-Enabled-yellow.svg"></a>  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/license-MIT-blue.svg"></a>
 
 
 ## Table of contents
