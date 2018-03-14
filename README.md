@@ -23,15 +23,19 @@
   * [Usage](#usage)
   * [Database Schema](#database-schema)
   * [Examples](#examples)
+  * [Sponsor](#sponsor)
   * [Contributing](#contributing)
   * [Development](#development)
     * [Guidelines](#guidelines)
     * [Methodologies](#methodologies)
     * [Technologies](#technologies)
         * [UI](#ui)
-        * [Frameworks](#frameworks)          
+        * [Frameworks](#frameworks)    
+        * [Testing](#testing)   
+        * [Integration](#integration)
   * [References](#references)
   * [License](#license)
+  * [Sponsor](#sponsor)  
   * [Special Thanks](#special-thanks)
 
 
@@ -78,6 +82,8 @@
 
 ## Examples
 
+## Sponsor
+
 ## References
 
 ## Contributing
@@ -94,6 +100,10 @@ or translating any document here to your language. [Find more information in CON
 #### UI
 
 #### Frameworks
+
+#### Testing
+
+#### Integration
 
 ## License
 
