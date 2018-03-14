@@ -29,8 +29,7 @@
     * [Methodologies](#methodologies)
     * [Technologies](#technologies)
         * [UI](#ui)
-        * [frameworks](#frameworks)
-          
+        * [Frameworks](#frameworks)          
   * [References](#references)
   * [License](#license)
   * [Special Thanks](#special-thanks)
@@ -85,7 +84,16 @@
 You may contribute in several ways like creating new features, fixing bugs, improving documentation and examples
 or translating any document here to your language. [Find more information in CONTRIBUTING.md](CONTRIBUTING.md).
 
-## Developer Guidelines
+# Development
+### Guidelines
+
+#### Methodologies
+
+#### Technologies
+
+#### UI
+
+#### Frameworks
 
 ## License
 
