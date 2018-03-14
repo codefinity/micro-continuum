@@ -23,9 +23,14 @@
   * [Usage](#usage)
   * [Database Schema](#database-schema)
   * [Examples](#examples)
-  * [Technologies Used](#technologies-used)
   * [Contributing](#contributing)
-  * [Developer Guidelines](#developer-guidelines)
+  * [Development](#development)
+    * [Guidelines](#guidelines)
+    * [Methodologies](#methodologies)
+    * [Technologies](#technologies)
+        * [UI](#ui)
+        * [frameworks](#frameworks)
+          
   * [References](#references)
   * [License](#license)
   * [Special Thanks](#special-thanks)
@@ -73,8 +78,6 @@
 ## Database Schema
 
 ## Examples
-
-## Technologies Used
 
 ## References
 
