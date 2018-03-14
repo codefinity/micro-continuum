@@ -20,7 +20,7 @@
   * [Technologies Used](#technologiesused)
   * [Contributing](#contributing)
   * [License](#license)
-  * [Special thanks](#special-thanks)
+  * [Special Thanks](#special-thanks)
 
 
 
@@ -55,3 +55,5 @@ or translating any document here to your language. [Find more information in CON
 ## License
 
 The code is licenced under [MIT](LICENSE)
+
+## Special Thanks
