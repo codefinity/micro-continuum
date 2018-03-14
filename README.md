@@ -33,6 +33,7 @@
         * [Frameworks](#frameworks)    
         * [Testing](#testing)   
         * [Integration](#integration)
+        * [Build](#build)
   * [References](#references)
   * [License](#license)
   * [Sponsor](#sponsor)  
@@ -104,6 +105,8 @@ or translating any document here to your language. [Find more information in CON
 #### Testing
 
 #### Integration
+
+#### Build
 
 ## License
 
