@@ -1,12 +1,14 @@
-# Micro-Id
+<h1 align="center">Micro-Id</h1> 
 
-<p align="left">
+<p align="center">
   Micro-Id is a <strong>User Management</strong> Microservice
 </p>
-
-
+<br />
+<div align="center">
   
 [![Join the chat at https://gitter.im/micro-id/Lobby](https://badges.gitter.im/micro-id/Lobby.svg)](https://gitter.im/micro-id/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)  <a href="https://codefinity.gitbooks.io/micro-id-api-definitions"><img src="https://img.shields.io/badge/GitBook-Enabled-yellow.svg"></a>  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/license-MIT-blue.svg"></a>
+
+<div>
 
 
 ## Table of Contents
@@ -19,6 +21,7 @@
   * [Examples](#examples)
   * [Technologies Used](#technologies-used)
   * [Contributing](#contributing)
+  * [References](#references)
   * [License](#license)
   * [Special Thanks](#special-thanks)
 
