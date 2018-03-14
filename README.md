@@ -34,6 +34,8 @@
 6. Log User Statistics.
 7. Sucure login methods like 2 factor Authentication.
 8. Manage roles and permissions.
+9. Dockerized
+10. Simple to Setup
 
 ## Setting It Up
 
