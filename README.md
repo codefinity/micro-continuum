@@ -84,12 +84,12 @@
 You may contribute in several ways like creating new features, fixing bugs, improving documentation and examples
 or translating any document here to your language. [Find more information in CONTRIBUTING.md](CONTRIBUTING.md).
 
-# Development
+## Development
 ### Guidelines
 
-#### Methodologies
+### Methodologies
 
-#### Technologies
+### Technologies
 
 #### UI
 
