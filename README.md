@@ -14,7 +14,9 @@
 ## Table of Contents
 
   * [Features](#features)
-  * [Setting It Up](#setting-it-up)
+  * [Getting Started](#getting-started)
+      * [Setup](#setup)
+      * [Configuration](#configuration)
   * [API Definition](#api-definition)
   * [Usage](#usage)
   * [Database Schema](#database-schema)
@@ -41,9 +43,22 @@
 9. Dockerized
 10. Simple to Setup
 
-## Setting It Up
+## Getting Started
+
+### Setup
+
+### Configuration
 
 ## API Definition
+
+
+| API Call          | Protocol    | Input JSON | Output JSON | Status Codes      |
+|:------------------|:------------|:-----------|:------------|:------------------|
+|  Add              | PUT         |            |             |                   |
+|  Update           | POST        |            |             |                   |
+|  Delete           | DELETE      |            |             |                   |
+|  Get              | GET         |            |             |                   |
+
 
 ## Usage
 
