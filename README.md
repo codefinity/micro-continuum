@@ -1,6 +1,8 @@
 # MicroId
 
-## MicroId is a User Management Microservice
+<p align="center">
+  MicroId is a User Management Microservice
+</p>
 
 
 ## Table of contents
