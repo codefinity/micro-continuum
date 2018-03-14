@@ -43,18 +43,24 @@
 
 ## Features
 
-1. Multitenant capabilities - Can be used to serve multiple clients and their uses.
+1. Multi-Tenant capabilities - Can be used to serve multiple clients and their uses.
 2. Basic User operations - Get, Add, Update, Delete, Change Password, Forgot Password
 3. Manage social logins.
 4. Token based authentication.
 5. Manage Social Authentications.
 6. Log User Statistics.
-7. Sucure login methods like 2 factor Authentication.
+7. Secure login methods like 2 factor Authentication, OAuth2, JWT
 8. Manage roles and permissions.
 9. Dockerized
 10. Serverless Capabilities
 11. Can be added through Maven
 12. Basic User Management Console
+13. Serverless Capabilities
+14. Events Subscription
+15. Custom User Rules
+16. Create plugins for customizations
+17. User Communications
+18. Autoscalable
 
 ## Getting Started
 
