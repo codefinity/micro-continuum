@@ -17,6 +17,8 @@
   * [Getting Started](#getting-started)
       * [Setup](#setup)
       * [Configuration](#configuration)
+      * [Console](#console)
+      * [Initial Tests](#initial-tests)
   * [API Definition](#api-definition)
   * [Usage](#usage)
   * [Database Schema](#database-schema)
@@ -48,6 +50,10 @@
 ### Setup
 
 ### Configuration
+
+### Console
+
+### Initial Tests
 
 ## API Definition
 
