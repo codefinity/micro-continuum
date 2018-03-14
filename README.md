@@ -15,7 +15,7 @@
   * [Setting It Up](#settingitup)
   * [API Definition](#aipdefinition)
   * [Usage](#usage)
-  * [Database Schema](#databaseschema)
+  * [Database Schema](#database-schema)
   * [Examples](#examples)
   * [Technologies Used](#technologiesused)
   * [Contributing](#contributing)
