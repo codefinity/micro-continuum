@@ -43,7 +43,9 @@
 7. Sucure login methods like 2 factor Authentication.
 8. Manage roles and permissions.
 9. Dockerized
-10. Simple to Setup
+10. Serverless Capabilities
+11. Can be added through Maven
+12. Basic User Management Console
 
 ## Getting Started
 
