@@ -12,8 +12,8 @@
 ## Table of contents
 
   * [Features](#features)
-  * [Setting It Up](#setting-i-tup)
-  * [API Definition](#aip-definition)
+  * [Setting It Up](#setting-it-up)
+  * [API Definition](#api-definition)
   * [Usage](#usage)
   * [Database Schema](#database-schema)
   * [Examples](#examples)
