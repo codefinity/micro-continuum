@@ -9,7 +9,7 @@
 [![Join the chat at https://gitter.im/micro-id/Lobby](https://badges.gitter.im/micro-id/Lobby.svg)](https://gitter.im/micro-id/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)  <a href="https://codefinity.gitbooks.io/micro-id-api-definitions"><img src="https://img.shields.io/badge/GitBook-Enabled-yellow.svg"></a>  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/license-MIT-blue.svg"></a>
 
 
-## Table of contents
+## Table of Contents
 
   * [Features](#features)
   * [Setting It Up](#setting-it-up)
