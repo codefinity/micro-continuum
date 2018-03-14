@@ -1,7 +1,7 @@
 # Micro-Id
 
 <p align="left">
-  Micro-Id is a User Management Microservice
+  Micro-Id is a <strong>User Management</strong> Microservice
 </p>
 
 
