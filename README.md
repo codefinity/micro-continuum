@@ -30,7 +30,8 @@
     * [Methodologies](#methodologies)
     * [Technologies](#technologies)
         * [UI](#ui)
-        * [Frameworks](#frameworks)    
+        * [Frameworks](#frameworks)
+        * [Database](#database)
         * [Testing](#testing)   
         * [Integration](#integration)
         * [Build](#build)
@@ -116,6 +117,9 @@ or translating any document here to your language. [Find more information in CON
 
 #### Frameworks
   * Spring Boot
+
+#### Database
+  * MongoDb
 
 #### Testing
   * JUnit
