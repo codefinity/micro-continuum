@@ -103,18 +103,29 @@ or translating any document here to your language. [Find more information in CON
 ### Guidelines
 
 ### Methodologies
+  * Domain Driven Design
+  * Behaviour Driven Design
+  * CQRS (Command Query Responsibility Segregation)
+  * TDD (Test-driven Development)
 
 ### Technologies
 
 #### UI
+  * ReactJs
+  * Redux  
 
 #### Frameworks
+  * Spring Boot
 
 #### Testing
+  * JUnit
+  * Cucumber
 
 #### Integration
+  * Rabbit MQ
 
 #### Build
+  * Travis CI
 
 ## License
 
