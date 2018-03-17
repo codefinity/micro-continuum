@@ -97,7 +97,7 @@ You can find the design documents <a href="https://docs.google.com/document/d/1w
 
 ## Contributing
 You may contribute in several ways like creating new features, fixing bugs, improving documentation and examples
-or translating any document here to your language. [Find out more](https://github.com/codefinity/micro-id/wiki/Contributing).
+or translating any document here to your language. [Find out more](https://github.com/codefinity/micro-id/wiki/Contributing){:target="_blank"}.
 
 ## Development
 
