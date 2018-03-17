@@ -89,7 +89,7 @@
 
 ## Design Documents
 
-You can find the design documents <a href="https://docs.google.com/document/d/1wvP54ux3oxZCB2isZbwMjo3kQ1b-efL1p2AYQ4UU0l4/edit?usp=sharing" target="_blank">Here</a> .
+You can find the design documents <a href="https://docs.google.com/document/d/1wvP54ux3oxZCB2isZbwMjo3kQ1b-efL1p2AYQ4UU0l4/edit?usp=sharing" target="_blank">here</a> .
 
 ## Sponsor
 
