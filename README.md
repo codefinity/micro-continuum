@@ -21,8 +21,7 @@
       * [Initial Tests](#initial-tests)
   * [API Definition](#api-definition)
   * [Usage](#usage)
-  * [Database Schema](#database-schema)
-  * [Examples](#examples)
+  * [Design Documents](#design-documents)
   * [Sponsor](#sponsor)
   * [Contributing](#contributing)
   * [Development](#development)
@@ -88,9 +87,7 @@
 
 ## Usage
 
-## Database Schema
-
-## Examples
+## Design Documents
 
 ## Sponsor
 
@@ -101,6 +98,7 @@ You may contribute in several ways like creating new features, fixing bugs, impr
 or translating any document here to your language. [Find more information in CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Development
+
 ### Guidelines
 
 ### Methodologies
