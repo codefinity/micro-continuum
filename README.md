@@ -89,7 +89,7 @@
 
 ## Design Documents
 
-You can find the design documents <a href="https://docs.google.com/document/d/1wvP54ux3oxZCB2isZbwMjo3kQ1b-efL1p2AYQ4UU0l4/edit?usp=sharing" target="_blank">Here</a>.
+You can find the design documents <a href="https://docs.google.com/document/d/1wvP54ux3oxZCB2isZbwMjo3kQ1b-efL1p2AYQ4UU0l4/edit?usp=sharing" target="_blank">Here</a> .
 
 ## Sponsor
 
@@ -97,7 +97,7 @@ You can find the design documents <a href="https://docs.google.com/document/d/1w
 
 ## Contributing
 You may contribute in several ways like creating new features, fixing bugs, improving documentation and examples
-or translating any document here to your language. [Find out more](https://github.com/codefinity/micro-id/wiki/Contributing){:target="_blank"}.
+or translating any document here to your language. [Find out more](https://github.com/codefinity/micro-id/wiki/Contributing)
 
 ## Development
 
