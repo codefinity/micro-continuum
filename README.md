@@ -27,13 +27,6 @@
   * [Development](#development)
     * [Guidelines](#guidelines)
     * [Methodologies](#methodologies)
-    * [Technologies](#technologies)
-        * [UI](#ui)
-        * [Frameworks](#frameworks)
-        * [Database](#database)
-        * [Testing](#testing)   
-        * [Integration](#integration)
-        * [Build](#build)
   * [References](#references)
   * [License](#license)
   * [Sponsor](#sponsor)  
@@ -109,27 +102,6 @@ or translating any document here to your language. [Find out more](https://githu
   * CQRS (Command Query Responsibility Segregation)
   * TDD (Test-driven Development)
 
-### Technologies
-
-#### UI
-  * ReactJs
-  * Redux  
-
-#### Frameworks
-  * Spring Boot
-
-#### Database
-  * MongoDb
-
-#### Testing
-  * JUnit
-  * Cucumber
-
-#### Integration
-  * Rabbit MQ
-
-#### Build
-  * Travis CI
 
 ## License
 
