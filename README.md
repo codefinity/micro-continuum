@@ -98,9 +98,9 @@ or translating any document here to your language. [Find out more](https://githu
   * CQRS (Command Query Responsibility Segregation)
   * TDD (Test-driven Development)
   
- ### Design Documents
+### Design Document
 
-You can find the design documents <a href="https://docs.google.com/document/d/1wvP54ux3oxZCB2isZbwMjo3kQ1b-efL1p2AYQ4UU0l4/edit?usp=sharing" target="_blank">here</a> .
+You can find the design document <a href="https://docs.google.com/document/d/1wvP54ux3oxZCB2isZbwMjo3kQ1b-efL1p2AYQ4UU0l4/edit?usp=sharing" target="_blank">here</a>.
 
 
 ## License
