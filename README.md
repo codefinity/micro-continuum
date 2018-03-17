@@ -89,6 +89,8 @@
 
 ## Design Documents
 
+You can find the design documents [Here][https://codefinity.gitbooks.io/micro-id/]
+
 ## Sponsor
 
 ## References
