@@ -21,12 +21,12 @@
       * [Initial Tests](#initial-tests)
   * [API Definition](#api-definition)
   * [Usage](#usage)
-  * [Design Documents](#design-documents)
-  * [Sponsor](#sponsor)
+    * [Sponsor](#sponsor)
   * [Contributing](#contributing)
   * [Development](#development)
     * [Guidelines](#guidelines)
     * [Methodologies](#methodologies)
+    * [Design Document](#design-document)
   * [References](#references)
   * [License](#license)
   * [Sponsor](#sponsor)  
@@ -80,10 +80,6 @@
 
 ## Usage
 
-## Design Documents
-
-You can find the design documents <a href="https://docs.google.com/document/d/1wvP54ux3oxZCB2isZbwMjo3kQ1b-efL1p2AYQ4UU0l4/edit?usp=sharing" target="_blank">here</a> .
-
 ## Sponsor
 
 ## References
@@ -101,6 +97,10 @@ or translating any document here to your language. [Find out more](https://githu
   * Behaviour Driven Design
   * CQRS (Command Query Responsibility Segregation)
   * TDD (Test-driven Development)
+  
+ ### Design Documents
+
+You can find the design documents <a href="https://docs.google.com/document/d/1wvP54ux3oxZCB2isZbwMjo3kQ1b-efL1p2AYQ4UU0l4/edit?usp=sharing" target="_blank">here</a> .
 
 
 ## License
