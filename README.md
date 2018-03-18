@@ -85,7 +85,7 @@ or translating any document here to your language. [Find out more](https://githu
 
 ### Guidelines
 
-Anybody is welcome to contribute to this project as long as they make themselves conversantwith [these]() guidelines.
+Anybody is welcome to contribute to this project as long as they make themselves conversant with [these](https://github.com/codefinity/micro-id/wiki/Guidelines) guidelines.
 
 ### Methodologies
   * Domain Driven Design
