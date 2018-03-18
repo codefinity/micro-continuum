@@ -69,14 +69,7 @@
 
 ## API Definition
 
-
-| API Call          | Protocol    | Input JSON | Output JSON | Status Codes      |
-|:------------------|:------------|:-----------|:------------|:------------------|
-|  Add              | PUT         |            |             |                   |
-|  Update           | POST        |            |             |                   |
-|  Delete           | DELETE      |            |             |                   |
-|  Get              | GET         |            |             |                   |
-
+API Documentation can be found [here](https://codefinity.gitbooks.io/micro-id-api/content/)
 
 ## Usage
 
@@ -91,6 +84,8 @@ or translating any document here to your language. [Find out more](https://githu
 ## Development
 
 ### Guidelines
+
+Anybody is welcome to contribute to this project as long as they make themselves conversantwith [these]() guidelines.
 
 ### Methodologies
   * Domain Driven Design
