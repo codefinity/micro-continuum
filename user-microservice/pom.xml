@@ -7,19 +7,26 @@
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.0.0.RELEASE</version>
 	</parent>
+	
 	<artifactId>user-microservice</artifactId>
 	<groupId>com.codefinity.microid</groupId>
 	<name>Spring Boot Data REST Sample</name>
 	<description>Spring Boot Data REST Sample</description>
 	<version>1.0</version>
 	<url>http://projects.spring.io/spring-boot/</url>
+	
 	<organization>
 		<name>Pivotal Software, Inc.</name>
 		<url>http://www.spring.io</url>
-	</organization>
+	</organization>	
+
 	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>9</java.version>
 		<main.basedir>${basedir}/../..</main.basedir>
-	</properties>
+	</properties>	
+	
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
