@@ -76,12 +76,12 @@ API Documentation can be found [here](https://codefinity.gitbooks.io/micro-id-ap
 
 Kindly support the Developers of the project who spend considerable time, effort and money in
 
-Designing.
-Documenting.
-Reading the articles on the web abd identifying best practices.
-Buying and reading books to find best techniques to Architect the project.
-Writing maintainable code.
-Keeping the project up to date with latest tachnologies.
+  * Designing.
+  * Documenting.
+  * Reading the articles on the web abd identifying best practices.
+  * Buying and reading books to find best techniques to Architect the project.
+  * Writing maintainable code.
+  * Keeping the project up to date with latest tachnologies.
 
 Donate
 
