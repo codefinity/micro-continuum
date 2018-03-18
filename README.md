@@ -21,13 +21,12 @@
       * [Initial Tests](#initial-tests)
   * [API Definition](#api-definition)
   * [Usage](#usage)
-    * [Sponsor](#sponsor)
+  * [Sponsor](#sponsor)
   * [Contributing](#contributing)
   * [Development](#development)
     * [Guidelines](#guidelines)
     * [Methodologies](#methodologies)
     * [Design Document](#design-document)
-  * [References](#references)
   * [License](#license)
   * [Sponsor](#sponsor)  
   * [Special Thanks](#special-thanks)
@@ -74,8 +73,6 @@ API Documentation can be found [here](https://codefinity.gitbooks.io/micro-id-ap
 ## Usage
 
 ## Sponsor
-
-## References
 
 ## Contributing
 You may contribute in several ways like creating new features, fixing bugs, improving documentation and examples
