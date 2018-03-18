@@ -14,6 +14,8 @@
 ## Table of Contents
 
   * [Features](#features)
+      * [Released](#released)
+      * [In Development](#in-development)
   * [Getting Started](#getting-started)
       * [Setup](#setup)
       * [Configuration](#configuration)
@@ -24,8 +26,8 @@
   * [Sponsor](#sponsor)
   * [Contributing](#contributing)
   * [Development](#development)
-    * [Guidelines](#guidelines)
-    * [Methodologies](#methodologies)
+    * [Developer Guidelines](#developer-guidelines)
+    * [Development Methodologies Used](#development-methodologies-used)
     * [Design Document](#design-document)
   * [License](#license)
   * [Sponsor](#sponsor)  
@@ -34,6 +36,10 @@
 
 
 ## Features
+
+#### Released
+
+#### In Development
 
 1. Multi-Tenant capabilities - Can be used to serve multiple clients and their uses.
 2. Basic User operations - Get, Add, Update, Delete, Change Password, Forgot Password
@@ -92,15 +98,19 @@ You may contribute in several ways like creating new features, testing, fixing b
 
 ## Development
 
-### Guidelines
+### Developer Guidelines
 
-Anybody is welcome to contribute to this project as long as they make themselves conversant with [these](https://github.com/codefinity/micro-id/wiki/Guidelines) guidelines.
+Anybody is welcome to contribute to this project as long as they make themselves conversant with [these](https://github.com/codefinity/micro-id/wiki/Developer-Guidelines) guidelines.
 
-### Methodologies
-  * Domain Driven Design
-  * Behaviour Driven Design
-  * CQRS (Command Query Responsibility Segregation)
-  * TDD (Test-driven Development)
+### Development Methodologies Used
+* DDD (Domain Driven Design)
+* BDD (Behaviour Driven Design)
+* CQRS (Command Query Responsibility Segregation)
+* TDD (Test-driven Development)
+* SOLID
+* Reactive 
+* 12 Factor Apps
+* GOF Design Patterns
   
 ### Design Document
 
