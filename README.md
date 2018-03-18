@@ -83,7 +83,9 @@ Kindly support the Developers of the project who spend considerable time, effort
   * Writing maintainable code.
   * Keeping the project up to date with latest tachnologies.
 
-Donate
+Plesae Donate
+
+Credits to donors will be given in Special Thanks section.
 
 ## Contributing
 You may contribute in several ways like creating new features, testing, fixing bugs, improving documentation, and examples. [Find out more](https://github.com/codefinity/micro-id/wiki/Contributing).
