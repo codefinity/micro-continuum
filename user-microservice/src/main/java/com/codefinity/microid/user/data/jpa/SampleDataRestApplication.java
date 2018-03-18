@@ -26,7 +26,6 @@ import org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguratio
 @Configuration
 @ComponentScan
 @EnableAutoConfiguration
-@Import(RepositoryRestMvcConfiguration.class)
 public class SampleDataRestApplication {
 
 	public static void main(String[] args) throws Exception {
