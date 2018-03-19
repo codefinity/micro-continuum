@@ -10,5 +10,6 @@
   <modules>
     <module>user-microservice</module>
     <module>config-server</module>
+    <module>x-microservice</module>
   </modules>
 </project>
