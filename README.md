@@ -15,7 +15,8 @@
 
   * [Features](#features)
       * [Released](#released)
-      * [In Development](#in-development)
+      * [Currently In Development](#currently-in-development)
+      * [In Development Pipeline](#in-development-pipeline)
   * [Getting Started](#getting-started)
       * [Setup](#setup)
       * [Configuration](#configuration)
@@ -39,7 +40,11 @@
 
 #### Released
 
-#### In Development
+#### Currently In Development
+
+1. Externalizing config using Spring Config Server 
+
+#### In Development Pipeline
 
 1. Multi-Tenant capabilities - Can be used to serve multiple clients and their uses.
 2. Basic User operations - Get, Add, Update, Delete, Change Password, Forgot Password
