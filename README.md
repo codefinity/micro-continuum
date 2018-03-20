@@ -1,4 +1,4 @@
-<h1 align="center">Micro-Id</h1> 
+<h1 align="center">Micro-Continuum</h1> 
 
 <p align="center">
   <strong>Micro-Continuum</strong> is an initiative to create a pre-assembled, configurable, set of reusable compinents for Microservice so that companies can setup their Microservices with minimum offort by mostly concentrating on their business functionalities.
