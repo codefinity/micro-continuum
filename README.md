@@ -6,7 +6,7 @@
 <br />
 <div align="center">
   
-<a href="https://codefinity.gitbooks.io/micro-continuum/content/"><img src="https://img.shields.io/badge/GitBook-Enabled-yellow.svg"></a>  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/license-MIT-blue.svg"></a>
+![Gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg) <a href="https://codefinity.gitbooks.io/micro-continuum/content/"><img src="https://img.shields.io/badge/GitBook-Enabled-yellow.svg"></a>  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/license-MIT-blue.svg"></a>
 
 </div>
 
