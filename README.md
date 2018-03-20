@@ -1,7 +1,7 @@
 <h1 align="center">Micro-Continuum</h1> 
 
 <p align="center">
-  <strong>Micro-Continuum</strong> is an initiative to create a pre-assembled, configurable, set of reusable components for Microservices that will enable companies to setup their Microservices with minimum offort by mostly concentrating on their business functionalities.
+  <strong>Micro-Continuum</strong> is an initiative to create a pre-assembled, configurable, set of reusable components for Microservices that will enable companies to setup their Microservices with minimum effort by mostly concentrating on their business functionalities.
 </p>
 <br />
 <div align="center">
