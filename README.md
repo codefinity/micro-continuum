@@ -6,7 +6,7 @@
 <br />
 <div align="center">
   
-[![Join the chat at https://gitter.im/micro-id/Lobby](https://badges.gitter.im/micro-id/Lobby.svg)](https://gitter.im/micro-id/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)  <a href="https://codefinity.gitbooks.io/micro-id-api/"><img src="https://img.shields.io/badge/GitBook-Enabled-yellow.svg"></a>  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/license-MIT-blue.svg"></a>
+[![Join the chat at https://gitter.im/micro-id/Lobby](https://badges.gitter.im/micro-id/Lobby.svg)](https://gitter.im/micro-id/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)  <a href="https://codefinity.gitbooks.io/micro-continuum/content/"><img src="https://img.shields.io/badge/GitBook-Enabled-yellow.svg"></a>  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/license-MIT-blue.svg"></a>
 
 </div>
 
@@ -79,7 +79,7 @@
 
 ## API Definition
 
-API Documentation can be found [here](https://codefinity.gitbooks.io/micro-id-api/content/)
+API Documentation can be found [here](https://codefinity.gitbooks.io/micro-continuum/content/)
 
 ## Usage
 
@@ -99,13 +99,13 @@ Please Donate
 Credits will be given in Special Thanks section.
 
 ## Contributing
-You may contribute in several ways like creating new features, testing, fixing bugs, improving documentation, and examples. [Find out more](https://github.com/codefinity/micro-id/wiki/Contributing).
+You may contribute in several ways like creating new features, testing, fixing bugs, improving documentation, and examples. [Find out more](https://github.com/codefinity/micro-continuum/wiki/Contributing).
 
 ## Development
 
 ### Developer Guidelines
 
-Anybody is welcome to contribute to this project as long as they make themselves conversant with [these](https://github.com/codefinity/micro-id/wiki/Developer-Guidelines) guidelines.
+Anybody is welcome to contribute to this project as long as they make themselves conversant with [these](https://github.com/codefinity/micro-continuum/wiki/Developer-Guidelines) guidelines.
 
 ### Development Methodologies Used
 * DDD (Domain Driven Design)
