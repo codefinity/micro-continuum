@@ -5,11 +5,12 @@ spring:
   application:
     name: config-server
     
+ #In case of local repository: file:///home/nikhil/open-source/config-repo  
   cloud:
     config:
       server:
         git:
-          uri: file:///home/nikhil/open-source/config-repo
+          uri: https://github.com/codefinity/micro-continuum/tree/master/config-repository
           
           
 #Actuator Endpoint http://localhost:8888/actuator/
