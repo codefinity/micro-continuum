@@ -10,7 +10,7 @@ spring:
     config:
       server:
         git:         
-          uri: https://github.com/codefinity/micro-continuum/tree/master/config-repository
+          uri: https://github.com/codefinity/micro-continuum-config
           
           
 #Actuator Endpoint http://localhost:8888/actuator/
