@@ -9,7 +9,19 @@ spring:
     config:
       server:
         git:
-          uri: file:///home/nikhil/open-source/micro-continuum
+          uri: file:///home/nikhil/open-source/config-repo
+          
+          
+#Actuator Endpoint http://localhost:8888/actuator/
+          
+management:
+  security:
+    enabled: false
+    
+
+  endpoint: 
+    info:
+      enabled: true
 
 
 
