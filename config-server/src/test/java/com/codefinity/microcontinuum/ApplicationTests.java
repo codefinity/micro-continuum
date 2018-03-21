@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.codefinity.microcontinuum.config;
+package com.codefinity.microcontinuum;
 
 /**
  * Integration test to run the application.

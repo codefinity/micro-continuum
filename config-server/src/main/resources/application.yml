@@ -1,3 +1,6 @@
+server:
+  port: 8888
+
 spring:
   application:
     name: config-server
@@ -8,6 +11,5 @@ spring:
         git:
           uri: file:///home/nikhil/open-source/micro-continuum
 
-server:
-  port: 8888
+
 
