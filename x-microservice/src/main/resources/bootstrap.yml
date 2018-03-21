@@ -1,2 +1,16 @@
 server:
   port: 8020
+  
+spring:
+  application:
+    name: x-microservice
+    
+  cloud:
+    config:
+      uri: http://localhost:8888
+      
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: admin
+    password: password
