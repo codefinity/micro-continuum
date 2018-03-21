@@ -9,7 +9,7 @@ spring:
   cloud:
     config:
       server:
-        git:
+        git:         
           uri: https://github.com/codefinity/micro-continuum/tree/master/config-repository
           
           
