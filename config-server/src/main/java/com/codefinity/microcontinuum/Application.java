@@ -14,21 +14,17 @@
  * limitations under the License.
  */
 
-package com.codefinity.microid.user.data.jpa;
+package com.codefinity.microcontinuum;
 
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Import;
-import org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.config.server.EnableConfigServer;
 
-@Configuration
-@ComponentScan
-@EnableAutoConfiguration
-public class SampleDataRestApplication {
+@SpringBootApplication
+@EnableConfigServer
+public class Application {
 
 	public static void main(String[] args) throws Exception {
-		SpringApplication.run(SampleDataRestApplication.class, args);
+		SpringApplication.run(Application.class, args);
 	}
 }

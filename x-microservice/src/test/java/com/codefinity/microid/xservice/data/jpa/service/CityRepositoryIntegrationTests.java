@@ -24,7 +24,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.codefinity.microid.xservice.data.jpa.SampleDataRestApplication;
+import com.codefinity.microcontinuum.xservice.SampleDataRestApplication;
 import com.codefinity.microid.xservice.data.jpa.domain.City;
 
 import static org.hamcrest.Matchers.greaterThan;

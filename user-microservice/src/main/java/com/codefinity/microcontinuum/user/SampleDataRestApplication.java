@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.codefinity.microid.xservice.data.jpa;
+package com.codefinity.microcontinuum.user;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -26,7 +26,6 @@ import org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguratio
 @Configuration
 @ComponentScan
 @EnableAutoConfiguration
-@Import(RepositoryRestMvcConfiguration.class)
 public class SampleDataRestApplication {
 
 	public static void main(String[] args) throws Exception {

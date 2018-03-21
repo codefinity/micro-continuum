@@ -1,2 +1,13 @@
+spring:
+  application:
+    name: config-server
+    
+  cloud:
+    config:
+      server:
+        git:
+          uri: file:///home/nikhil/open-source/micro-continuum
+
 server:
-  port: 8090
+  port: 8888
+

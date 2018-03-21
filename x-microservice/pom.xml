@@ -8,7 +8,7 @@
 		<version>2.0.0.RELEASE</version>
 	</parent>
 	<artifactId>x-microservice</artifactId>
-	<groupId>com.codefinity.microid</groupId>
+	<groupId>com.codefinity.microcontinuum</groupId>
 	<name>Spring Boot Data REST Sample</name>
 	<description>Spring Boot Data REST Sample</description>
 	<version>1.0</version>
