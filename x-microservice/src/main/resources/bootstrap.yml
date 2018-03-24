@@ -15,10 +15,7 @@ spring:
       uri: http://localhost:8888
       
     bus:
-      enabled: true  
-      
-      refresh:
-        enabled: true
+      enabled: true
       
   rabbitmq:
     host: localhost
@@ -33,4 +30,4 @@ management:
       exposure:
         include: bus-refresh,refresh
         
-      #base-path: /
+      base-path: /

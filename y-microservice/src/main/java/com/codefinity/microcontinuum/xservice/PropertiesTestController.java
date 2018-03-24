@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RefreshScope
 public class PropertiesTestController {
 
-	@Value("${x-microservice.config-test-value}")
+	@Value("${y-microservice.config-test-value}")
 	private String testProperty;
 	
 	@RequestMapping(value = "/testproperty")

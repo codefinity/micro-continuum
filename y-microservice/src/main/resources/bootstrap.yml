@@ -17,9 +17,7 @@ spring:
     bus:
       enabled: true  
       
-      refresh:
-        enabled: true
-      
+     
   rabbitmq:
     host: localhost
     port: 5672
@@ -33,4 +31,4 @@ management:
       exposure:
         include: bus-refresh,refresh
         
-      #base-path: /
+      base-path: /
