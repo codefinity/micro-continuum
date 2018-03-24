@@ -1,0 +1,50 @@
+server:
+  port: 8095
+  
+spring:
+  application:
+    name: zuul-api-gateway
+    
+  profiles:
+    active: development
+    
+  cloud:
+    config:
+      #name: config-server
+      #enabled: true
+      uri: http://localhost:8888
+      
+    bus:
+      enabled: true
+      
+zuul:
+  routes:
+    x-microservice:      
+      serviceId: x-microservice
+      path: /x-microservice/**
+    y-microservice:      
+      serviceId: x-microservice
+      path: /y-microservice/**
+    z-microservice:      
+      serviceId: x-microservice
+      path: /z-microservice/**
+      
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+      
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: admin
+    password: password   
+    
+    
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh,refresh
+        
+      base-path: /
