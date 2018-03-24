@@ -40,9 +40,13 @@
 
 #### Released
 
+#### Completed
+
+1. Added config Server, and Clients to Microservices
+
 #### Currently In Development
 
-1. Externalizing config using Spring Config Server 
+1. Integrating Eureka Service Discovery
 
 #### In Development Pipeline
 
