@@ -1,0 +1,36 @@
+server:
+  port: 8030
+  
+spring:
+  application:
+    name: y-microservice
+    
+  profiles:
+    active: development
+    
+  cloud:
+    config:
+      #name: config-server
+      #enabled: true
+      uri: http://localhost:8888
+      
+    bus:
+      enabled: true  
+      
+      refresh:
+        enabled: true
+      
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: admin
+    password: password   
+    
+    
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh,refresh
+        
+      #base-path: /

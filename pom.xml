@@ -11,6 +11,9 @@
     <module>user-microservice</module>
     <module>config-server</module>
     <module>x-microservice</module>
+    <module>y-microservice</module>
+    <module>z-microservice</module>
+    <module>template-microservice</module>
     <module>eureka-service-discovery</module>
     <module>zuul-api-gateway</module>
   </modules>
