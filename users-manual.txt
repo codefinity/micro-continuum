@@ -1,0 +1,19 @@
+URLs of Microservices:
+----------------------
+
+x-microservice: http://localhost:8020/ 
+y-microservice: http://localhost:8030/ 
+z-microservice: http://localhost:8040/
+
+To Refresh the properties of a particular microservice:
+-------------------------------------------------------
+
+curl -X POST http://localhost:8020/refresh
+
+
+To Refresh the properties of all microservices:
+-----------------------------------------------
+
+curl -X POST http://localhost:8020/bus-refresh
+
+ 
