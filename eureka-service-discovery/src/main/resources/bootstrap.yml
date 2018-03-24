@@ -1,0 +1,39 @@
+server:
+  port: 8761
+  
+spring:
+  application:
+    name: eureka-service-discovery
+    
+  profiles:
+    active: development
+    
+  cloud:
+    config:
+      #name: config-server
+      #enabled: true
+      uri: http://localhost:8888
+      
+    bus:
+      enabled: true
+      
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: admin
+    password: password   
+    
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+    register-with-eureka: false
+    fetch-registry: false    
+    
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh,refresh
+        
+      base-path: /
