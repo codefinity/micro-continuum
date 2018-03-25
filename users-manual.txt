@@ -16,4 +16,22 @@ To Refresh the properties of all microservices:
 
 curl -X POST http://localhost:8020/bus-refresh
 
+
+ZUUL Url:
+---------
+
+http://localhost:8095/x-microservice/testproperty
+http://localhost:8095/y-microservice/
+http://localhost:8095/z-microservice/
+
+
+ToDo:
+-----
+
+1) Secure communication between microservice and config server.
+
+2) Secure communication between microservices using Feign.
+	https://cloud.spring.io/spring-cloud-netflix/multi/multi_spring-cloud-feign.html
+
+
  

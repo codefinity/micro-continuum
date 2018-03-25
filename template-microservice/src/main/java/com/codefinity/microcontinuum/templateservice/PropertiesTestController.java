@@ -1,4 +1,4 @@
-package com.codefinity.microcontinuum.xservice;
+package com.codefinity.microcontinuum.templateservice;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RefreshScope
 public class PropertiesTestController {
 
-	@Value("${y-microservice.config-test-value}")
+	@Value("${x-microservice.config-test-value}")
 	private String testProperty;
 	
 	@RequestMapping(value = "/testproperty")

@@ -17,29 +17,28 @@ spring:
     bus:
       enabled: true
       
+  rabbitmq:
+      host: localhost
+      port: 5672
+      username: admin
+      password: password  
+      
 zuul:
   routes:
     x-microservice:      
       serviceId: x-microservice
       path: /x-microservice/**
     y-microservice:      
-      serviceId: x-microservice
+      serviceId: y-microservice
       path: /y-microservice/**
     z-microservice:      
-      serviceId: x-microservice
+      serviceId: z-microservice
       path: /z-microservice/**
       
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka
-      
-  rabbitmq:
-    host: localhost
-    port: 5672
-    username: admin
-    password: password   
-    
+      defaultZone: http://localhost:8761/eureka   
     
 management:
   endpoints:

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.codefinity.microcontinuum.xservice;
+package com.codefinity.microcontinuum.templateservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
