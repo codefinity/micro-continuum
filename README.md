@@ -49,7 +49,8 @@
 
 #### Currently In Development
 
-1. Logging Management Using ELK Stack
+1. Communication between Microservices using RabbitMQ Streams
+2. Logging Management using ELK Stack
 
 #### In Development Pipeline
 
