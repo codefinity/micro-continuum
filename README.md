@@ -42,11 +42,14 @@
 
 #### Completed
 
-1. Added config Server, and Clients to Microservices
+1. Config Server, and Clients to Microservices
+2. Eureka Service Registry
+3. Zuul Gateway
+4. Feign Clients
 
 #### Currently In Development
 
-1. Integrating Eureka Service Discovery
+1. Logging Management Using ELK Stack
 
 #### In Development Pipeline
 
