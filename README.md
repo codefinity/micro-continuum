@@ -42,7 +42,7 @@
 
 #### Completed
 
-1. Config Server, and Clients to Microservices
+1. Config Server and Clients
 2. Eureka Service Registry
 3. Zuul Gateway
 4. Feign Clients
