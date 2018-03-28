@@ -17,6 +17,11 @@ spring:
     bus:
       enabled: true
       
+    stream:
+      bindings:
+        messageq:
+          destination: microserviceQ
+      
   rabbitmq:
     host: localhost
     port: 5672

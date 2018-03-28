@@ -24,6 +24,11 @@ http://localhost:8095/x-microservice/testproperty
 http://localhost:8095/y-microservice/
 http://localhost:8095/z-microservice/
 
+Spring Cloud Stream Test:
+-------------------------
+
+http://localhost:8095/x-microservice/testspringcloudstreaming
+
 
 ToDo:
 -----
@@ -32,6 +37,11 @@ ToDo:
 
 2) Secure communication between microservices using Feign.
 	https://cloud.spring.io/spring-cloud-netflix/multi/multi_spring-cloud-feign.html
+
+3) Eureka server security
+
+4) See how to send Domain Event message in spring cloud stream.
+
 
 
  
