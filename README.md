@@ -43,6 +43,8 @@
 
 #### Completed
 
+##### Infrastructure
+
 1. Config Server and Clients
 2. Eureka Service Registry
 3. Zuul Gateway
@@ -51,14 +53,19 @@
 6. Communication between Microservices using Spring Cloud Streams (RabbitMQ)
 7. Hystrix Circuit Breaker integration with Zuul
 8. Hystrix Dashboard Integration
+9. Turbine Integration
 
 #### Currently In Development
 
+##### Infrastructure
+
 1. Hystrix Caching Fallback
-2. Hystrix Turbine Integration
-3. Ribbon load balancing
-4. Logging Management using ELK Stack
-5. Spring Cloud Sleuth integration
+2. Ribbon load balancing
+
+##### Loging
+
+1. Logging Management using ELK Stack
+2. Spring Cloud Sleuth integration
 
 #### In Development Pipeline
 
