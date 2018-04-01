@@ -17,5 +17,6 @@
     <module>eureka-service-discovery</module>
     <module>zuul-api-gateway</module>
     <module>hystrix-dashboard</module>
+    <module>turbine-dashboard</module>
   </modules>
 </project>

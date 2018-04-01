@@ -29,6 +29,17 @@ Spring Cloud Stream Test:
 
 http://localhost:8095/x-microservice/testspringcloudstreaming
 
+Hystrix:
+-------
+
+URL: http://localhost:8090/hystrix
+Add Url: http://localhost:8090/hystrix
+
+Turbine:
+--------
+URL: http://localhost:9010/hystrix
+Add URL: http://localhost:9010/turbine.stream
+
 
 ToDo:
 -----

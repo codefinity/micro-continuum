@@ -1,0 +1,35 @@
+server:
+  port: 9010
+  
+spring:
+  application:
+    name: turbine-dashboard
+    
+  profiles:
+    active: development
+    
+  cloud:
+    config:
+      #name: config-server
+      #enabled: true
+      uri: http://localhost:8888
+      
+turbine:
+   clusterNameExpression: new String('default')
+   appConfig : zuul-api-gateway  
+   instanceUrlSuffix:
+    default: hystrix.stream
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+      
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh,refresh,health,hystrix.stream
+        
+ 
+      base-path: /
