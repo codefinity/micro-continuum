@@ -45,15 +45,16 @@
 
 ##### Infrastructure
 
-1. Config Server and Clients
-2. Eureka Service Registry
-3. Zuul Gateway
-4. Zuul Filter
-5. Feign Clients
-6. Communication between Microservices using Spring Cloud Streams (RabbitMQ)
-7. Hystrix Circuit Breaker integration with Zuul
-8. Hystrix Dashboard Integration
-9. Turbine Integration
+* Config Server and Clients
+* Eureka Service Registry
+* Zuul Gateway
+* Zuul Filter
+* Feign Clients
+* Communication between Microservices using Spring Cloud Streams (RabbitMQ)
+* Hystrix Circuit Breaker integration with Zuul
+* Hystrix Dashboard Integration
+* Turbine Integration
+* Profiles
 
 #### Currently In Development
 
@@ -92,6 +93,10 @@
 ##### Automation
 
 1. Self Healing Capabilities
+
+##### Emailing Microservice
+
+1. Setting Templates
 
 ##### User Management Microservice
 
