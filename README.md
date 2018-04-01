@@ -15,6 +15,7 @@
 
   * [Features](#features)
       * [Released](#released)
+      * [Completed](#completed)
       * [Currently In Development](#currently-in-development)
       * [In Development Pipeline](#in-development-pipeline)
   * [Getting Started](#getting-started)
@@ -53,14 +54,15 @@
 
 1. Hystrix Circuit Breaker integration with Zuul
 2. Hystrix Dashboard Integration
-3. Ribbon load balancing
+3. Hystrix Caching Fallback
 4. Hystrix Turbine Integration
-5. Logging Management using ELK Stack
-6. Spring Cloud Sleuth integration
+5. Ribbon load balancing
+6. Logging Management using ELK Stack
+7. Spring Cloud Sleuth integration
 
 #### In Development Pipeline
 
-#### Docker
+##### Docker
 
 1. Dockerizing the microservices
 2. Deploying using docker compose file
