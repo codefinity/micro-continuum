@@ -29,6 +29,11 @@ Spring Cloud Stream Test:
 
 http://localhost:8095/x-microservice/testspringcloudstreaming
 
+Circuit Breaker URL:
+--------------------
+
+http://localhost:8095/y-service/user/1
+
 Hystrix:
 -------
 
@@ -39,7 +44,6 @@ Turbine:
 --------
 URL: http://localhost:9010/hystrix
 Add URL: http://localhost:9010/turbine.stream
-
 
 ToDo:
 -----
