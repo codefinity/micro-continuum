@@ -60,66 +60,66 @@
 
 ##### Infrastructure
 
-1. Hystrix Caching Fallback
-2. Ribbon load balancing
+* Hystrix Caching Fallback
+* Ribbon load balancing
 
 ##### Logging
 
-1. Logging Management using ELK Stack
-2. Spring Cloud Sleuth integration
+* Logging Management using ELK Stack
+* Spring Cloud Sleuth integration
 
 #### In Development Pipeline
 
 ##### Docker
 
-1. Dockerizing the microservices
-2. Deploying using docker compose file
+* Dockerizing the microservices
+* Deploying using docker compose file
 
 ##### Log Analysis
 
-1. Storing logs using Lambda Architecture
-2. Real time log analysis using Apache Storm
-3. Real time notification in case of failures
+* Storing logs using Lambda Architecture
+* Real time log analysis using Apache Storm
+* Real time notification in case of failures
 
 ##### Caching
 
-1. Caching using etags
-2. Caching using Redis
+* Caching using etags
+* Caching using Redis
 
 ##### Communication
 
-1. Spring protocol conversion using Spring Integration
+* Spring protocol conversion using Spring Integration
 
 ##### Automation
 
-1. Self Healing Capabilities
+* Self Healing Capabilities
 
 ##### Emailing Microservice
 
-1. Setting Templates
+* Setting Templates
 
 ##### User Management Microservice
 
-1. Multi-Tenant capabilities - Can be used to serve multiple clients and their uses.
-2. Basic User operations - Get, Add, Update, Delete, Change Password, Forgot Password
-3. Manage social logins.
-4. Token based authentication.
-5. Manage Social Authentications.
-6. Log User Statistics.
-7. Secure login methods like 2 factor Authentication, OAuth2, JWT
-8. Manage roles and permissions.
-9. Dockerized
-10. Serverless Capabilities
-11. Can be added through Maven
-12. Basic User Management Console
-13. Serverless Capabilities
-14. Events Subscription
-15. Custom User Rules
-16. Create plugins for customizations
-17. User Communications
-18. Autoscalable
-19. Single Sign On
-20. Integration with messaging systems
+* Multi-Tenant capabilities - Can be used to serve multiple clients and their uses.
+* Basic User operations - Get, Add, Update, Delete, Change Password, Forgot Password
+* Manage social logins.
+* Token based authentication.
+* Manage Social Authentications.
+* Log User Statistics.
+* Secure login methods like 2 factor Authentication, OAuth2, JWT
+* Manage roles and permissions.
+* Dockerized
+* Serverless Capabilities
+* Can be added through Maven
+* Basic User Management Console
+* Serverless Capabilities
+* Events Subscription
+* Custom User Rules
+* Create plugins for customizations
+* User Communications
+* Autoscalable
+* Single Sign On
+* Integration with messaging systems
 
 ## Getting Started
 
