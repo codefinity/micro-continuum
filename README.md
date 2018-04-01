@@ -49,16 +49,16 @@
 4. Zuul Filter
 5. Feign Clients
 6. Communication between Microservices using Spring Cloud Streams (RabbitMQ)
+7. Hystrix Circuit Breaker integration with Zuul
+8. Hystrix Dashboard Integration
 
 #### Currently In Development
 
-1. Hystrix Circuit Breaker integration with Zuul
-2. Hystrix Dashboard Integration
-3. Hystrix Caching Fallback
-4. Hystrix Turbine Integration
-5. Ribbon load balancing
-6. Logging Management using ELK Stack
-7. Spring Cloud Sleuth integration
+1. Hystrix Caching Fallback
+2. Hystrix Turbine Integration
+3. Ribbon load balancing
+4. Logging Management using ELK Stack
+5. Spring Cloud Sleuth integration
 
 #### In Development Pipeline
 
