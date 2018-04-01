@@ -28,12 +28,25 @@ zuul:
     x-microservice:      
       serviceId: x-microservice
       path: /x-microservice/**
+      stripPrefix: true      
     y-microservice:      
       serviceId: y-microservice
       path: /y-microservice/**
+      stripPrefix: true      
     z-microservice:      
       serviceId: z-microservice
       path: /z-microservice/**
+      stripPrefix: true      
+      
+hystrix:
+  metrics:
+    enabled: true
+  command:
+    x-microservice:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 500
       
 eureka:
   client:
