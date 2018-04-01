@@ -12,14 +12,14 @@ import org.springframework.http.client.ClientHttpResponse;
 
 import com.netflix.hystrix.exception.HystrixTimeoutException;
 
-public class XSericeFallbackProvider implements FallbackProvider {
+public class YSericeFallbackProvider implements FallbackProvider {
 
 	@Override
 	public String getRoute() {
 
 		System.out.println("ZUUL: Passing through Hystrix");
 
-		return "x-microservice";
+		return "y-microservice";
 
 	}
 

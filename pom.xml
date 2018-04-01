@@ -16,5 +16,6 @@
     <module>template-microservice</module>
     <module>eureka-service-discovery</module>
     <module>zuul-api-gateway</module>
+    <module>hystrix-dashboard</module>
   </modules>
 </project>

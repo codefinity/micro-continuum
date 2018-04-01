@@ -16,21 +16,12 @@
 
 package com.codefinity.microcontinuum.gateway;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
-import org.springframework.web.bind.annotation.CrossOrigin;
+/*@RunWith(SpringJUnit4ClassRunner.class)
+@SpringApplicationConfiguration(classes = Application.class)
+@WebAppConfiguration
+@ActiveProfiles("scratch")*/
+// Separate profile for web tests to avoid clashing databases
+public class SampleDataRestApplicationTests {
 
-@SpringBootApplication
-@EnableDiscoveryClient
-@CrossOrigin
-@EnableCircuitBreaker
-@EnableZuulProxy
-public class Application {
 
-	public static void main(String[] args) throws Exception {
-		SpringApplication.run(Application.class, args);
-	}
 }

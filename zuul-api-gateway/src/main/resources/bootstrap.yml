@@ -51,12 +51,13 @@ hystrix:
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka   
+      defaultZone: http://localhost:8761/eureka
     
 management:
   endpoints:
     web:
       exposure:
-        include: bus-refresh,refresh
+        include: bus-refresh,refresh,health,hystrix.stream
         
+ 
       base-path: /
