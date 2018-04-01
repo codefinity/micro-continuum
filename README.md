@@ -62,7 +62,7 @@
 1. Hystrix Caching Fallback
 2. Ribbon load balancing
 
-##### Loging
+##### Logging
 
 1. Logging Management using ELK Stack
 2. Spring Cloud Sleuth integration
