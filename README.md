@@ -60,6 +60,11 @@
 
 #### In Development Pipeline
 
+#### Docker
+
+1. Dockerizing the microservices
+2. Deploying using docker compose file
+
 ##### Log Analysis
 
 1. Storing logs using Lambda Architecture
