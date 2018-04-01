@@ -45,14 +45,41 @@
 1. Config Server and Clients
 2. Eureka Service Registry
 3. Zuul Gateway
-4. Feign Clients
+4. Zuul Filter
+5. Feign Clients
+6. Communication between Microservices using Spring Cloud Streams (RabbitMQ)
 
 #### Currently In Development
 
-1. Communication between Microservices using RabbitMQ Streams
-2. Logging Management using ELK Stack
+1. Hystrix Circuit Breaker integration with Zuul
+2. Hystrix Dashboard Integration
+3.
+4. Hystrix Turbine Integration
+5. Logging Management using ELK Stack
+6. Spring Cloud Sleuth integration
 
 #### In Development Pipeline
+
+##### Log Analysis
+
+1. Storing logs using Lambda Architecture
+2. Real time log analysis using Apache Storm
+3. Real time notification in case of failures
+
+##### Caching
+
+1. Caching using etags
+2. Caching using Redis
+
+##### Communication
+
+1. Spring protocol conversion using Spring Integration
+
+##### Automation
+
+1. Self Healing Capabilities
+
+##### User Management Microservice
 
 1. Multi-Tenant capabilities - Can be used to serve multiple clients and their uses.
 2. Basic User operations - Get, Add, Update, Delete, Change Password, Forgot Password
