@@ -15,6 +15,7 @@
 
   * [Features](#features)
       * [Released](#released)
+      * [Completed](#completed)
       * [Currently In Development](#currently-in-development)
       * [In Development Pipeline](#in-development-pipeline)
   * [Getting Started](#getting-started)
