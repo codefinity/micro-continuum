@@ -81,6 +81,10 @@
 * Real time log analysis using Apache Storm
 * Real time notification in case of failures
 
+##### API Documentation
+
+* Integrating Swagger
+
 ##### Caching
 
 * Caching using etags
