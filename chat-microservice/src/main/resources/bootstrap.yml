@@ -3,7 +3,7 @@ server:
   
 spring:
   application:
-    name: template-microservice
+    name: chat-microservice
     
   profiles:
     active: development
