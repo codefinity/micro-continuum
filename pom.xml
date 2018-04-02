@@ -18,5 +18,8 @@
     <module>zuul-api-gateway</module>
     <module>hystrix-dashboard</module>
     <module>turbine-dashboard</module>
+    <module>email-microservice</module>
+    <module>notification-microservice</module>
+    <module>chat-microservice</module>
   </modules>
 </project>
