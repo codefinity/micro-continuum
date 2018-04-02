@@ -9,6 +9,7 @@
   <url>http://maven.apache.org</url>
   <modules>
     <module>user-microservice</module>
+    <module>geography-microservice</module>
     <module>config-server</module>
     <module>x-microservice</module>
     <module>y-microservice</module>
