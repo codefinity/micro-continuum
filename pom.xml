@@ -24,5 +24,7 @@
     <module>chat-microservice</module>
     <module>common</module>
     <module>management</module>
+    <module>audit-microservice</module>
+    <module>search-microservice</module>
   </modules>
 </project>

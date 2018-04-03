@@ -1,0 +1,37 @@
+server:
+  port: 8050
+  
+spring:
+  application:
+    name: template-microservice
+    
+  profiles:
+    active: development
+    
+  cloud:
+    config:
+      #name: config-server
+      #enabled: true
+      uri: http://localhost:8888
+      
+    bus:
+      enabled: true  
+         
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: admin
+    password: password  
+      
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka    
+    
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh,refresh
+        
+      #base-path: /
