@@ -45,6 +45,17 @@ Turbine:
 URL: http://localhost:9010/hystrix
 Add URL: http://localhost:9010/turbine.stream
 
+Load Balancing:
+---------------
+
+Start: config server, discovery, zuul
+
+java -Dserver.port=2222 -jar y-microservice-1.0.jar
+java -Dserver.port=1111 -jar y-microservice-1.0.jar
+
+load this url in the browser: http://localhost:8095/y-microservice/user/1
+
+
 ToDo:
 -----
 
