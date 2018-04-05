@@ -4,8 +4,8 @@
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>email-microservice</artifactId>
 	<groupId>com.codefinity.microcontinuum</groupId>
-	<name>Spring Boot Data REST Sample</name>
-	<description>Spring Boot Data REST Sample</description>
+	<name>Email Service</name>
+	<description>Email Service</description>
 	<version>1.0</version>
 	<url>http://projects.spring.io/spring-boot/</url>
 	<organization>

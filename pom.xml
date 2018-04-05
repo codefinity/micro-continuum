@@ -5,7 +5,8 @@
   <artifactId>micro-continuum</artifactId>
   <packaging>pom</packaging>
   <version>1.0</version>
-  <name>micro-continuum</name>
+  <name>Micro-Continuum</name>
+  <description>Micro-Continuum</description>
   <url>http://maven.apache.org</url>
   <modules>
     <module>user-microservice</module>

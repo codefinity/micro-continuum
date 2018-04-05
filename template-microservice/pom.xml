@@ -4,8 +4,8 @@
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>template-microservice</artifactId>
 	<groupId>com.codefinity.microcontinuum</groupId>
-	<name>Spring Boot Data REST Sample</name>
-	<description>Spring Boot Data REST Sample</description>
+	<name>Template Microservice</name>
+	<description>Template Microservice</description>
 	<version>1.0</version>
 	<url>http://projects.spring.io/spring-boot/</url>
 	<organization>
