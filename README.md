@@ -57,12 +57,12 @@
 * Profiles
 * Hystrix Caching Fallback
 * Ribbon load balancing
+* Logging Management using ELK Stack
 
 #### Currently In Development
 
 ##### Logging
 
-* Logging Management using ELK Stack
 * Spring Cloud Sleuth integration
 
 ##### Docker
