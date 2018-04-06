@@ -55,7 +55,6 @@
 * Hystrix Dashboard Integration
 * Turbine Integration
 * Profiles
-* Hystrix Caching Fallback
 * Ribbon load balancing
 
 ##### Logging
@@ -94,6 +93,7 @@
 
 * Caching using etags
 * Caching using Redis
+* Hystrix Caching Fallback
 
 ##### Communication
 
