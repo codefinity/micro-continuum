@@ -62,6 +62,10 @@
 * Logging Management using ELK Stack
 * Spring Cloud Sleuth integration - Feign and RabbitMQ
 
+##### Other
+
+* Microservice Events
+
 #### Currently In Development
 
 ##### Docker
