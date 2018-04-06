@@ -55,25 +55,25 @@
 * Hystrix Dashboard Integration
 * Turbine Integration
 * Profiles
-
-#### Currently In Development
-
-##### Infrastructure
-
 * Hystrix Caching Fallback
 * Ribbon load balancing
+
+#### Currently In Development
 
 ##### Logging
 
 * Logging Management using ELK Stack
 * Spring Cloud Sleuth integration
 
-#### In Development Pipeline
-
 ##### Docker
 
 * Dockerizing the microservices
 * Deploying using docker compose file
+
+#### In Development Pipeline
+
+##### Infrastructure
+
 
 ##### Log Analysis
 
