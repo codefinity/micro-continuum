@@ -65,5 +65,17 @@ public class TestController {
 		return "Message Logged";
 
 	}
+	
+	@RequestMapping(value = "/sleuthtest")
+	public String sleuthTest() {
+		
+		logger.info("Sleuth Message Start");
+
+		String message = yService.sleuthTest("Sleuth Test Message");
+		
+		logger.info("Sleuth Message End");
+		
+		return message;
+	}
 
 }

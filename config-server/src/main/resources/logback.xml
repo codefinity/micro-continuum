@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
     <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
-    <property name="spring.application.name" value="search-apigateway"/>
+    <property name="spring.application.name" value="config-server"/>
 	<include resource="org/springframework/boot/logging/logback/console-appender.xml" />
 	<appender name="stash" class="net.logstash.logback.appender.LogstashTcpSocketAppender">
       	<destination>localhost:5000</destination>

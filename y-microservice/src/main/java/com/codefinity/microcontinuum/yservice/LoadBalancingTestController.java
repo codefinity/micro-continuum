@@ -8,12 +8,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.codefinity.microcontinuum.yservice.remotecalls.ZService;
+
 @RestController
 @RefreshScope
 public class LoadBalancingTestController {
 
 	@Autowired
 	Environment environment;
+	
+	@Autowired
+	private ZService zService;
 
 	@RequestMapping(value = "/user/{id}", method = RequestMethod.GET)
 	public User user(@PathVariable String id) {
@@ -31,5 +36,11 @@ public class LoadBalancingTestController {
 
 		return user;
 
+	}
+	
+	@RequestMapping(value = "/sleuthtest/{message}")
+	public String sleuthTest(@PathVariable("message") String message ) {
+
+		return zService.sleuthTest(message);
 	}
 }
