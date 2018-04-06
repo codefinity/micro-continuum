@@ -1,31 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.codefinity.microcontinuum</groupId>
-  <artifactId>micro-continuum</artifactId>
-  <packaging>pom</packaging>
-  <version>1.0</version>
-  <name>Micro-Continuum</name>
-  <description>Micro-Continuum</description>
-  <url>http://maven.apache.org</url>
-  <modules>
-    <module>user-microservice</module>
-    <module>geography-microservice</module>
-    <module>config-server</module>
-    <module>x-microservice</module>
-    <module>y-microservice</module>
-    <module>z-microservice</module>
-    <module>template-microservice</module>
-    <module>eureka-service-discovery</module>
-    <module>zuul-api-gateway</module>
-    <module>hystrix-dashboard</module>
-    <module>turbine-dashboard</module>
-    <module>email-microservice</module>
-    <module>notification-microservice</module>
-    <module>chat-microservice</module>
-    <module>common</module>
-    <module>management</module>
-    <module>audit-microservice</module>
-    <module>search-microservice</module>
-  </modules>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.codefinity.microcontinuum</groupId>
+	<artifactId>micro-continuum</artifactId>
+	<packaging>pom</packaging>
+	<version>1.0</version>
+	<name>Micro-Continuum</name>
+	<description>Micro-Continuum</description>
+	<url>http://maven.apache.org</url>
+	<modules>
+		<module>common</module>
+		<module>eureka-service-discovery</module>
+		<module>config-server</module>
+		<module>zuul-api-gateway</module>
+		<module>hystrix-dashboard</module>
+		<module>turbine-dashboard</module>
+		<module>user-microservice</module>
+		<module>x-microservice</module>
+		<module>y-microservice</module>
+		<module>z-microservice</module>
+		<module>email-microservice</module>
+		<module>notification-microservice</module>
+		<module>chat-microservice</module>
+		<module>management</module>
+		<module>audit-microservice</module>
+		<module>search-microservice</module>
+		<module>geography-microservice</module>
+		<module>template-microservice</module>
+	</modules>
 </project>
