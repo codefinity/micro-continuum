@@ -1,8 +1,7 @@
 package com.codefinity.microcontinuum.xservice;
 
-import java.util.HashMap;
-import java.util.Map;
-
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
@@ -17,6 +16,8 @@ import com.codefinity.microcontinuum.xservice.remotecalls.dto.User;
 @RestController
 @RefreshScope
 public class TestController {
+	
+	private static final Logger logger = LoggerFactory.getLogger(TestController.class);
 
 	@Value("${x-microservice.config-test-value}")
 	private String testProperty;
@@ -43,15 +44,26 @@ public class TestController {
 	public String testSpringCloudStreaming() {
 
 		sender.send("Hello !");
-		
-		/*Map<String, Object> message = new HashMap<String, Object>();
-		message.put("MESSAGE1", "message-1");
-		message.put("MESSAGE2", "message-2");
-		message.put("MESSAGE3", "message-3");
 
-		sender.send(message);*/
-		
+		/*
+		 * Map<String, Object> message = new HashMap<String, Object>();
+		 * message.put("MESSAGE1", "message-1"); message.put("MESSAGE2", "message-2");
+		 * message.put("MESSAGE3", "message-3");
+		 * 
+		 * sender.send(message);
+		 */
+
 		return "Message Sent";
 
 	}
+
+	@RequestMapping(value = "/elklogtest")
+	public String elkLoTest() {
+
+		logger.info("This is a log message");
+
+		return "Message Logged";
+
+	}
+
 }
