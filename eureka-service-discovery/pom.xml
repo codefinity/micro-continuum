@@ -34,7 +34,8 @@
 			<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
 		</dependency>
 
-		<!-- added to fix error with java 9 "Implementation of JAXB-API has not been found on module path or classpath." -->
+		<!-- added to fix error with java 9 "Implementation of JAXB-API has not 
+			been found on module path or classpath." -->
 		<!-- Reference: https://stackoverflow.com/questions/43574426/how-to-resolve-java-lang-noclassdeffounderror-javax-xml-bind-jaxbexception-in-j -->
 		<dependency>
 			<groupId>javax.xml.bind</groupId>
@@ -55,8 +56,8 @@
 			<groupId>javax.activation</groupId>
 			<artifactId>activation</artifactId>
 			<version>1.1.1</version>
-		</dependency>		
-		<!-- error fix  -->
+		</dependency>
+		<!-- error fix -->
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -76,6 +77,12 @@
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-bus-amqp</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>net.logstash.logback</groupId>
+			<artifactId>logstash-logback-encoder</artifactId>
+			<version>5.0</version>
 		</dependency>
 
 		<dependency>
