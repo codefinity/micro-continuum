@@ -85,6 +85,10 @@
 
 * Integrating Swagger
 
+##### Devops
+
+* Building Jenkins CI Pipeline
+
 ##### Caching
 
 * Caching using etags
