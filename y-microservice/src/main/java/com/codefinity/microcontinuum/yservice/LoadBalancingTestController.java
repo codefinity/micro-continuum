@@ -1,5 +1,7 @@
 package com.codefinity.microcontinuum.yservice;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.core.env.Environment;
@@ -14,9 +16,11 @@ import com.codefinity.microcontinuum.yservice.remotecalls.ZService;
 @RefreshScope
 public class LoadBalancingTestController {
 
+	private static final Logger logger = LoggerFactory.getLogger(LoadBalancingTestController.class);
+
 	@Autowired
 	Environment environment;
-	
+
 	@Autowired
 	private ZService zService;
 
@@ -37,9 +41,11 @@ public class LoadBalancingTestController {
 		return user;
 
 	}
-	
+
 	@RequestMapping(value = "/sleuthtest/{message}")
-	public String sleuthTest(@PathVariable("message") String message ) {
+	public String sleuthTest(@PathVariable("message") String message) {
+
+		logger.info("Sleuth Message at Y-Microservice");
 
 		return zService.sleuthTest(message);
 	}

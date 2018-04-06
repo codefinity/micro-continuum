@@ -69,7 +69,7 @@ public class TestController {
 	@RequestMapping(value = "/sleuthtest")
 	public String sleuthTest() {
 		
-		logger.info("Sleuth Message Start");
+		logger.info("Sleuth Message at X-Microservice");
 
 		String message = yService.sleuthTest("Sleuth Test Message");
 		
