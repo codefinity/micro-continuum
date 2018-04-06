@@ -60,7 +60,7 @@
 ##### Logging
 
 * Logging Management using ELK Stack
-* Spring Cloud Sleuth integration
+* Spring Cloud Sleuth integration - Feign and RabbitMQ
 
 #### Currently In Development
 
