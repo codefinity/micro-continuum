@@ -1,5 +1,7 @@
 package com.codefinity.microcontinuum.xservice.messaging;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.cloud.stream.annotation.EnableBinding;
@@ -13,6 +15,8 @@ import org.springframework.stereotype.Component;
 @EnableBinding(MicroserviceSource.class)
 public class Sender {
 
+	private static final Logger logger = LoggerFactory.getLogger(Sender.class);
+	
 	public Sender() {
 
 	}
@@ -24,6 +28,9 @@ public class Sender {
 
 	public void send(String message) {
 		// template.convertAndSend("InventoryQ", message);
+		
+		logger.info("Sender: Sleuth Message at X-Microservice for RabbitMQ");
+		
 		messageChannel.send(MessageBuilder.withPayload(message).build());
 	}
 }

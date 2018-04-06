@@ -43,6 +43,8 @@ public class TestController {
 	@RequestMapping(value = "/testspringcloudstreaming")
 	public String testSpringCloudStreaming() {
 
+		logger.info("Controller: Sleuth Message at X-Microservice for RabbitMQ");
+		
 		sender.send("Hello !");
 
 		/*
