@@ -146,6 +146,10 @@
 
 ##### Management Microservice
 
+#### Planned For Future
+
+##### Social Networking Microservice
+
 ## Getting Started
 
 ### Setup
