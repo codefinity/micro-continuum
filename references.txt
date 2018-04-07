@@ -1,0 +1,5 @@
+Spring Cloud Sleuth Integration With RabbitMQ:
+
+http://cloud.spring.io/spring-cloud-static/spring-cloud-sleuth/2.0.0.M9/single/spring-cloud-sleuth.html#_sleuth_with_zipkin_over_rabbitmq_or_kafka
+
+
