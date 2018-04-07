@@ -73,6 +73,13 @@
 * Dockerizing the microservices
 * Deploying using docker compose file
 
+##### Security
+
+* Authentication using OAuth/JWT/OpenId Connect
+* Authorization
+* Inter Microservices Security
+* Social Logins - Google, Facebook, Twitter
+
 #### In Development Pipeline
 
 ##### Infrastructure
@@ -115,24 +122,29 @@
 
 * Multi-Tenant capabilities - Can be used to serve multiple clients and their uses.
 * Basic User operations - Get, Add, Update, Delete, Change Password, Forgot Password
-* Manage social logins.
-* Token based authentication.
-* Manage Social Authentications.
 * Log User Statistics.
-* Secure login methods like 2 factor Authentication, OAuth2, JWT
 * Manage roles and permissions.
-* Dockerized
 * Serverless Capabilities
-* Can be added through Maven
-* Basic User Management Console
+* Basic User Management Console in React
 * Serverless Capabilities
 * Events Subscription
 * Custom User Rules
 * Create plugins for customizations
-* User Communications
 * Autoscalable
 * Single Sign On
 * Integration with messaging systems
+
+##### EMail Microservice
+
+##### Chat Microservice
+
+##### Search Microservice
+
+##### Geography Microservice
+
+##### Notification Microservice
+
+##### Management Microservice
 
 ## Getting Started
 
