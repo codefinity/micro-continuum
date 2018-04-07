@@ -146,6 +146,8 @@
 
 ##### Management Microservice
 
+##### Audit Microservice
+
 #### Planned For Future
 
 ##### Social Networking Microservice
