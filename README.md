@@ -86,9 +86,7 @@
 
 * Kubernetes Integration
 
-##### Logging
-
-##### Log Analysis
+##### Logging and Log Analysis
 
 * Storing logs using Lambda Architecture
 * Real time log analysis using Apache Storm
