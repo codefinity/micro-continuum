@@ -55,6 +55,16 @@ java -Dserver.port=1111 -jar y-microservice-1.0.jar
 
 load this url in the browser: http://localhost:8095/y-microservice/user/1
 
+KIBANA:
+-------
+
+URL: http://localhost:5601/
+
+Add:
+
+Default Index Pattern: logstash-*
+Field: @timestamp
+
 
 ToDo:
 -----
