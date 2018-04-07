@@ -84,6 +84,8 @@
 
 ##### Infrastructure
 
+* Kubernetes Integration
+
 ##### Logging
 
 ##### Log Analysis
