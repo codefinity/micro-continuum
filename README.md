@@ -73,6 +73,10 @@
 * Dockerizing the microservices
 * Deploying using docker compose file
 
+##### Infrastructure
+
+* Integrating Zipkin Server
+
 ##### Security
 
 * Authentication using OAuth/JWT/OpenId Connect
