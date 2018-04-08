@@ -56,6 +56,7 @@
 * Turbine Integration
 * Profiles
 * Ribbon load balancing
+* Integrating Zipkin Server
 
 ##### Logging
 
@@ -73,16 +74,14 @@
 * Dockerizing the microservices
 * Deploying using docker compose file
 
-##### Infrastructure
-
-* Integrating Zipkin Server
-
 ##### Security
 
 * Authentication using OAuth/JWT/OpenId Connect
 * Authorization
 * Inter Microservices Security
 * Social Logins - Google, Facebook, Twitter
+
+##### Infrastructure
 
 #### In Development Pipeline
 
