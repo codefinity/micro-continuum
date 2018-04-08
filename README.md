@@ -117,10 +117,6 @@
 
 * Self Healing Capabilities
 
-##### Emailing Microservice
-
-* Setting Templates
-
 ##### User Management Microservice
 
 * Multi-Tenant capabilities - Can be used to serve multiple clients and their uses.
@@ -138,6 +134,8 @@
 * Integration with messaging systems
 
 ##### EMail Microservice
+
+* Setting Templates
 
 ##### Chat Microservice
 
