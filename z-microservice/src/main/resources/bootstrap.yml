@@ -22,6 +22,17 @@ spring:
     port: 5672
     username: admin
     password: password  
+
+  zipkin:
+    service:
+      name: z-microservice
+    sender: 
+      type: web
+    baseUrl: http://localhost:9411
+    
+  sleuth:
+    sampler: 
+      probability: 1.0
     
 eureka:
   client:

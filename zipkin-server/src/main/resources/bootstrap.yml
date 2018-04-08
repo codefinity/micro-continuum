@@ -1,9 +1,9 @@
 server:
-  port: 8020
+  port: 5000
   
 spring:
   application:
-    name: x-microservice
+    name: zipkin-server
     
   profiles:
     active: development
@@ -15,31 +15,13 @@ spring:
       uri: http://localhost:8888
       
     bus:
-      enabled: true
-      
-    stream:
-      bindings:
-        messageq:
-          destination: microserviceQ
-              
-      
+      enabled: true  
+         
   rabbitmq:
     host: localhost
     port: 5672
     username: admin
-    password: password      
-    
-  zipkin:
-    service:
-      name: x-microservice
-    sender: 
-      type: web
-    baseUrl: http://localhost:9411
-    
-  sleuth:
-    sampler: 
-      probability: 1.0
-
+    password: password  
       
 eureka:
   client:
@@ -53,17 +35,3 @@ management:
         include: bus-refresh,refresh
         
       base-path: /
-      
-#logging:
-#  level: 
-#    root: info
-
-
-  
-    
-
-
-
-
-
-

@@ -16,6 +16,7 @@
 		<module>zuul-api-gateway</module>
 		<module>hystrix-dashboard</module>
 		<module>turbine-dashboard</module>
+		<module>zipkin-server</module>
 		<module>user-microservice</module>
 		<module>x-microservice</module>
 		<module>y-microservice</module>

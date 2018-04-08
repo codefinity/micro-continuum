@@ -42,6 +42,31 @@ services:
       - elk
     depends_on:
       - elasticsearch
+      
+      
+
+  # The zipkin process services the UI, and also exposes a POST endpoint that
+  # instrumentation can send trace data to. Scribe is disabled by default.
+  # Switch storage type to Elasticsearch
+  zipkin:
+    #image: openzipkin/zipkin
+    build:
+      context: zipkin/
+    environment:
+      - STORAGE_TYPE=elasticsearch
+      # Point the zipkin at the storage backend
+      - ES_HOSTS=elasticsearch
+      # Uncomment to see requests to and from elasticsearch
+      # - ES_HTTP_LOGGING=BODY
+    ports:
+      # Port used for the Zipkin UI and HTTP Api
+      - 9411:9411
+      # Uncomment if you set SCRIBE_ENABLED=true
+      # - 9410:9410
+    networks:
+      - elk
+    depends_on:
+      - elasticsearch
 
 networks:
 

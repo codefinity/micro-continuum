@@ -65,6 +65,18 @@ Add:
 Default Index Pattern: logstash-*
 Field: @timestamp
 
+Zipkin:
+-------
+http://localhost:9411/
+
+Test using 
+For feign: http://localhost:8095/x-microservice/sleuthtest
+For RabbitMQ: For feign: http://localhost:8095/x-microservice/testspringcloudstreaming
+
+Zipkin only works with spring boot 1.5. Using a prebuilt Zipkin jar for server for now.
+Zipkin-Server Project exists for future implementation when Zipkin is compatable with Spring Boot 2.0.
+
+
 
 ToDo:
 -----
@@ -77,6 +89,10 @@ ToDo:
 3) Eureka server security
 
 4) See how to send Domain Event message in spring cloud stream.
+
+5) Deploy docker on multiple servers.
+
+
 
 
 
