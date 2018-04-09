@@ -24,7 +24,6 @@
       * [Console](#console)
       * [Initial Tests](#initial-tests)
   * [API Definition](#api-definition)
-  * [Usage](#usage)
   * [Sponsor](#sponsor)
   * [Contributing](#contributing)
   * [Development](#development)
@@ -184,8 +183,6 @@
 ## API Definition
 
 API Documentation can be found [here](https://codefinity.gitbooks.io/micro-continuum/content/)
-
-## Usage
 
 ## Sponsor
 
