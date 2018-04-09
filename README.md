@@ -54,7 +54,7 @@
 * Hystrix Circuit Breaker integration with Zuul
 * Hystrix Dashboard Integration
 * Turbine Integration
-* Profiles
+* Profiles - Development, Testing and Production
 * Ribbon load balancing
 * Integrating Zipkin Server
 
