@@ -139,11 +139,21 @@
 
 ##### Chat Microservice
 
+* Used for live conninication between users
+* Quickly setting up chat rooms
+
 ##### Search Microservice
+
+* Uses Elastisearch for searching
 
 ##### Geography Microservice
 
+* Geoserver Integration
+* Reactive services to store user location
+
 ##### Notification Microservice
+
+* Generates push notifications for mobile and web
 
 ##### Management Microservice
 
