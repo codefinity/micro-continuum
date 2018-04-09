@@ -156,6 +156,8 @@
 
 ##### Social Networking Microservice
 
+##### Chatbot Microservice
+
 ## Getting Started
 
 ### Setup
@@ -173,19 +175,6 @@ API Documentation can be found [here](https://codefinity.gitbooks.io/micro-conti
 ## Usage
 
 ## Sponsor
-
-Kindly support the Developers of the project who spend considerable time, effort and money in
-
-  * Designing.
-  * Documenting.
-  * Reading the articles on the web abd identifying best practices.
-  * Buying and reading books to find best techniques to Architect the project.
-  * Writing maintainable code.
-  * Keeping the project up to date with latest tachnologies.
-
-Please Donate
-
-Credits will be given in Special Thanks section.
 
 ## Contributing
 You may contribute in several ways like creating new features, testing, fixing bugs, improving documentation, and examples. [Find out more](https://github.com/codefinity/micro-continuum/wiki/Contributing).

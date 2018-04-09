@@ -81,16 +81,20 @@ Zipkin-Server Project exists for future implementation when Zipkin is compatable
 ToDo:
 -----
 
-1) Secure communication between microservice and config server.
+* Logging Microservice name in the logs using Sleuth.
 
-2) Secure communication between microservices using Feign.
+* Sending JSON data over RabbitMQ and desearlizing it on receiving end.
+
+* Secure communication between microservice and config server.
+
+* Secure communication between microservices using Feign.
 	https://cloud.spring.io/spring-cloud-netflix/multi/multi_spring-cloud-feign.html
 
-3) Eureka server security
+* Eureka server security
 
-4) See how to send Domain Event message in spring cloud stream.
+* See how to send Domain Event message in spring cloud stream.
 
-5) Deploy docker on multiple servers.
+* Deploy docker on multiple servers.
 
 
 
