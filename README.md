@@ -157,7 +157,7 @@
 
 ##### Management Microservice
 
-* Setting Alarms for Failure - SMS, PUSH and EMAIL
+* Setting Alarms for Failure - SMS, Push Notifications and EMail
 
 ##### Audit Microservice
 
