@@ -157,6 +157,10 @@
 
 ##### Management Microservice
 
+* Microservices Control Dashboard
+* Sheduling test routines
+* Setting Infracture Paramaters
+* 
 * Setting Alarms for Failure - SMS, Push Notifications and EMail
 
 ##### Audit Microservice
