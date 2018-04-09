@@ -54,8 +54,9 @@
 * Hystrix Circuit Breaker integration with Zuul
 * Hystrix Dashboard Integration
 * Turbine Integration
-* Profiles
+* Profiles - Development, Testing and Production
 * Ribbon load balancing
+* Integrating Zipkin Server
 
 ##### Logging
 
@@ -73,16 +74,14 @@
 * Dockerizing the microservices
 * Deploying using docker compose file
 
-##### Infrastructure
-
-* Integrating Zipkin Server
-
 ##### Security
 
 * Authentication using OAuth/JWT/OpenId Connect
 * Authorization
 * Inter Microservices Security
 * Social Logins - Google, Facebook, Twitter
+
+##### Infrastructure
 
 #### In Development Pipeline
 
@@ -118,10 +117,6 @@
 
 * Self Healing Capabilities
 
-##### Emailing Microservice
-
-* Setting Templates
-
 ##### User Management Microservice
 
 * Multi-Tenant capabilities - Can be used to serve multiple clients and their uses.
@@ -140,15 +135,33 @@
 
 ##### EMail Microservice
 
+* Setting Templates
+
 ##### Chat Microservice
+
+* Used for live conninication between users
+* Quickly setting up chat rooms
 
 ##### Search Microservice
 
+* Uses Elastisearch for searching
+
 ##### Geography Microservice
+
+* Geoserver Integration
+* Reactive services to store user location
 
 ##### Notification Microservice
 
+* Generates push notifications for mobile and web
+
 ##### Management Microservice
+
+* Microservices Control Dashboard
+* Sheduling test routines
+* Setting Infracture Paramaters
+* 
+* Setting Alarms for Failure - SMS, Push Notifications and EMail
 
 ##### Audit Microservice
 
