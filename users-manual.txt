@@ -1,3 +1,8 @@
+Build Docker:
+-------------
+sudo docker-compose -f ./docker-compose.development.yml up --force-recreate --build
+
+
 URLs of Microservices:
 ----------------------
 
@@ -15,6 +20,11 @@ To Refresh the properties of all microservices:
 -----------------------------------------------
 
 curl -X POST http://localhost:8020/bus-refresh
+
+Eureka Dashboard:
+-----------------
+
+http://localhost:8761/
 
 
 ZUUL Url:
@@ -77,9 +87,19 @@ Zipkin only works with spring boot 1.5. Using a prebuilt Zipkin jar for server f
 Zipkin-Server Project exists for future implementation when Zipkin is compatable with Spring Boot 2.0.
 
 
+Testing Endpoints:
+------------------
+
+Microservice Functioning: http://localhost:8095/x-microservice/hello
+Reading Config Property From Config Server: http://localhost:8095/x-microservice/configservertest
+
+
 
 ToDo:
 -----
+* Multiple config servers enabling - Done
+
+* Multiple Discovery Clients
 
 * Logging Microservice name in the logs using Sleuth.
 
@@ -95,6 +115,7 @@ ToDo:
 * See how to send Domain Event message in spring cloud stream.
 
 * Deploy docker on multiple servers.
+
 
 
 

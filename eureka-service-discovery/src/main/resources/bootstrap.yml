@@ -8,28 +8,33 @@ spring:
   profiles:
     active: development
     
+
+#Getting config server location from Service Discovery    
   cloud:
     config:
-      #name: config-server
-      #enabled: true
-      uri: http://localhost:8888
-      
-    bus:
-      enabled: true
-      
-  rabbitmq:
-    host: localhost
-    port: 5672
-    username: admin
-    password: password   
+      discovery:
+        enabled: true
+        serviceId: config-server
+    
+#      
+#    bus:
+#      enabled: true
+#      
+#  rabbitmq:
+#    host: rabbitmq
+#    port: 5672
+#    username: admin
+#    password: password   
     
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka
+      defaultZone: http://eureka-service-discovery:8761/eureka
     register-with-eureka: false
     fetch-registry: false    
     
+#Actuator Settings  
+#Endpoint http://localhost:8888/actuator/  
 management:
   endpoints:
     web:

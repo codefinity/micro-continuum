@@ -5,16 +5,26 @@ spring:
   application:
     name: config-server
     
- #In case of local repository: file:///home/nikhil/open-source/config-repo  
+#In case of local repository: file:///home/nikhil/open-source/config-repo  
   cloud:
     config:
       server:
         git:         
           uri: https://github.com/codefinity/micro-continuum-config
+
+
+#For registering config server with client so that multiple instances of config server can be run.          
+      discovery:
+        enabled: true
           
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-service-discovery:8761/eureka
           
-#Actuator Endpoint http://localhost:8888/actuator/
-          
+        
+#Actuator Settings            
+#Endpoint http://localhost:8888/actuator/          
 management:
   security:
     enabled: false

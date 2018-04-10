@@ -1,0 +1,7 @@
+FROM java:8-jre
+MAINTAINER Nikhil
+
+ADD ./target/eureka-service-discovery-1.0.jar /app/
+CMD ["java", "-Xmx200m", "-jar", "/app/eureka-service-discovery-1.0.jar"]
+
+EXPOSE 8761

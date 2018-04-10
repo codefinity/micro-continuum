@@ -1,4 +1,4 @@
-package com.codefinity.microcontinuum.gateway;
+/*package com.codefinity.microcontinuum.gateway;
 
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
@@ -25,3 +25,4 @@ public class ZuulConfig {
     }
 	
 }
+*/

@@ -1,4 +1,4 @@
-package com.codefinity.microcontinuum.gateway;
+/*package com.codefinity.microcontinuum.gateway;
 
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
@@ -38,3 +38,4 @@ public class CustomZuulFilter extends ZuulFilter{
 
 	
 }
+*/

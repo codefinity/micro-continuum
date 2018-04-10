@@ -1,0 +1,165 @@
+version: '2'
+
+services:
+
+    config-server:
+      build:
+        context: config-server/
+      restart: always
+      #volumes:
+     
+      ports:
+        - 8888:8888
+      environment:
+        ES_JAVA_OPTS: "-Xmx256m -Xms256m"
+      networks:
+        - elk
+        
+      depends_on:  
+        - eureka-service-discovery
+        
+    eureka-service-discovery:
+      build:
+        context: eureka-service-discovery/
+      restart: always
+      #volumes:
+     
+      ports:
+        - 8761:8761
+      environment:
+        ES_JAVA_OPTS: "-Xmx256m -Xms256m"
+      networks:
+        - elk
+      #depends_on:
+      #  - rabbitMQ
+        
+        
+    zuul-api-gateway:
+      build:
+        context: zuul-api-gateway/
+      restart: always
+      #volumes:
+     
+      ports:
+        - "8095:8095"
+      environment:
+        ES_JAVA_OPTS: "-Xmx256m -Xms256m"
+      networks:
+        - elk
+      depends_on:  
+        - eureka-service-discovery
+        - config-server
+        
+        
+    x-microservice:
+      build:
+        context: x-microservice/
+      restart: always
+      #volumes:
+     
+      ports:
+        - 8020:8020
+      environment:
+        ES_JAVA_OPTS: "-Xmx256m -Xms256m"
+      networks:
+        - elk     
+      depends_on:
+        - eureka-service-discovery
+        - config-server
+        - zuul-api-gateway
+#        - rabbitMQ
+        
+        
+#    rabbitMQ: 
+#      image: "rabbitmq:3-management"
+#      hostname: "rabbitmq"
+#      environment:
+#        RABBITMQ_ERLANG_COOKIE: "SWQOKODSQALRPCLNMEQG"
+#        RABBITMQ_DEFAULT_USER: "admin"
+#        RABBITMQ_DEFAULT_PASS: "password"
+#        RABBITMQ_DEFAULT_VHOST: "/"
+#      ports:
+#        - "15672:15672"
+#        - "5672:5672"
+#      networks:
+#        - elk  
+#      labels:
+#         NAME: "rabbitmq1"
+#      #volumes:
+#         #- "./enabled_plugins:/etc/rabbitmq/enabled_plugins"
+        
+        
+        
+        
+    
+
+#  elasticsearch:
+#    build:
+#      context: elasticsearch/
+#    volumes:
+#      - ./elasticsearch/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml:ro
+#      - ./elasticsearch/data:/usr/share/elasticsearch/data
+#    ports:
+#      - "9200:9200"
+#      - "9300:9300"
+#    environment:
+#      ES_JAVA_OPTS: "-Xmx256m -Xms256m"
+#    networks:
+#      - elk
+
+#  logstash:
+#    build:
+#      context: logstash/
+#    volumes:
+#      - ./logstash/config/logstash.yml:/usr/share/logstash/config/logstash.yml:ro
+#      - ./logstash/pipeline:/usr/share/logstash/pipeline:ro
+#    ports:
+#      - "5000:5000"
+#    environment:
+#      LS_JAVA_OPTS: "-Xmx256m -Xms256m"
+#    networks:
+#      - elk
+#    depends_on:
+#      - elasticsearch
+#
+#  kibana:
+#    build:
+#      context: kibana/
+#    volumes:
+#      - ./kibana/config/:/usr/share/kibana/config:ro
+#    ports:
+#      - "5601:5601"
+#    networks:
+#      - elk
+#    depends_on:
+#      - elasticsearch
+#      
+#      
+#
+#  # The zipkin process services the UI, and also exposes a POST endpoint that
+#  # instrumentation can send trace data to. Scribe is disabled by default.
+#  # Switch storage type to Elasticsearch
+#  zipkin:
+#    #image: openzipkin/zipkin
+#    build:
+#      context: zipkin/
+#    environment:
+#      - STORAGE_TYPE=elasticsearch
+#      # Point the zipkin at the storage backend
+#      - ES_HOSTS=elasticsearch
+#      # Uncomment to see requests to and from elasticsearch
+#      # - ES_HTTP_LOGGING=BODY
+#    ports:
+#      # Port used for the Zipkin UI and HTTP Api
+#      - 9411:9411
+#      # Uncomment if you set SCRIBE_ENABLED=true
+#      # - 9410:9410
+#    networks:
+#      - elk
+#    depends_on:
+#      - elasticsearch
+
+networks:
+
+  elk:
+    driver: bridge

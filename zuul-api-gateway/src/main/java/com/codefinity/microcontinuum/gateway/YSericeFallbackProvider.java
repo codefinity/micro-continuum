@@ -1,4 +1,4 @@
-package com.codefinity.microcontinuum.gateway;
+/*package com.codefinity.microcontinuum.gateway;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
@@ -68,3 +68,4 @@ public class YSericeFallbackProvider implements FallbackProvider {
 	}
 
 }
+*/
