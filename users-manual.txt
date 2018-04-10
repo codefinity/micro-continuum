@@ -114,6 +114,7 @@ Testing Endpoints:
 
 Microservice Functioning: http://localhost:8095/x-microservice/hello
 Reading Config Property From Config Server: http://localhost:8095/x-microservice/configservertest
+Feign Test: http://localhost:8095/x-microservice/feigntest/1
 
 
 

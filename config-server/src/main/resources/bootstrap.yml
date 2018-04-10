@@ -13,9 +13,9 @@ spring:
           uri: https://github.com/codefinity/micro-continuum-config
 
 
-#For registering config server with client so that multiple instances of config server can be run.          
+#So that config server does not try to discover itself
       discovery:
-        enabled: true
+        enabled: false
           
 eureka:
   client:

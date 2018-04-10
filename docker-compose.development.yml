@@ -68,6 +68,24 @@ services:
         - config-server
         - zuul-api-gateway
 #        - rabbitMQ
+
+    y-microservice:
+      build:
+        context: y-microservice/
+      restart: always
+      #volumes:
+     
+      ports:
+        - 8030:8030
+      environment:
+        ES_JAVA_OPTS: "-Xmx256m -Xms256m"
+      networks:
+        - elk     
+      depends_on:
+        - eureka-service-discovery
+        - config-server
+        - zuul-api-gateway
+#        - rabbitMQ
         
         
 #    rabbitMQ: 

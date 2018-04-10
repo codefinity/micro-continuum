@@ -44,7 +44,9 @@ spring:
 #      probability: 1.0
 #
 #
-      
+
+
+#Service Discovery Location
 eureka:
   client:
     service-url:
@@ -60,7 +62,8 @@ management:
         include: bus-refresh,refresh
         
       base-path: /
-      
+
+#Logging      
 logging:
   level: 
     root: info

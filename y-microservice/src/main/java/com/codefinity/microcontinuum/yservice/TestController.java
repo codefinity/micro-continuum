@@ -14,9 +14,9 @@ import com.codefinity.microcontinuum.yservice.remotecalls.ZService;
 
 @RestController
 @RefreshScope
-public class LoadBalancingTestController {
+public class TestController {
 
-	private static final Logger logger = LoggerFactory.getLogger(LoadBalancingTestController.class);
+	private static final Logger logger = LoggerFactory.getLogger(TestController.class);
 
 	@Autowired
 	Environment environment;

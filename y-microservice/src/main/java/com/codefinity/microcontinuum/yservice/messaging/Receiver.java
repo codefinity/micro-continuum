@@ -1,4 +1,4 @@
-package com.codefinity.microcontinuum.yservice.messaging;
+/*package com.codefinity.microcontinuum.yservice.messaging;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,11 +25,11 @@ public class Receiver {
 
 		System.out.println("Spring Cloud Stream Output: " + message);
 
-		/*
+		
 		 * System.out.println("Spring Cloud Stream Output: "
 		 * +(String)message.get("MESSAGE1") +", " +(String)message.get("MESSAGE2") +", "
 		 * +(String)message.get("MESSAGE3"));
-		 */
+		 
 
 	}
 }
@@ -41,3 +41,4 @@ interface MicroserviceSink {
 	public MessageChannel microserviceQ();
 
 }
+*/

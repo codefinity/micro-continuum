@@ -8,43 +8,46 @@ spring:
   profiles:
     active: development
     
+#Getting config server location from Service Discovery    
   cloud:
     config:
-      #name: config-server
-      #enabled: true
-      uri: http://localhost:8888
+      discovery:
+        enabled: true
+        serviceId: config-server
       
-    bus:
-      enabled: true
-      
-    stream:
-      bindings:
-        messageq:
-          destination: microserviceQ
-      
-  rabbitmq:
-    host: localhost
-    port: 5672
-    username: admin
-    password: password  
+#    bus:
+#      enabled: true
+#      
+#    stream:
+#      bindings:
+#        messageq:
+#          destination: microserviceQ
+#      
+#  rabbitmq:
+#    host: localhost
+#    port: 5672
+#    username: admin
+#    password: password  
+#  
+#  zipkin:
+#    service:
+#      name: y-microservice
+#    sender: 
+#      type: web
+#    baseUrl: http://localhost:9411
+#    
+#  sleuth:
+#    sampler: 
+#      probability: 1.0
   
-  zipkin:
-    service:
-      name: y-microservice
-    sender: 
-      type: web
-    baseUrl: http://localhost:9411
-    
-  sleuth:
-    sampler: 
-      probability: 1.0
-  
-      
+#Service Discovery Location      
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka    
+      defaultZone: http://eureka-service-discovery:8761/eureka   
     
+#Actuator Settings
+#Endpoint http://localhost:8888/actuator/     
 management:
   endpoints:
     web:
@@ -52,3 +55,8 @@ management:
         include: bus-refresh,refresh
         
       base-path: /
+      
+#Logging      
+logging:
+  level: 
+    root: info      
