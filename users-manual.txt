@@ -2,6 +2,28 @@ Build Docker:
 -------------
 sudo docker-compose -f ./docker-compose.development.yml up --force-recreate --build
 
+Microservices Ports:
+--------------------
+
+eureka-service-discovery:
+config-server:
+zuul-api-gateway:
+hystrix-dashboard:
+turbine-dashboard:
+zipkin-server:
+user-microservice:
+x-microservice:
+y-microservice:
+z-microservice:
+email-microservice:
+notification-microservice:
+chat-microservice:
+management:
+audit-microservice:
+search-microservice:
+geography-microservice:
+template-microservice:
+
 
 URLs of Microservices:
 ----------------------
