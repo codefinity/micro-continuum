@@ -14,17 +14,16 @@ spring:
     config:
       discovery:
         enabled: true
-        serviceId: config-server 
-    
-#      
-#    bus:
-#      enabled: true
-#      
-#  rabbitmq:
-#      host: rabbitmq
-#      port: 5672
-#      username: admin
-#      password: password  
+        serviceId: config-server    
+      
+    bus:
+      enabled: true
+      
+  rabbitmq:
+      host: rabbitmq
+      port: 5672
+      username: admin
+      password: password 
       
 zuul:
   routes:
@@ -32,14 +31,14 @@ zuul:
       serviceId: x-microservice
       path: /x-microservice/**
       stripPrefix: true  
-#    y-microservice:      
-#      serviceId: y-microservice
-#      path: /y-microservice/**
-#      stripPrefix: true      
-#    z-microservice:      
-#      serviceId: z-microservice
-#      path: /z-microservice/**
-#      stripPrefix: true      
+    y-microservice:      
+      serviceId: y-microservice
+      path: /y-microservice/**
+      stripPrefix: true      
+    z-microservice:      
+      serviceId: z-microservice
+      path: /z-microservice/**
+      stripPrefix: true      
       
 #hystrix:
 #  metrics:
@@ -63,7 +62,8 @@ management:
   endpoints:
     web:
       exposure:
-        include: bus-refresh,refresh,health,hystrix.stream
+        include: bus-refresh,refresh,health
+        #,hystrix.stream
         
  
       base-path: /

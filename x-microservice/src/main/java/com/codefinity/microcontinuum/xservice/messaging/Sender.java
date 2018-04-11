@@ -1,4 +1,4 @@
-package com.codefinity.microcontinuum.xservice.messaging;
+/*package com.codefinity.microcontinuum.xservice.messaging;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -22,23 +22,24 @@ public class Sender {
 	}
 
 
-	/*@Output(MicroserviceSource.MicroserviceQ)
+	@Output(MicroserviceSource.MicroserviceQ)
 	@Autowired
-	private MessageChannel messageChannel;*/
+	private MessageChannel messageChannel;
 
-	/*public void send(String message) {
+	public void send(String message) {
 		// template.convertAndSend("InventoryQ", message);
 		
 		logger.info("Sender: Sleuth Message at X-Microservice for RabbitMQ");
 		
 		messageChannel.send(MessageBuilder.withPayload(message).build());
-	}*/
+	}
 }
 
-/*interface MicroserviceSource {
+interface MicroserviceSource {
 	public static String MicroserviceQ = "microserviceQ";
 
 	@Output("microserviceQ")
 	public MessageChannel microserviceQ();
 
-}*/
+}
+*/

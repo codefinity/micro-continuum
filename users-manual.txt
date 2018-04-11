@@ -2,6 +2,8 @@ Build Docker:
 -------------
 sudo docker-compose -f ./docker-compose.development.yml up --force-recreate --build
 
+sudo docker-compose -f ./docker-compose.development.yml down
+
 Microservices Ports:
 --------------------
 
@@ -138,6 +140,20 @@ ToDo:
 * See how to send Domain Event message in spring cloud stream.
 
 * Deploy docker on multiple servers.
+
+* Look into these endpoints
+
+endpoints:
+  restart:
+    enabled: true
+  shutdown:
+    enabled: true
+  health:
+    sensitive: false
+
+* How does load balancong work in docker swarm mode?
+
+
 
 
 

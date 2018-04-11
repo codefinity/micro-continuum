@@ -1,4 +1,4 @@
-version: '2'
+version: '3.6'
 
 services:
 
@@ -6,15 +6,13 @@ services:
       build:
         context: config-server/
       restart: always
-      #volumes:
-     
+      #volumes:     
       ports:
         - 8888:8888
       environment:
         ES_JAVA_OPTS: "-Xmx256m -Xms256m"
       networks:
-        - elk
-        
+        - elk        
       depends_on:  
         - eureka-service-discovery
         
@@ -22,24 +20,21 @@ services:
       build:
         context: eureka-service-discovery/
       restart: always
-      #volumes:
-     
+      #volumes:     
       ports:
         - 8761:8761
       environment:
         ES_JAVA_OPTS: "-Xmx256m -Xms256m"
       networks:
         - elk
-      #depends_on:
-      #  - rabbitMQ
-        
+      depends_on:
+        - rabbitmq       
         
     zuul-api-gateway:
       build:
         context: zuul-api-gateway/
       restart: always
-      #volumes:
-     
+      #volumes:     
       ports:
         - "8095:8095"
       environment:
@@ -55,8 +50,7 @@ services:
       build:
         context: x-microservice/
       restart: always
-      #volumes:
-     
+      #volumes:     
       ports:
         - 8020:8020
       environment:
@@ -67,7 +61,8 @@ services:
         - eureka-service-discovery
         - config-server
         - zuul-api-gateway
-#        - rabbitMQ
+        - rabbitmq
+      command: ["./app/wait-for.sh", "java", "-Xmx200m", "-jar", "/app/x-microservice-1.0.jar"]
 
     y-microservice:
       build:
@@ -85,26 +80,43 @@ services:
         - eureka-service-discovery
         - config-server
         - zuul-api-gateway
-#        - rabbitMQ
+        - rabbitmq
+      command: ["./app/wait-for.sh", "java", "-Xmx200m", "-jar", "/app/x-microservice-1.0.jar"]
+
+    z-microservice:
+      build:
+        context: z-microservice/
+      restart: always
+      #volumes:     
+      ports:
+        - 8040:8040
+      environment:
+        ES_JAVA_OPTS: "-Xmx256m -Xms256m"
+      networks:
+        - elk     
+      depends_on:
+        - eureka-service-discovery
+        - config-server
+        - zuul-api-gateway
+        - rabbitmq
+      command: ["./app/wait-for.sh", "java", "-Xmx200m", "-jar", "/app/x-microservice-1.0.jar"]
         
         
-#    rabbitMQ: 
-#      image: "rabbitmq:3-management"
-#      hostname: "rabbitmq"
-#      environment:
-#        RABBITMQ_ERLANG_COOKIE: "SWQOKODSQALRPCLNMEQG"
-#        RABBITMQ_DEFAULT_USER: "admin"
-#        RABBITMQ_DEFAULT_PASS: "password"
-#        RABBITMQ_DEFAULT_VHOST: "/"
-#      ports:
-#        - "15672:15672"
-#        - "5672:5672"
-#      networks:
-#        - elk  
-#      labels:
-#         NAME: "rabbitmq1"
-#      #volumes:
-#         #- "./enabled_plugins:/etc/rabbitmq/enabled_plugins"
+    rabbitmq: 
+      image: rabbitmq:3.7.4-management
+      hostname: rabbitmq
+      environment:
+        RABBITMQ_ERLANG_COOKIE: "SWQOKODSQALRPCLNMEQG"
+        RABBITMQ_DEFAULT_USER: admin
+        RABBITMQ_DEFAULT_PASS: password
+        RABBITMQ_DEFAULT_VHOST: "/"
+      ports:
+        - 15672:15672
+        - 5672:5672
+      networks:
+        - elk  
+      #volumes:
+         #- "./enabled_plugins:/etc/rabbitmq/enabled_plugins"
         
         
         

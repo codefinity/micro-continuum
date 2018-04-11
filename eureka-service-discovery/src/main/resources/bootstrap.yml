@@ -16,15 +16,15 @@ spring:
         enabled: true
         serviceId: config-server
     
-#      
-#    bus:
-#      enabled: true
-#      
-#  rabbitmq:
-#    host: rabbitmq
-#    port: 5672
-#    username: admin
-#    password: password   
+      
+    bus:
+      enabled: true
+      
+  rabbitmq:
+    host: rabbitmq
+    port: 5672
+    username: admin
+    password: password   
     
 eureka:
   client:
