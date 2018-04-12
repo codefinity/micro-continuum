@@ -17,10 +17,10 @@ spring:
       discovery:
         enabled: false
           
-eureka:
-  client:
-    service-url:
-      defaultZone: http://eureka-service-discovery:8761/eureka
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://eureka-service-discovery:8761/eureka
           
         
 #Actuator Settings            

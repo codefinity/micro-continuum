@@ -7,17 +7,17 @@ sudo docker-compose -f ./docker-compose.development.yml down
 Microservices Ports:
 --------------------
 
-eureka-service-discovery:
-config-server:
-zuul-api-gateway:
-hystrix-dashboard:
-turbine-dashboard:
-zipkin-server:
-user-microservice:
-x-microservice:
-y-microservice:
-z-microservice:
-email-microservice:
+eureka-service-discovery:8761
+config-server: 		8888
+zuul-api-gateway: 	8095
+hystrix-dashboard:	
+turbine-dashboard:	
+zipkin-server:		
+user-microservice:	
+x-microservice: 	8020
+y-microservice: 	8030
+z-microservice: 	8040
+email-microservice:	
 notification-microservice:
 chat-microservice:
 management:

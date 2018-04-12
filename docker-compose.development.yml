@@ -12,9 +12,7 @@ services:
       environment:
         ES_JAVA_OPTS: "-Xmx256m -Xms256m"
       networks:
-        - elk        
-      depends_on:  
-        - eureka-service-discovery
+        - elk
         
     eureka-service-discovery:
       build:
@@ -31,81 +29,81 @@ services:
         - rabbitmq
       command: ["./app/wait-for.sh", "java", "-Xmx200m", "-jar", "/app/eureka-service-discovery-1.0.jar"]
         
-    zuul-api-gateway:
-      build:
-        context: zuul-api-gateway/
-      restart: always
-      #volumes:     
-      ports:
-        - "8095:8095"
-      environment:
-        ES_JAVA_OPTS: "-Xmx256m -Xms256m"
-      networks:
-        - elk
-      depends_on:  
-        - eureka-service-discovery
-        - config-server
-      command: ["./app/wait-for.sh", "java", "-Xmx200m", "-jar", "/app/zuul-api-gateway-1.0.jar"]
+#    zuul-api-gateway:
+#      build:
+#        context: zuul-api-gateway/
+#      restart: always
+#      #volumes:     
+#      ports:
+#        - "8095:8095"
+#      environment:
+#        ES_JAVA_OPTS: "-Xmx256m -Xms256m"
+#      networks:
+#        - elk
+#      depends_on:  
+#        - eureka-service-discovery
+#        - config-server
+#      command: ["./app/wait-for.sh", "java", "-Xmx200m", "-jar", "/app/zuul-api-gateway-1.0.jar"]
 
         
         
-    x-microservice:
-      build:
-        context: x-microservice/
-      restart: always
-      #volumes:     
-      ports:
-        - 8020:8020
-      environment:
-        ES_JAVA_OPTS: "-Xmx256m -Xms256m"
-      networks:
-        - elk
-      depends_on:
-        - rabbitmq
-        - eureka-service-discovery
-        - config-server
-        - zuul-api-gateway
-      #To connect to localhost
-      #extra_hosts:
-      #  - "outside:192.168.0.106"
-      command: ["./app/wait-for.sh", "java", "-Xmx200m", "-jar", "/app/x-microservice-1.0.jar"]
-
-    y-microservice:
-      build:
-        context: y-microservice/
-      restart: always
-      #volumes:
-     
-      ports:
-        - 8030:8030
-      environment:
-        ES_JAVA_OPTS: "-Xmx256m -Xms256m"
-      networks:
-        - elk     
-      depends_on:
-        - eureka-service-discovery
-        - config-server
-        - zuul-api-gateway
-        - rabbitmq
-      command: ["./app/wait-for.sh", "java", "-Xmx200m", "-jar", "/app/x-microservice-1.0.jar"]
-
-    z-microservice:
-      build:
-        context: z-microservice/
-      restart: always
-      #volumes:     
-      ports:
-        - 8040:8040
-      environment:
-        ES_JAVA_OPTS: "-Xmx256m -Xms256m"
-      networks:
-        - elk     
-      depends_on:
-        - eureka-service-discovery
-        - config-server
-        - zuul-api-gateway
-        - rabbitmq
-      command: ["./app/wait-for.sh", "java", "-Xmx200m", "-jar", "/app/x-microservice-1.0.jar"]
+#    x-microservice:
+#      build:
+#        context: x-microservice/
+#      restart: always
+#      #volumes:     
+#      ports:
+#        - 8020:8020
+#      environment:
+#        ES_JAVA_OPTS: "-Xmx256m -Xms256m"
+#      networks:
+#        - elk
+#      depends_on:
+#        - rabbitmq
+#        - eureka-service-discovery
+#        - config-server
+#        - zuul-api-gateway
+#      #To connect to localhost
+#      #extra_hosts:
+#      #  - "outside:192.168.0.106"
+#      command: ["./app/wait-for.sh", "java", "-Xmx200m", "-jar", "/app/x-microservice-1.0.jar"]
+#
+#    y-microservice:
+#      build:
+#        context: y-microservice/
+#      restart: always
+#      #volumes:
+#     
+#      ports:
+#        - 8030:8030
+#      environment:
+#        ES_JAVA_OPTS: "-Xmx256m -Xms256m"
+#      networks:
+#        - elk     
+#      depends_on:
+#        - eureka-service-discovery
+#        - config-server
+#        - zuul-api-gateway
+#        - rabbitmq
+#      command: ["./app/wait-for.sh", "java", "-Xmx200m", "-jar", "/app/x-microservice-1.0.jar"]
+#
+#    z-microservice:
+#      build:
+#        context: z-microservice/
+#      restart: always
+#      #volumes:     
+#      ports:
+#        - 8040:8040
+#      environment:
+#        ES_JAVA_OPTS: "-Xmx256m -Xms256m"
+#      networks:
+#        - elk     
+#      depends_on:
+#        - eureka-service-discovery
+#        - config-server
+#        - zuul-api-gateway
+#        - rabbitmq
+#      command: ["./app/wait-for.sh", "java", "-Xmx200m", "-jar", "/app/x-microservice-1.0.jar"]
         
         
     rabbitmq: 

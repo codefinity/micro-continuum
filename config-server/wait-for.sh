@@ -19,7 +19,7 @@ done
 
 >&2 echo "RabbitMq is up - executing command"
 #exec $cmd
-exec java -Xmx200m -jar /app/x-microservice-1.0.jar
+exec java -Xmx200m -jar /app/config-server-1.0.jar
 
 
 
