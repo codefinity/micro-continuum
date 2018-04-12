@@ -28,7 +28,8 @@ services:
       networks:
         - elk
       depends_on:
-        - rabbitmq       
+        - rabbitmq
+      command: ["./app/wait-for.sh", "java", "-Xmx200m", "-jar", "/app/eureka-service-discovery-1.0.jar"]
         
     zuul-api-gateway:
       build:
@@ -44,6 +45,8 @@ services:
       depends_on:  
         - eureka-service-discovery
         - config-server
+      command: ["./app/wait-for.sh", "java", "-Xmx200m", "-jar", "/app/zuul-api-gateway-1.0.jar"]
+
         
         
     x-microservice:
@@ -56,12 +59,15 @@ services:
       environment:
         ES_JAVA_OPTS: "-Xmx256m -Xms256m"
       networks:
-        - elk     
+        - elk
       depends_on:
+        - rabbitmq
         - eureka-service-discovery
         - config-server
         - zuul-api-gateway
-        - rabbitmq
+      #To connect to localhost
+      #extra_hosts:
+      #  - "outside:192.168.0.106"
       command: ["./app/wait-for.sh", "java", "-Xmx200m", "-jar", "/app/x-microservice-1.0.jar"]
 
     y-microservice:
@@ -103,12 +109,12 @@ services:
         
         
     rabbitmq: 
-      image: rabbitmq:3.7.4-management
+      image: rabbitmq:3.7.4-rc.4-management
       hostname: rabbitmq
       environment:
         RABBITMQ_ERLANG_COOKIE: "SWQOKODSQALRPCLNMEQG"
-        RABBITMQ_DEFAULT_USER: admin
-        RABBITMQ_DEFAULT_PASS: password
+        RABBITMQ_DEFAULT_USER: "admin"
+        RABBITMQ_DEFAULT_PASS: "password"
         RABBITMQ_DEFAULT_VHOST: "/"
       ports:
         - 15672:15672
@@ -190,6 +196,6 @@ services:
 #      - elasticsearch
 
 networks:
-
   elk:
-    driver: bridge
+    driver: bridge    
+

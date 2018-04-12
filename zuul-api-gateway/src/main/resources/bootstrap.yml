@@ -12,9 +12,12 @@ spring:
 #Getting config server location from Service Discovery    
   cloud:
     config:
-      discovery:
-        enabled: true
-        serviceId: config-server    
+      uri: http://config-server:8888
+      #Self discovery of config server not working with docker
+      #discovery:
+      #  enabled: true
+      #  serviceId: config-server
+        
       
     bus:
       enabled: true
@@ -23,7 +26,7 @@ spring:
       host: rabbitmq
       port: 5672
       username: admin
-      password: password 
+      password: password
       
 zuul:
   routes:

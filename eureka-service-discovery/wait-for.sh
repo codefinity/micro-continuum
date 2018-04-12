@@ -1,5 +1,5 @@
 #!/bin/bash
-# wait-for-rabbitmq.sh
+# wait-for.sh
 
 set -e
 
@@ -14,12 +14,12 @@ cmd="$@"
 
 until nc -z rabbitmq 5672; do
     echo "$(date) - waiting for rabbitmq..."
-    sleep 1
+    sleep 20
 done
 
 >&2 echo "RabbitMq is up - executing command"
 #exec $cmd
-exec java -Xmx200m -jar /app/x-microservice-1.0.jar
+exec java -Xmx200m -jar /app/eureka-service-discovery-1.0.jar
 
 
 

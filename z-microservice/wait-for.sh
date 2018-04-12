@@ -14,7 +14,7 @@ cmd="$@"
 
 until nc -z rabbitmq 5672; do
     echo "$(date) - waiting for rabbitmq..."
-    sleep 1
+    sleep 20
 done
 
 >&2 echo "RabbitMq is up - executing command"

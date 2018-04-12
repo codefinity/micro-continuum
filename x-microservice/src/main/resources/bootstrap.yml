@@ -11,21 +11,22 @@ spring:
 #Getting config server location from Service Discovery    
   cloud:
     config:
-      discovery:
-        enabled: true
-        serviceId: config-server    
+      uri: http://config-server:8888
+      #Self discovery of config server not working with docker
+      #discovery:
+      #  enabled: true
+      #  serviceId: config-server  
       
     bus:
       enabled: true
-      
-#    stream:
-#      bindings:
-#        messageq:
-#          destination: microserviceQ     
-              
+           
       
   rabbitmq:
+    #dynamic: true
+    #For localhost
+    #host: 192.168.0.106
     host: rabbitmq
+    #virtual-host: "/"
     port: 5672
     username: admin
     password: password
@@ -41,15 +42,12 @@ spring:
 #  sleuth:
 #    sampler: 
 #      probability: 1.0
-#
-#
-
 
 #Service Discovery Location
 eureka:
   client:
     service-url:
-      defaultZone: http://eureka-service-discovery:8761/eureka  
+      defaultZone: http://eureka-service-discovery:8761/eureka
 
 
 #Actuator Settings
@@ -66,13 +64,3 @@ management:
 logging:
   level: 
     root: info
-
-
-  
-    
-
-
-
-
-
-
