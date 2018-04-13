@@ -1,18 +1,18 @@
-/*package com.codefinity.microcontinuum.xservice.messaging;
+package com.codefinity.microcontinuum.xservice.messaging;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-//import org.springframework.cloud.context.config.annotation.RefreshScope;
-//import org.springframework.cloud.stream.annotation.EnableBinding;
-//import org.springframework.cloud.stream.annotation.Output;
-//import org.springframework.messaging.MessageChannel;
-//import org.springframework.messaging.support.MessageBuilder;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
+import org.springframework.cloud.stream.annotation.EnableBinding;
+import org.springframework.cloud.stream.annotation.Output;
+import org.springframework.messaging.MessageChannel;
+import org.springframework.messaging.support.MessageBuilder;
 import org.springframework.stereotype.Component;
 
-//@RefreshScope
+@RefreshScope
 @Component
-//@EnableBinding(MicroserviceSource.class)
+@EnableBinding(MicroserviceSource.class)
 public class Sender {
 
 	private static final Logger logger = LoggerFactory.getLogger(Sender.class);
@@ -20,7 +20,6 @@ public class Sender {
 	public Sender() {
 
 	}
-
 
 	@Output(MicroserviceSource.MicroserviceQ)
 	@Autowired
@@ -42,4 +41,3 @@ interface MicroserviceSource {
 	public MessageChannel microserviceQ();
 
 }
-*/
