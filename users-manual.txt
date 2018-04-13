@@ -1,3 +1,7 @@
+Build Microservices:
+--------------------
+mvn clean package -DskipTests
+
 Build Docker:
 -------------
 sudo docker-compose -f ./docker-compose.development.yml up --force-recreate --build
@@ -34,16 +38,6 @@ x-microservice: http://localhost:8020/
 y-microservice: http://localhost:8030/ 
 z-microservice: http://localhost:8040/
 
-To Refresh the properties of a particular microservice:
--------------------------------------------------------
-
-curl -X POST http://localhost:8020/refresh
-
-
-To Refresh the properties of all microservices:
------------------------------------------------
-
-curl -X POST http://localhost:8020/bus-refresh
 
 Eureka Dashboard:
 -----------------
@@ -114,15 +108,39 @@ Zipkin-Server Project exists for future implementation when Zipkin is compatable
 Testing Endpoints:
 ------------------
 
-Microservice Functioning: http://localhost:8095/x-microservice/hello
-Reading Config Property From Config Server: http://localhost:8095/x-microservice/configservertest
-Feign Test: http://localhost:8095/x-microservice/feigntest/1
+Microservice Functioning: 			http://localhost:8095/x-microservice/hello
+Reading Config Property From Config Server: 	http://localhost:8095/x-microservice/configservertest
+Feign Test: 					http://localhost:8095/x-microservice/feigntest/1
 
+Management Endpoints:
+---------------------
+
+http://localhost:8020/bus-refresh
+http://localhost:8020/refresh
+http://localhost:8020/features
+http://localhost:8020/info
+http://localhost:8020/health
+http://localhost:8020/metrics
+http://localhost:8020/shutdown
+http://localhost:8020/resume
+http://localhost:8020/pause
+http://localhost:8020/restart
+http://localhost:8020/scheduledtasks
+
+Commands:
+
+Stop: 		curl -X POST http://localhost:8020/shutdown
+Refresh Config: curl -X POST http://localhost:8020/refresh
+Bus Refresh:	curl -X POST http://localhost:8020/bus-refresh
 
 
 ToDo:
 -----
-* Multiple config servers enabling - Done
+* Block Endpoint management acess through ZUUL.
+
+* Security for Actuator Endpoints. Only allowed roles will have access.
+
+* Multiple config servers enabling
 
 * Multiple Discovery Clients
 

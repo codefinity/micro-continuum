@@ -43,11 +43,55 @@ eureka:
       defaultZone: http://eureka-service-discovery:8761/eureka 
     
     
+#Actuator Settings
+#Endpoint http://localhost:8888/    
 management:
-  endpoints:
+ 
+  health:
+    rabbit:
+      enabled: true
+  
+  endpoint:
+    features:
+      enabled: true
+    info:
+      enabled: true
+    auditevents:
+      enabled: true
+    bus-refresh:
+      enabled: true
+    bus-env:
+      enabled: true
+    channels:
+      enabled: true
+    conditions:
+      enabled: true
+    configprops:
+      enabled: true
+    env:
+      enabled: true
+    health:
+      enabled: true  
+    metrics:
+      enabled: true
+    resume:
+      enabled: true
+    pause:
+      enabled: true
+    refresh:
+      enabled: true
+    restart:
+      enabled: true
+    scheduledtasks:
+      enabled: true
+    shutdown:
+      enabled: true                            
+         
+  endpoints:   
     web:
       exposure:
-        include: bus-refresh,refresh
+        include: bus-refresh,refresh,features,info,health,metrics,
+                  shutdown,resume,pause,restart,scheduledtasks
         
       base-path: /
       
