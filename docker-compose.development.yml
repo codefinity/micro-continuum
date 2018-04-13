@@ -29,21 +29,21 @@ services:
         - rabbitmq
       command: ["./app/wait-for.sh", "java", "-Xmx200m", "-jar", "/app/eureka-service-discovery-1.0.jar"]
         
-#    zuul-api-gateway:
-#      build:
-#        context: zuul-api-gateway/
-#      restart: always
-#      #volumes:     
-#      ports:
-#        - "8095:8095"
-#      environment:
-#        ES_JAVA_OPTS: "-Xmx256m -Xms256m"
-#      networks:
-#        - elk
-#      depends_on:  
-#        - eureka-service-discovery
-#        - config-server
-#      command: ["./app/wait-for.sh", "java", "-Xmx200m", "-jar", "/app/zuul-api-gateway-1.0.jar"]
+    zuul-api-gateway:
+      build:
+        context: zuul-api-gateway/
+      restart: always
+      #volumes:     
+      ports:
+        - "8095:8095"
+      environment:
+        ES_JAVA_OPTS: "-Xmx256m -Xms256m"
+      networks:
+        - elk
+      depends_on:  
+        - eureka-service-discovery
+        - config-server
+      command: ["./app/wait-for.sh", "java", "-Xmx200m", "-jar", "/app/zuul-api-gateway-1.0.jar"]
 
         
         
