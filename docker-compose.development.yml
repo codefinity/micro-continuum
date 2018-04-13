@@ -123,77 +123,95 @@ services:
         - elk  
       #volumes:
          #- "./enabled_plugins:/etc/rabbitmq/enabled_plugins"
-        
-        
-        
-        
-    
+         
 
-#  elasticsearch:
-#    build:
-#      context: elasticsearch/
-#    volumes:
-#      - ./elasticsearch/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml:ro
-#      - ./elasticsearch/data:/usr/share/elasticsearch/data
-#    ports:
-#      - "9200:9200"
-#      - "9300:9300"
-#    environment:
-#      ES_JAVA_OPTS: "-Xmx256m -Xms256m"
-#    networks:
-#      - elk
+#    x-microservice:
+#      build:
+#        context: x-microservice/
+#      restart: always
+#      #volumes:     
+#      ports:
+#        - 8020:8020
+#      environment:
+#        ES_JAVA_OPTS: "-Xmx256m -Xms256m"
+#      networks:
+#        - elk
+#      depends_on:
+#        - rabbitmq
+#        - eureka-service-discovery
+#        - config-server
+#        - zuul-api-gateway
+#      #To connect to localhost
+#      #extra_hosts:
+#      #  - "outside:192.168.0.106"
+#      command: ["./app/wait-for.sh", "java", "-Xmx200m", "-jar", "/app/x-microservice-1.0.jar"]
+         
 
-#  logstash:
-#    build:
-#      context: logstash/
-#    volumes:
-#      - ./logstash/config/logstash.yml:/usr/share/logstash/config/logstash.yml:ro
-#      - ./logstash/pipeline:/usr/share/logstash/pipeline:ro
-#    ports:
-#      - "5000:5000"
-#    environment:
-#      LS_JAVA_OPTS: "-Xmx256m -Xms256m"
-#    networks:
-#      - elk
-#    depends_on:
-#      - elasticsearch
-#
-#  kibana:
-#    build:
-#      context: kibana/
-#    volumes:
-#      - ./kibana/config/:/usr/share/kibana/config:ro
-#    ports:
-#      - "5601:5601"
-#    networks:
-#      - elk
-#    depends_on:
-#      - elasticsearch
-#      
-#      
-#
-#  # The zipkin process services the UI, and also exposes a POST endpoint that
-#  # instrumentation can send trace data to. Scribe is disabled by default.
-#  # Switch storage type to Elasticsearch
-#  zipkin:
-#    #image: openzipkin/zipkin
-#    build:
-#      context: zipkin/
-#    environment:
-#      - STORAGE_TYPE=elasticsearch
-#      # Point the zipkin at the storage backend
-#      - ES_HOSTS=elasticsearch
-#      # Uncomment to see requests to and from elasticsearch
-#      # - ES_HTTP_LOGGING=BODY
-#    ports:
-#      # Port used for the Zipkin UI and HTTP Api
-#      - 9411:9411
-#      # Uncomment if you set SCRIBE_ENABLED=true
-#      # - 9410:9410
-#    networks:
-#      - elk
-#    depends_on:
-#      - elasticsearch
+#    elasticsearch:
+#      build:
+#        context: elasticsearch/
+#      volumes:
+#        - ./elasticsearch/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml:ro
+#        #- ./elasticsearch/data:/usr/share/elasticsearch/data:rw
+#      ports:
+#        - "9200:9200"
+#        - "9300:9300"
+#      environment:
+#        ES_JAVA_OPTS: "-Xmx256m -Xms256m"
+#      networks:
+#        - elk
+#  
+#    logstash:
+#      build:
+#        context: logstash/
+#      volumes:
+#        - ./logstash/config/logstash.yml:/usr/share/logstash/config/logstash.yml:ro
+#        - ./logstash/pipeline:/usr/share/logstash/pipeline:ro
+#      ports:
+#        - "5000:5000"
+#      environment:
+#        LS_JAVA_OPTS: "-Xmx256m -Xms256m"
+#      networks:
+#        - elk
+#      depends_on:
+#        - elasticsearch
+#  
+#    kibana:
+#      build:
+#        context: kibana/
+#      volumes:
+#        - ./kibana/config/:/usr/share/kibana/config:ro
+#      ports:
+#        - "5601:5601"
+#      networks:
+#        - elk
+#      depends_on:
+#        - elasticsearch        
+#        
+#  
+#    # The zipkin process services the UI, and also exposes a POST endpoint that
+#    # instrumentation can send trace data to. Scribe is disabled by default.
+#    # Switch storage type to Elasticsearch
+#    zipkin:
+#      #image: openzipkin/zipkin
+#      build:
+#        context: zipkin/
+#      environment:
+#        - STORAGE_TYPE=elasticsearch
+#        # Point the zipkin at the storage backend
+#        - ES_HOSTS=elasticsearch
+#        # Uncomment to see requests to and from elasticsearch
+#        # - ES_HTTP_LOGGING=BODY
+#      ports:
+#        # Port used for the Zipkin UI and HTTP Api
+#        - 9411:9411
+#        # Uncomment if you set SCRIBE_ENABLED=true
+#        # - 9410:9410
+#      networks:
+#        - elk
+#      depends_on:
+#        - elasticsearch
+#      command: ["./app/wait-for.sh", "java", "-Xmx200m", "-jar", "/app/zipkin-server-2.7.1-exec.jar"]
 
 networks:
   elk:

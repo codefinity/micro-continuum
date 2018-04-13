@@ -70,13 +70,13 @@
 		<dependency>
 			<groupId>org.springframework.amqp</groupId>
 			<artifactId>spring-rabbit</artifactId>
-		</dependency>
+		</dependency> -->
 
 		<dependency>
 			<groupId>net.logstash.logback</groupId>
 			<artifactId>logstash-logback-encoder</artifactId>
 			<version>5.0</version>
-		</dependency> -->
+		</dependency> 
 
 		<!-- Testin Frameworks -->
 		<dependency>

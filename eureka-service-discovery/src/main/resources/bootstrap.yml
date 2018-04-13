@@ -16,8 +16,7 @@ spring:
       #Self discovery of config server not working with docker
       #discovery:
       #  enabled: true
-      #  serviceId: config-server
-    
+      #  serviceId: config-server    
       
     bus:
       enabled: true
@@ -44,3 +43,8 @@ management:
         include: bus-refresh,refresh
         
       base-path: /
+      
+#Logging      
+logging:
+  level: 
+    root: info

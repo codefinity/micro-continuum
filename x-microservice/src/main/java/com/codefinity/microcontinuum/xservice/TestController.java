@@ -82,16 +82,16 @@ public class TestController {
 
 	}
 
-	/*@RequestMapping(value = "/elklogtest")
+	@RequestMapping(value = "/elklogtest")
 	public String elkLoTest() {
 
 		logger.info("This is a log message");
 
 		return "Message Logged";
 
-	}*/
+	}
 	
-	/*@RequestMapping(value = "/sleuthtest")
+	@RequestMapping(value = "/sleuthtest")
 	public String sleuthTest() {
 		
 		logger.info("Sleuth Message at X-Microservice");
@@ -101,6 +101,6 @@ public class TestController {
 		logger.info("Sleuth Message End");
 		
 		return message;
-	}*/
+	}
 
 }

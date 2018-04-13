@@ -55,7 +55,7 @@ http://localhost:8095/z-microservice/
 Spring Cloud Stream Test:
 -------------------------
 
-http://localhost:8095/x-microservice/testspringcloudstreaming
+http://localhost:8095/x-microservice/cloudstreamingtest
 
 Circuit Breaker URL:
 --------------------
@@ -99,7 +99,7 @@ http://localhost:9411/
 
 Test using 
 For feign: http://localhost:8095/x-microservice/sleuthtest
-For RabbitMQ: For feign: http://localhost:8095/x-microservice/testspringcloudstreaming
+For RabbitMQ: http://localhost:8095/x-microservice/cloudstreamingtest
 
 Zipkin only works with spring boot 1.5. Using a prebuilt Zipkin jar for server for now.
 Zipkin-Server Project exists for future implementation when Zipkin is compatable with Spring Boot 2.0.

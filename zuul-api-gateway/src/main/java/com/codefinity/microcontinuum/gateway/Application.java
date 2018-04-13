@@ -27,7 +27,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 @SpringBootApplication
 @EnableDiscoveryClient
 @CrossOrigin
-//@EnableCircuitBreaker
+@EnableCircuitBreaker
 //For config client
 @EnableAutoConfiguration
 @EnableZuulProxy
