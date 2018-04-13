@@ -22,6 +22,5 @@ public class ZuulConfig {
     @Bean
     RestTemplate restTemplate() {
       return new RestTemplate();
-    }
-	
+    }	
 }

@@ -16,6 +16,7 @@ public class YServiceController {
 	String getHub(@PathVariable("id") Long id) {
 		// logger.info(" [Hystrix enabled] Search Request in API gateway for getting
 		// Hub, forwarding to search-service - ");
+		System.out.println("Through Hystrix");
 		return yServiceComponent.getUser(id);
 	}
 

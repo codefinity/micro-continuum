@@ -65,12 +65,12 @@ http://localhost:8095/y-service/user/1
 Hystrix:
 
 URL: http://localhost:8090/hystrix
-Add Url: http://localhost:8090/hystrix
+Add Url: http://zuul-api-gateway:8095/hystrix.stream
 
 Turbine:
 
 URL: http://localhost:9010/hystrix
-Add URL: http://localhost:9010/turbine.stream
+Add URL: http://turbine-dashboard:9010/turbine.stream
 
 Load Balancing:
 ---------------
