@@ -43,16 +43,16 @@ zuul:
       path: /z-microservice/**
       stripPrefix: true      
       
-#hystrix:
-#  metrics:
-#    enabled: true
-#  command:
-#    x-microservice:
-#      execution:
-#        isolation:
-#          thread:
-#            timeoutInMilliseconds: 5000
-#      
+hystrix:
+  metrics:
+    enabled: true
+  command:
+    x-microservice:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 5000
+      
 eureka:
   client:
     service-url:
@@ -65,8 +65,7 @@ management:
   endpoints:
     web:
       exposure:
-        include: bus-refresh,refresh,health
-        #,hystrix.stream
+        include: bus-refresh,refresh,health,hystrix.stream
         
  
       base-path: /

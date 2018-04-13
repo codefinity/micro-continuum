@@ -6,4 +6,4 @@ RUN apt-get update && apt-get -y install netcat && apt-get clean
 ADD ./target/hystrix-dashboard-1.0.jar /app/
 CMD ["java", "-Xmx200m", "-jar", "/app/hystrix-dashboard-1.0.jar"]
 
-EXPOSE 8020
+EXPOSE 8090

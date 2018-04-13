@@ -8,8 +8,8 @@ spring:
   profiles:
     active: development
     
-  cloud:
-    config:
-      #name: config-server
-      #enabled: true
-      uri: http://localhost:8888
+  #cloud:
+  #  config:
+  #    #name: config-server
+  #    #enabled: true
+  #    uri: http://localhost:8888

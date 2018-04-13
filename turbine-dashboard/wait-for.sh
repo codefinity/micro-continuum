@@ -1,25 +1,28 @@
 #!/bin/bash
-# wait-for-rabbitmq.sh
+# wait-for.sh
 
 set -e
 
-#host="$1"
 shift
 cmd="$@"
 
-#until PGPASSWORD=$POSTGRES_PASSWORD psql -h "$host" -U "postgres" -c '\q'; do
-#  >&2 echo "Postgres is unavailable - sleeping"
-#  sleep 1
-#done
+is_eureka_service_discovery_on=false
 
-until nc -z rabbitmq 5672; do
-    echo "$(date) - waiting for rabbitmq..."
-    sleep 1
+until $is_eureka_service_discovery_on ; do
+    sleep 20
+    
+	if [ $(nc -z eureka-service-discovery 8761; echo $?) -eq 0 ]
+	then
+		is_eureka_service_discovery_on=true
+		echo "$(date) - Eureka Service Discovery Connected"
+	else		
+		echo "$(date) - Waiting for Eureka Service Discovery"
+	fi
+    
 done
 
->&2 echo "RabbitMq is up - executing command"
-#exec $cmd
-exec java -Xmx200m -jar /app/x-microservice-1.0.jar
+>&2 echo "Dependencies are up - starting turbine-dashboard Container"
+exec java -Xmx200m -jar /app/turbine-dashboard-1.0.jar
 
 
 

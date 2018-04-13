@@ -14,8 +14,8 @@ Microservices Ports:
 eureka-service-discovery:8761
 config-server: 		8888
 zuul-api-gateway: 	8095
-hystrix-dashboard:	
-turbine-dashboard:	
+hystrix-dashboard:	8090
+turbine-dashboard:	9010
 zipkin-server:		
 user-microservice:	
 x-microservice: 	8020
@@ -63,13 +63,12 @@ Circuit Breaker URL:
 http://localhost:8095/y-service/user/1
 
 Hystrix:
--------
 
 URL: http://localhost:8090/hystrix
 Add Url: http://localhost:8090/hystrix
 
 Turbine:
---------
+
 URL: http://localhost:9010/hystrix
 Add URL: http://localhost:9010/turbine.stream
 
