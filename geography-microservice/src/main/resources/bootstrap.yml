@@ -15,7 +15,7 @@ spring:
       uri: http://localhost:8888
       
     bus:
-      enabled: true  
+      enabled: true
          
   rabbitmq:
     host: localhost

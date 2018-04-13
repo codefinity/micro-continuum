@@ -15,7 +15,14 @@ spring:
       uri: http://localhost:8888
       
     bus:
-      enabled: true  
+      enabled: true
+    
+    stream:
+      bindings:
+        input:
+          destination: microserviceQ
+        output: 
+          destination: microserviceQ  
          
   rabbitmq:
     host: localhost

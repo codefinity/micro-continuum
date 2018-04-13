@@ -20,6 +20,12 @@ spring:
     bus:
       enabled: true
       
+    stream:
+      bindings:
+        input:
+          destination: microserviceQ
+        #output: 
+        #  destination: microserviceQ      
    
   rabbitmq:
     host: rabbitmq

@@ -136,6 +136,15 @@ Bus Refresh:	curl -X POST http://localhost:8020/bus-refresh
 
 ToDo:
 -----
+* Binders:
+
+	Understand the concept and implement.
+	Support for JSON Message - Searialize and Deserailiaze
+	Reference:
+	http://cloud.spring.io/spring-cloud-stream/
+	http://www.baeldung.com/spring-cloud-stream
+	
+
 * Block Endpoint management acess through ZUUL.
 
 * Security for Actuator Endpoints. Only allowed roles will have access.
