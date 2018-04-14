@@ -55,7 +55,7 @@ $ cd micro-continuum
 
 $ mvn clean package
 
-$ docker-compose -f ./docker-compose.development.yml up
+$ docker-compose up
 ```
 ### Initial Tests
 
