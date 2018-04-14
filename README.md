@@ -99,17 +99,18 @@ http://localhost:8095/z-microservice/hello
 
 * Logging Management using ELK Stack
 * Spring Cloud Sleuth integration - Feign and RabbitMQ
+* Zipkin Integration (Facing issue after dockeriation)
+
+##### Docker
+
+* Dockerizing the microservices
+* Deploying using docker compose file
 
 ##### Other
 
 * Microservice Events
 
 #### Currently In Development
-
-##### Docker
-
-* Dockerizing the microservices
-* Deploying using docker compose file
 
 ##### Security
 
