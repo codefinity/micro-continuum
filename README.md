@@ -15,8 +15,6 @@
 
 * [Getting Started](#getting-started)
     * [Setup](#setup)
-    * [Configuration](#configuration)
-    * [Console](#console)
     * [Initial Tests](#initial-tests)
 * [Features](#features)
     * [Released](#released)
@@ -34,7 +32,19 @@
 * [Sponsor](#sponsor)  
 * [Special Thanks](#special-thanks)
 
+## Getting Started
 
+### Setup
+
+```
+git https://github.com/codefinity/micro-continuum.git
+
+cd micro-continuum
+
+docker-compose -f ./docker-compose.development.yml up
+```
+
+### Initial Tests
 
 ## Features
 
@@ -171,16 +181,6 @@
 ##### Chatbot Microservice
 
 ##### IOT Microservice Using Spring Reactive Flux
-
-## Getting Started
-
-### Setup
-
-### Configuration
-
-### Console
-
-### Initial Tests
 
 ## API Definition
 
