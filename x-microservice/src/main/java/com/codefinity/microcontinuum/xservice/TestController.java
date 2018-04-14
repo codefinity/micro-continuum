@@ -35,7 +35,7 @@ public class TestController {
 	@RequestMapping(value = "/hello")
 	public String testService() {
 
-		return "Service Working";
+		return "X-MicroService Working";
 	}
 
 	@RequestMapping(value = "/configservertest")

@@ -16,6 +16,12 @@ public class TestController {
 
 	@Value("${z-microservice.config-test-value}")
 	private String testProperty;
+	
+	@RequestMapping(value = "/hello")
+	public String testService() {
+
+		return "Z-MicroService Working";
+	}
 
 	@RequestMapping(value = "/testproperty")
 	public String greeting() {

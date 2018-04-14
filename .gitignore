@@ -25,3 +25,5 @@ nbdist/
 
 ### ELK ###
 elasticsearch/data/
+
+!zipkin/zipkin-server-2.7.1-exec.jar

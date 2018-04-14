@@ -23,6 +23,12 @@ public class TestController {
 
 	@Autowired
 	private ZService zService;
+	
+	@RequestMapping(value = "/hello")
+	public String testService() {
+
+		return "Y-MicroService Working";
+	}
 
 	@RequestMapping(value = "/user/{id}", method = RequestMethod.GET)
 	public User user(@PathVariable String id) {
