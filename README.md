@@ -37,7 +37,17 @@
 
 ### Installations
 
+Install Docker:
+```
+https://docs.docker.com/install/linux/docker-ce/ubuntu/
 
+```
+
+Install Docker Compose:
+```
+https://docs.docker.com/compose/install/
+
+```
 
 ### Setup
 
