@@ -15,7 +15,7 @@
 
 * [Getting Started](#getting-started)
     * [Installations](#installations)
-    * [Setup](#setup)
+    * [Setup and Run](#setup-and-run)
     * [Initial Tests](#initial-tests)
 * [User Guide](#user-guide)    
 * [Features](#features)
@@ -34,32 +34,29 @@
 * [Sponsor](#sponsor)  
 * [Special Thanks](#special-thanks)
 
-## Getting Started
+## Getting Started - For Linux
 
 ### Installations
 
 Install Docker:
 ```
 https://docs.docker.com/install/linux/docker-ce/ubuntu/
-
 ```
-
 Install Docker Compose:
 ```
 https://docs.docker.com/compose/install/
+```
+### Setup and Run
 
 ```
+$ git https://github.com/codefinity/micro-continuum.git
 
-### Setup
+$ cd micro-continuum
 
+$ mvn clean package
+
+$ docker-compose -f ./docker-compose.development.yml up
 ```
-git https://github.com/codefinity/micro-continuum.git
-
-cd micro-continuum
-
-docker-compose -f ./docker-compose.development.yml up
-```
-
 ### Initial Tests
 
 These URLs should return messages
