@@ -62,6 +62,16 @@ docker-compose -f ./docker-compose.development.yml up
 
 ### Initial Tests
 
+These URLs should return messages
+
+```
+http://localhost:8095/x-microservice/hello
+
+http://localhost:8095/y-microservice/hello
+
+http://localhost:8095/z-microservice/hello
+```
+
 ## User Guide
 
 ## Features
