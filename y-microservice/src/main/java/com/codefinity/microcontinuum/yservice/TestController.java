@@ -3,6 +3,7 @@ package com.codefinity.microcontinuum.yservice;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.core.env.Environment;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -24,11 +25,19 @@ public class TestController {
 	@Autowired
 	private ZService zService;
 	
+	@Value("${y-microservice.config-test-value}")
+	private String testProperty;	
 	
 	@RequestMapping(value = "/hello")
 	public String testService() {
 
 		return "Y-MicroService Working";
+	}
+	
+	@RequestMapping(value = "/configservertest")
+	public String testProperty() {
+
+		return testProperty;
 	}
 
 	@RequestMapping(value = "/user/{id}", method = RequestMethod.GET)
