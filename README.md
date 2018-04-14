@@ -13,7 +13,7 @@
 
 ## Table of Contents
 
-* [Getting Started](#getting-started)
+* [Getting Started](#getting-started---for-linux)
     * [Installations](#installations)
     * [Setup and Run](#setup-and-run)
     * [Initial Tests](#initial-tests)
