@@ -17,6 +17,7 @@
     * [Installations](#installations)
     * [Setup](#setup)
     * [Initial Tests](#initial-tests)
+* [User Guide](#user-guide)    
 * [Features](#features)
     * [Released](#released)
     * [Completed](#completed)
@@ -60,6 +61,8 @@ docker-compose -f ./docker-compose.development.yml up
 ```
 
 ### Initial Tests
+
+## User Guide
 
 ## Features
 
