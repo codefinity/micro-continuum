@@ -7,10 +7,16 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RefreshScope
-public class PropertiesTestController {
+public class TestController {
 
 	@Value("${template-microservice.config-test-value}")
 	private String testProperty;
+	
+	@RequestMapping(value = "/hello")
+	public String testService() {
+
+		return "Test-MicroService Working";
+	}
 	
 	@RequestMapping(value = "/testproperty")
 	public String greeting( ) {

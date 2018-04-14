@@ -24,6 +24,7 @@ public class TestController {
 	@Autowired
 	private ZService zService;
 	
+	
 	@RequestMapping(value = "/hello")
 	public String testService() {
 
