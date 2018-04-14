@@ -14,6 +14,7 @@
 ## Table of Contents
 
 * [Getting Started](#getting-started)
+    * [Installations](#installations)
     * [Setup](#setup)
     * [Initial Tests](#initial-tests)
 * [Features](#features)
@@ -33,6 +34,10 @@
 * [Special Thanks](#special-thanks)
 
 ## Getting Started
+
+### Installations
+
+
 
 ### Setup
 
