@@ -100,8 +100,8 @@ http://localhost:8095/z-microservice/hello
 
 ##### Docker
 
-* Dockerizing the microservices
-* Deploying using docker compose file
+* Integrated with Docker
+* Deployed using Docker Compose
 
 ##### Other
 
