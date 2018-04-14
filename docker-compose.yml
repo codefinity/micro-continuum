@@ -1,74 +1,227 @@
-version: '2'
+version: '3.6'
 
 services:
 
-  elasticsearch:
-    build:
-      context: elasticsearch/
-    volumes:
-      - ./elasticsearch/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml:ro
-      - ./elasticsearch/data:/usr/share/elasticsearch/data
-    ports:
-      - "9200:9200"
-      - "9300:9300"
-    environment:
-      ES_JAVA_OPTS: "-Xmx256m -Xms256m"
-    networks:
-      - elk
+    config-server:
+      build:
+        context: config-server/
+      restart: always
+      #volumes:     
+      ports:
+        - 8888:8888
+      environment:
+        ES_JAVA_OPTS: "-Xmx256m -Xms256m"
+      networks:
+        - elk
+        
+    eureka-service-discovery:
+      build:
+        context: eureka-service-discovery/
+      restart: always
+      #volumes:     
+      ports:
+        - 8761:8761
+      environment:
+        ES_JAVA_OPTS: "-Xmx256m -Xms256m"
+      networks:
+        - elk
+      depends_on:
+        - rabbitmq
+      command: ["./app/wait-for.sh", "java", "-Xmx200m", "-jar", "/app/eureka-service-discovery-1.0.jar"]
+        
+    zuul-api-gateway:
+      build:
+        context: zuul-api-gateway/
+      restart: always
+      #volumes:     
+      ports:
+        - "8095:8095"
+      environment:
+        ES_JAVA_OPTS: "-Xmx256m -Xms256m"
+      networks:
+        - elk
+      depends_on:  
+        - eureka-service-discovery
+        - config-server
+      command: ["./app/wait-for.sh", "java", "-Xmx200m", "-jar", "/app/zuul-api-gateway-1.0.jar"]
 
-  logstash:
-    build:
-      context: logstash/
-    volumes:
-      - ./logstash/config/logstash.yml:/usr/share/logstash/config/logstash.yml:ro
-      - ./logstash/pipeline:/usr/share/logstash/pipeline:ro
-    ports:
-      - "5000:5000"
-    environment:
-      LS_JAVA_OPTS: "-Xmx256m -Xms256m"
-    networks:
-      - elk
-    depends_on:
-      - elasticsearch
+        
+        
+    x-microservice:
+      build:
+        context: x-microservice/
+      restart: always
+      #volumes:     
+      ports:
+        - 8020:8020
+      environment:
+        ES_JAVA_OPTS: "-Xmx256m -Xms256m"
+      networks:
+        - elk
+      depends_on:
+        - rabbitmq
+        - eureka-service-discovery
+        - config-server
+        - zuul-api-gateway
+      #To connect to localhost
+      #extra_hosts:
+      #  - "outside:192.168.0.106"
+      command: ["./app/wait-for.sh", "java", "-Xmx200m", "-jar", "/app/x-microservice-1.0.jar"]
 
-  kibana:
-    build:
-      context: kibana/
-    volumes:
-      - ./kibana/config/:/usr/share/kibana/config:ro
-    ports:
-      - "5601:5601"
-    networks:
-      - elk
-    depends_on:
-      - elasticsearch
+
+    y-microservice:
+      build:
+        context: y-microservice/
+      restart: always
+      #volumes:
+     
+      ports:
+        - 8030:8030
+      environment:
+        ES_JAVA_OPTS: "-Xmx256m -Xms256m"
+      networks:
+        - elk     
+      depends_on:
+        - eureka-service-discovery
+        - config-server
+        - zuul-api-gateway
+        - rabbitmq
+      command: ["./app/wait-for.sh", "java", "-Xmx200m", "-jar", "/app/y-microservice-1.0.jar"]
+
+
+    z-microservice:
+      build:
+        context: z-microservice/
+      restart: always
+      #volumes:     
+      ports:
+        - 8040:8040
+      environment:
+        ES_JAVA_OPTS: "-Xmx256m -Xms256m"
+      networks:
+        - elk     
+      depends_on:
+        - eureka-service-discovery
+        - config-server
+        - zuul-api-gateway
+        - rabbitmq
+      command: ["./app/wait-for.sh", "java", "-Xmx200m", "-jar", "/app/z-microservice-1.0.jar"]
+        
+        
+    rabbitmq: 
+      image: rabbitmq:3.7.4-rc.4-management
+      hostname: rabbitmq
+      environment:
+        RABBITMQ_ERLANG_COOKIE: "SWQOKODSQALRPCLNMEQG"
+        RABBITMQ_DEFAULT_USER: "admin"
+        RABBITMQ_DEFAULT_PASS: "password"
+        RABBITMQ_DEFAULT_VHOST: "/"
+      ports:
+        - 15672:15672
+        - 5672:5672
+      networks:
+        - elk  
+      #volumes:
+         #- "./enabled_plugins:/etc/rabbitmq/enabled_plugins"
+         
+
+    hystrix-dashboard:
+      build:
+        context: hystrix-dashboard/
+      restart: always
+      #volumes:     
+      ports:
+        - 8090:8090
+      environment:
+        ES_JAVA_OPTS: "-Xmx256m -Xms256m"
+      networks:
+        - elk
+      depends_on:
+        - zuul-api-gateway
       
       
+    turbine-dashboard:
+      build:
+        context: turbine-dashboard/
+      restart: always
+      #volumes:     
+      ports:
+        - 9010:9010
+      environment:
+        ES_JAVA_OPTS: "-Xmx256m -Xms256m"
+      networks:
+        - elk
+      depends_on:
+        - zuul-api-gateway 
+      command: ["./app/wait-for.sh", "java", "-Xmx200m", "-jar", "/app/turbine-dashboard-1.0.jar"]   
 
-  # The zipkin process services the UI, and also exposes a POST endpoint that
-  # instrumentation can send trace data to. Scribe is disabled by default.
-  # Switch storage type to Elasticsearch
-  zipkin:
-    #image: openzipkin/zipkin
-    build:
-      context: zipkin/
-    environment:
-      - STORAGE_TYPE=elasticsearch
-      # Point the zipkin at the storage backend
-      - ES_HOSTS=elasticsearch
-      # Uncomment to see requests to and from elasticsearch
-      # - ES_HTTP_LOGGING=BODY
-    ports:
-      # Port used for the Zipkin UI and HTTP Api
-      - 9411:9411
-      # Uncomment if you set SCRIBE_ENABLED=true
-      # - 9410:9410
-    networks:
-      - elk
-    depends_on:
-      - elasticsearch
+    elasticsearch:
+      build:
+        context: elasticsearch/
+      volumes:
+        - ./elasticsearch/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml:ro
+        #- ./elasticsearch/data:/usr/share/elasticsearch/data:rw
+      ports:
+        - "9200:9200"
+        - "9300:9300"
+      environment:
+        ES_JAVA_OPTS: "-Xmx256m -Xms256m"
+      networks:
+        - elk
+  
+    logstash:
+      build:
+        context: logstash/
+      volumes:
+        - ./logstash/config/logstash.yml:/usr/share/logstash/config/logstash.yml:ro
+        - ./logstash/pipeline:/usr/share/logstash/pipeline:ro
+      ports:
+        - "5000:5000"
+      environment:
+        LS_JAVA_OPTS: "-Xmx256m -Xms256m"
+      networks:
+        - elk
+      depends_on:
+        - elasticsearch
+  
+    kibana:
+      build:
+        context: kibana/
+      volumes:
+        - ./kibana/config/:/usr/share/kibana/config:ro
+      ports:
+        - "5601:5601"
+      networks:
+        - elk
+      depends_on:
+        - elasticsearch        
+        
+  
+    # The zipkin process services the UI, and also exposes a POST endpoint that
+    # instrumentation can send trace data to. Scribe is disabled by default.
+    # Switch storage type to Elasticsearch
+    zipkin:
+      #image: openzipkin/zipkin
+      build:
+        context: zipkin/
+      environment:
+        - STORAGE_TYPE=elasticsearch
+        # Point the zipkin at the storage backend
+        - ES_HOSTS=elasticsearch
+        # Uncomment to see requests to and from elasticsearch
+        # - ES_HTTP_LOGGING=BODY
+      ports:
+        # Port used for the Zipkin UI and HTTP Api
+        - 9411:9411
+        # Uncomment if you set SCRIBE_ENABLED=true
+        # - 9410:9410
+      networks:
+        - elk
+      depends_on:
+        - elasticsearch
+      command: ["./app/wait-for.sh", "java", "-Xmx200m", "-jar", "/app/zipkin-server-2.7.1-exec.jar"]
 
 networks:
-
   elk:
-    driver: bridge
+    driver: bridge    
+
