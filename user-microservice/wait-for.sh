@@ -10,43 +10,59 @@ is_config_server_on=false
 is_rabbitmq_on=false
 is_eureka_discovery_on=false
 is_zuul_api_gateway_on=false
+is_mongo_db_on=false
 
-until $is_config_server_on && $is_rabbitmq_on && $is_eureka_discovery_on && $is_zuul_api_gateway_on ; do
-    sleep 20
+until 
+		$is_config_server_on 
+		&& $is_rabbitmq_on 
+		&& $is_eureka_discovery_on 
+		&& $is_zuul_api_gateway_on 
+		&& $isis_mongo_db_on ; do
     
+    sleep 20
+
+
     if [ $(nc -z rabbitmq 5672; echo $?) -eq 0 ]
 	then
-		is_rabbitmq_on=true
-		echo "$(date) - RabbitMQ Connected"
+		isis_mongo_db_on=true
+		echo "$(date) - MongoDb Connected"
 	else
-		echo "$(date) - Waiting for RabbitMQ"		
-	fi
+		echo "$(date) - Waiting for MongoDb"		
+	fi    
     
-	if [ $(nc -z config-server 8888; echo $?) -eq 0 ]
-	then
-		is_config_server_on=true
-		echo "$(date) - Config Server Connected"
-	else		
-		echo "$(date) - Waiting for Config Server"
-	fi
-	
-	if [ $(nc -z eureka-service-discovery 8761; echo $?) -eq 0 ]
-	then
-		is_eureka_discovery_on=true
-		echo "$(date) - Eureka Discovery Server Connected"
-	else		
-		echo "$(date) - Waiting for Eureka Discovery Server"
-	fi
-	
-	if [ $(nc -z zuul-api-gateway 8095; echo $?) -eq 0 ]
-	then
-		is_zuul_api_gateway_on=true
-		echo "$(date) - ZUUL API Gateway Connected"
-	else		
-		echo "$(date) - Waiting for ZUUL API Gateway"
-	fi
+#    if [ $(nc -z rabbitmq 5672; echo $?) -eq 0 ]
+#	then
+#		is_rabbitmq_on=true
+#		echo "$(date) - RabbitMQ Connected"
+#	else
+#		echo "$(date) - Waiting for RabbitMQ"		
+#	fi
+#    
+#	if [ $(nc -z config-server 8888; echo $?) -eq 0 ]
+#	then
+#		is_config_server_on=true
+#		echo "$(date) - Config Server Connected"
+#	else		
+#		echo "$(date) - Waiting for Config Server"
+#	fi
+#	
+#	if [ $(nc -z eureka-service-discovery 8761; echo $?) -eq 0 ]
+#	then
+#		is_eureka_discovery_on=true
+#		echo "$(date) - Eureka Discovery Server Connected"
+#	else		
+#		echo "$(date) - Waiting for Eureka Discovery Server"
+#	fi
+#	
+#	if [ $(nc -z zuul-api-gateway 8095; echo $?) -eq 0 ]
+#	then
+#		is_zuul_api_gateway_on=true
+#		echo "$(date) - ZUUL API Gateway Connected"
+#	else		
+#		echo "$(date) - Waiting for ZUUL API Gateway"
+#	fi
     
 done
 
->&2 echo "Dependencies are up - starting x-microservice Container"
-exec java -Xmx200m -jar /app/x-microservice-1.0.jar
+>&2 echo "Dependencies are up - starting user-microservice Container"
+exec java -Xmx200m -jar /app/user-microservice-1.0.jar
