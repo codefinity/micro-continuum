@@ -13,17 +13,29 @@ services:
         ES_JAVA_OPTS: "-Xmx256m -Xms256m"
       networks:
         - elk
-      depends_on:
+      #depends_on:
         #- rabbitmq
         #- eureka-service-discovery
         #- config-server
         #- zuul-api-gateway
+        #- mongodb
       #To connect to localhost
       #extra_hosts:
       #  - "outside:192.168.0.106"
       command: ["./app/wait-for.sh", "java", "-Xmx200m", "-jar", "/app/user-microservice-1.0.jar"]
 
-
+    mongodb: 
+      image: mongo:3.6.3
+      hostname: mongodb
+      environment:
+        - MONGO_INITDB_ROOT_USERNAME=admin
+        - MONGO_INITDB_ROOT_PASSWORD=admin
+      ports:
+        - 27017:27017
+      networks:
+        - elk  
+        #volumes:
+        #- ./data/db:/data/db
 
 
 #    config-server:

@@ -10,21 +10,21 @@ is_config_server_on=false
 is_rabbitmq_on=false
 is_eureka_discovery_on=false
 is_zuul_api_gateway_on=false
-is_mongo_db_on=false
+is_mongodb_on=false
 
 until 
-		$is_config_server_on 
-		&& $is_rabbitmq_on 
-		&& $is_eureka_discovery_on 
-		&& $is_zuul_api_gateway_on 
-		&& $isis_mongo_db_on ; do
+		#$is_config_server_on &&
+		#$is_rabbitmq_on &&
+		#$is_eureka_discovery_on && 
+		#$is_zuul_api_gateway_on &&
+		$is_mongodb_on ; do
     
     sleep 20
 
 
-    if [ $(nc -z rabbitmq 5672; echo $?) -eq 0 ]
+    if [ $(nc -z mongodb 27017; echo $?) -eq 0 ]
 	then
-		isis_mongo_db_on=true
+		is_mongodb_on=true
 		echo "$(date) - MongoDb Connected"
 	else
 		echo "$(date) - Waiting for MongoDb"		
