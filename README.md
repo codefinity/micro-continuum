@@ -111,8 +111,10 @@ http://localhost:8095/z-microservice/hello
 
 ##### Security
 
-* Authentication using OAuth/JWT/OpenId Connect
-* Authorization
+* MongoDb Docker Integration
+* Integration With Spring Security
+* Authentication using Nimbus JWT
+* Authorization Using JWT Scopes
 * Inter Microservices Security
 * Social Logins - Google, Facebook, Twitter
 
