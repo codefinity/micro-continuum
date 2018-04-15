@@ -6,5 +6,65 @@ Zipkin Integration:
 
 https://www.e4developer.com/2018/02/09/tracing-messages-in-choreography-with-sleuth-and-zipkin/
 
+Spring JWT:
+
+http://projects.spring.io/spring-security/
+
+https://github.com/dsyer/presos/blob/master/decks/microservice-security-springone.md
+
+http://projects.spring.io/spring-security-oauth/docs/oauth2.html
+
+https://piotrminkowski.wordpress.com/2017/02/22/microservices-security-with-oauth2/
+
+https://nordicapis.com/api-security-oauth-openid-connect-depth/
+
+https://spring.io/blog/2015/10/19/springone2gx-2015-replay-securing-microservices-with-spring-cloud-security
+
+https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-Security-2.0
+
+https://spring.io/blog/2017/09/15/security-changes-in-spring-boot-2-0-m4
+
+https://spring.io/blog/2018/03/01/spring-security-oauth-boot-2-auto-config-2-0-0-released
+
+https://docs.spring.io/spring-security-oauth2-boot/docs/current-SNAPSHOT/reference/htmlsingle/
+
+https://spring.io/blog/2018/03/06/using-spring-security-5-to-integrate-with-oauth-2-secured-services-such-as-facebook-and-github
+
+https://spring.io/blog/2018/01/30/next-generation-oauth-2-0-support-with-spring-security
+
+https://mvnrepository.com/artifact/org.springframework.security/spring-security-jwt/1.0.9.RELEASE
+
+https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-security.html
+
+https://spring.io/blog/2017/05/11/spring-security-5-0-0-m1#new-support-for-oauth-2-0-and-openid-connect-1-0
+
+Currently Working on
+
+http://sivatechlab.com/secure-rest-api-using-spring-security-oauth2-jwt/
+
+https://github.com/sivaappavu/crm-oauth2-jwt
+
+https://www.jamasoftware.com/blog/spring-security-oauth-multi-tenant/
+
+https://github.com/tuanngda/spring-boot-oauth2-demo
+
+http://www.baeldung.com/spring-security-oauth-jwt
+
+https://medium.com/@nydiarra/secure-a-spring-boot-rest-api-with-json-web-token-reference-to-angular-integration-e57a25806c50
+
+https://www.linkedin.com/pulse/json-web-token-jwt-spring-security-real-world-example-boris-trivic/
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

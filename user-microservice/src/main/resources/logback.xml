@@ -3,13 +3,13 @@
     <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
     <property name="spring.application.name" value="user-microservice"/>
 	<include resource="org/springframework/boot/logging/logback/console-appender.xml" />
-	<appender name="stash" class="net.logstash.logback.appender.LogstashTcpSocketAppender">
+	<!-- <appender name="stash" class="net.logstash.logback.appender.LogstashTcpSocketAppender">
       	<destination>localhost:5000</destination>
-      	<!-- encoder is required -->
+      	encoder is required
       	<encoder class="net.logstash.logback.encoder.LogstashEncoder" />
-  	</appender>
+  	</appender> -->
 	<root level="INFO">
 		<appender-ref ref="CONSOLE" />
-		<appender-ref ref="stash" />
+		<!-- <appender-ref ref="stash" /> -->
 	</root>
 </configuration>

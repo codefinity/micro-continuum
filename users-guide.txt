@@ -135,6 +135,12 @@ Bus Refresh:	curl -X POST http://localhost:8020/bus-refresh
 
 ToDo:
 -----
+* Authorize controllers. Search for "@PreAuthorize jwt token".
+
+* Change Log Messaging to Debug.
+
+* Using Spring Security With Webflux. https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-security.html
+
 * Binders:
 
 	Understand the concept and implement.

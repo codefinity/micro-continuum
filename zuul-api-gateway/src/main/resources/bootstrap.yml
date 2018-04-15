@@ -30,6 +30,10 @@ spring:
       
 zuul:
   routes:
+    user-microservice:      
+      serviceId: user-microservice
+      path: /user-microservice/**
+      stripPrefix: true
     x-microservice:      
       serviceId: x-microservice
       path: /x-microservice/**
