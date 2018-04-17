@@ -10,7 +10,7 @@ import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-public class CustomAuthenticationProvider implements AuthenticationProvider {
+public class MicroContinuumAuthenticationProvider implements AuthenticationProvider {
 
 	@Autowired
 	private MicroContinuumUserDetailsService userManagementService;
