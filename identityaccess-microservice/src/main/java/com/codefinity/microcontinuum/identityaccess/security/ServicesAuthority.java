@@ -2,13 +2,13 @@ package com.codefinity.microcontinuum.identityaccess.security;
 
 import org.springframework.security.core.GrantedAuthority;
 
-public class MicroContinuumAuthority implements GrantedAuthority {
+public class ServicesAuthority implements GrantedAuthority {
 
 	private static final long serialVersionUID = 1L;
 	
 	private String authority;
 
-	public MicroContinuumAuthority(String authority) {
+	public ServicesAuthority(String authority) {
 		this.authority = authority;
 	}
 
@@ -26,9 +26,9 @@ public class MicroContinuumAuthority implements GrantedAuthority {
 	public boolean equals(Object obj) {
 		if (obj == null)
 			return false;
-		if (!(obj instanceof MicroContinuumAuthority))
+		if (!(obj instanceof ServicesAuthority))
 			return false;
-		return ((MicroContinuumAuthority) obj).getAuthority().equals(authority);
+		return ((ServicesAuthority) obj).getAuthority().equals(authority);
 	}
 
 }

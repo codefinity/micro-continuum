@@ -10,13 +10,13 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import com.codefinity.microcontinuum.identityaccess.domain.model.User;
 import com.codefinity.microcontinuum.identityaccess.repository.UserRepository;
 
-public class MicroContinuumUserDetailsService implements UserDetailsService {
+public class ServicesUserDetailsService implements UserDetailsService {
 	
 	private final UserRepository userRepository;
 	//private final RoleRepository roleRepository;
 
 	@Autowired
-	public MicroContinuumUserDetailsService(UserRepository userRepository) {
+	public ServicesUserDetailsService(UserRepository userRepository) {
 
 		this.userRepository = userRepository;
 		//this.roleRepository = roleRepository;
@@ -37,7 +37,7 @@ public class MicroContinuumUserDetailsService implements UserDetailsService {
 
 			List<String> roles = userRepository.getRoleByEmail(email);
 
-			return new MicroContinuumUserDetails(user, roles);
+			return new ServicesUserDetails(user, roles);
 
 		}
 	}	

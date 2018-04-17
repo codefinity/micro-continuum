@@ -4,13 +4,13 @@ import org.springframework.security.core.GrantedAuthority;
 
 import com.codefinity.microcontinuum.identityaccess.domain.model.Role;
 
-public class MicroContinuumRoleDetails implements GrantedAuthority {
+public class ServicesRoleDetails implements GrantedAuthority {
 	
 	private static final long serialVersionUID = 5917454223219488057L;
 
 	private String roleName;
 
-	public MicroContinuumRoleDetails(Role role)
+	public ServicesRoleDetails(Role role)
 	{
 		this.roleName = role.getName();
 	}	

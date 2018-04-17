@@ -7,14 +7,14 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 
-import com.codefinity.microcontinuum.identityaccess.security.MicroContinuumAuthenticationProvider;
+import com.codefinity.microcontinuum.identityaccess.security.ServicesAuthenticationProvider;
 
 @Configuration
 @EnableWebSecurity
 public class WebSecurityConfigurer extends WebSecurityConfigurerAdapter {
 
 	@Autowired
-	private MicroContinuumAuthenticationProvider authProvider;
+	private ServicesAuthenticationProvider authProvider;
 
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 		auth.authenticationProvider(authProvider);

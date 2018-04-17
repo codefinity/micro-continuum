@@ -10,7 +10,7 @@ import org.springframework.util.StringUtils;
 
 import com.codefinity.microcontinuum.identityaccess.domain.model.User;
 
-public class MicroContinuumUserDetails implements UserDetails {
+public class ServicesUserDetails implements UserDetails {
 
 	private static final long serialVersionUID = 1L;
 	private List<String> userRoles;
@@ -25,7 +25,7 @@ public class MicroContinuumUserDetails implements UserDetails {
 	private String userName;
 	private String password;
 
-	public MicroContinuumUserDetails(User user, List<String> userRoles) {
+	public ServicesUserDetails(User user, List<String> userRoles) {
 
 		//super(user);
 		this.userRoles = userRoles;
