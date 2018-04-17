@@ -18,7 +18,7 @@
 		<module>hystrix-dashboard</module>
 		<module>turbine-dashboard</module>
 		<module>zipkin-server</module>
-		<module>user-microservice</module>
+		<module>identityaccess-microservice</module>
 		<module>x-microservice</module>
 		<module>y-microservice</module>
 		<module>z-microservice</module>

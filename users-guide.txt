@@ -185,6 +185,10 @@ endpoints:
 
 * How does load balancong work in docker swarm mode?
 
+* utils/ will contain bash scripts to create new microservices.
+
+* libs/ will contain jars to support utils. 
+
 
 
 

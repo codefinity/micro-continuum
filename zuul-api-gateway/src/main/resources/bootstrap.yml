@@ -31,8 +31,8 @@ spring:
 zuul:
   routes:
     user-microservice:      
-      serviceId: user-microservice
-      path: /user-microservice/**
+      serviceId: identityaccess-microservice
+      path: /identityaccess-microservice/**
       stripPrefix: true
     x-microservice:      
       serviceId: x-microservice
