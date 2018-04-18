@@ -45,8 +45,8 @@ public class UserResource extends AbstractResource {
 
     @RequestMapping(value="/username", method=RequestMethod.GET)
     public ResponseEntity<UserRepresentation> getUser(
-            @PathParam("tenantId") String tenantId,
-            @PathParam("username") String username) {
+    		@PathVariable String tenantId,
+    		@PathVariable String username) {
 
         User user = this.identityApplicationService().user(tenantId, username);
 
@@ -62,9 +62,9 @@ public class UserResource extends AbstractResource {
 
     @RequestMapping(value="/{username}/inRole/{role}", method=RequestMethod.GET)
     public ResponseEntity<UserInRoleRepresentation> getUserInRole(
-            @PathParam("tenantId") String aTenantId,
-            @PathParam("username") String aUsername,
-            @PathParam("role") String aRoleName) {
+    		@PathVariable String aTenantId,
+    		@PathVariable String aUsername,
+    		@PathVariable String aRoleName) {
 
 
         User user = null;
