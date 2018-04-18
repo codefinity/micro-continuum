@@ -8,7 +8,7 @@ import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.util.StringUtils;
 
-import com.codefinity.microcontinuum.identityaccess.domain.model.User;
+import com.codefinity.microcontinuum.identityaccess.domain.model.identity.User;
 
 public class ServicesUserDetails implements UserDetails {
 
@@ -29,8 +29,8 @@ public class ServicesUserDetails implements UserDetails {
 
 		//super(user);
 		this.userRoles = userRoles;
-		this.userName = user.getEmail();
-		this.password = user.getPassword();
+		//this.userName = user.getEmail();
+		//this.password = user.getPassword();
 
 	}
 

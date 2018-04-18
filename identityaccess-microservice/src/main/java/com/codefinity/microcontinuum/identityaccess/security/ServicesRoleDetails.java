@@ -2,7 +2,7 @@ package com.codefinity.microcontinuum.identityaccess.security;
 
 import org.springframework.security.core.GrantedAuthority;
 
-import com.codefinity.microcontinuum.identityaccess.domain.model.Role;
+import com.codefinity.microcontinuum.identityaccess.domain.model.access.Role;
 
 public class ServicesRoleDetails implements GrantedAuthority {
 	
@@ -12,7 +12,7 @@ public class ServicesRoleDetails implements GrantedAuthority {
 
 	public ServicesRoleDetails(Role role)
 	{
-		this.roleName = role.getName();
+		//this.roleName = role.getName();
 	}	
 	
 	@Override

@@ -7,28 +7,28 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
-import com.codefinity.microcontinuum.identityaccess.domain.model.User;
-import com.codefinity.microcontinuum.identityaccess.repository.UserRepository;
+import com.codefinity.microcontinuum.identityaccess.domain.model.identity.User;
+//import com.codefinity.microcontinuum.identityaccess.persistance.UserRepository;
 
 public class ServicesUserDetailsService implements UserDetailsService {
 	
-	private final UserRepository userRepository;
+	//private final UserRepository userRepository;
 	//private final RoleRepository roleRepository;
 
-	@Autowired
+	/*@Autowired
 	public ServicesUserDetailsService(UserRepository userRepository) {
 
-		this.userRepository = userRepository;
+		//this.userRepository = userRepository;
 		//this.roleRepository = roleRepository;
-	}
+	}*/
 
 	@Override
 	public UserDetails loadUserByUsername(String email)
 			throws UsernameNotFoundException {
 
-		User user = userRepository.getUserByEmail(email);
+		//User user = userRepository.getUserByEmail(email);
 
-		if (null == user) {
+		/*if (null == user) {
 
 			throw new UsernameNotFoundException(
 					"No user present with username: " + email);
@@ -39,7 +39,9 @@ public class ServicesUserDetailsService implements UserDetailsService {
 
 			return new ServicesUserDetails(user, roles);
 
-		}
+		}*/
+		
+		return null;
 	}	
 
 }
