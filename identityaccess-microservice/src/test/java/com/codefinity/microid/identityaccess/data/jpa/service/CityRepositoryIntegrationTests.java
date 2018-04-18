@@ -1,14 +1,14 @@
-package com.codefinity.microid.identityaccess.data.jpa.service;
+/*package com.codefinity.microid.identityaccess.data.jpa.service;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-/**
+*//**
  * Integration tests for {@link CityRepository}.
  * 
  * @author Oliver Gierke
- */
+ *//*
 @RunWith(SpringJUnit4ClassRunner.class)
 //@SpringApplicationConfiguration(classes = SampleDataRestApplication.class)
 public class CityRepositoryIntegrationTests {
@@ -20,3 +20,4 @@ public class CityRepositoryIntegrationTests {
 		//assertThat(cities.getTotalElements(), is(greaterThan(20L)));
 	}
 }
+*/

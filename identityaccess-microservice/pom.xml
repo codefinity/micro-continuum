@@ -5,7 +5,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>identityaccess-microservice</artifactId>
 	<groupId>com.codefinity.microcontinuum</groupId>
-	<name>User Microservice</name>
+	<name>Identity Access Microservice</name>
 	<description>Identity Access Microservice</description>
 	<version>1.0</version>
 	<url>http://projects.spring.io/spring-boot/</url>
@@ -82,6 +82,8 @@
 			<groupId>com.codefinity.microcontinuum</groupId>
 			<artifactId>common</artifactId>
 			<version>1.0</version>
+         	<!-- <scope>system</scope>
+         	<systemPath>../common/target/common-1.0.jar</systemPath> -->
 		</dependency>
 		
 		<!-- <dependency>

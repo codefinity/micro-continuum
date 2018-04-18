@@ -7,12 +7,8 @@
 	<groupId>com.codefinity.microcontinuum</groupId>
 	<name>Common Microservice Compoments</name>
 	<description>Common Microservice Compoments</description>
+	<packaging>jar</packaging>
 	<version>1.0</version>
-	<url>http://projects.spring.io/spring-boot/</url>
-	<organization>
-		<name>Pivotal Software, Inc.</name>
-		<url>http://www.spring.io</url>
-	</organization>
 
 	<!--<parent>
 		 <groupId>org.springframework.boot</groupId> <artifactId>spring-boot-starter-parent</artifactId> 

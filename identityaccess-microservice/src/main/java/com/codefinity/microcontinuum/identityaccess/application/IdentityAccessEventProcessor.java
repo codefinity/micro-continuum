@@ -1,7 +1,5 @@
 package com.codefinity.microcontinuum.identityaccess.application;
 
-import org.aspectj.lang.annotation.Aspect;
-import org.junit.Before;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.codefinity.microcontinuum.common.domain.model.DomainEvent;
@@ -9,7 +7,7 @@ import com.codefinity.microcontinuum.common.domain.model.DomainEventPublisher;
 import com.codefinity.microcontinuum.common.domain.model.DomainEventSubscriber;
 import com.codefinity.microcontinuum.common.event.EventStore;
 
-@Aspect
+//@Aspect
 public class IdentityAccessEventProcessor {
 
     @Autowired
