@@ -1,74 +1,66 @@
-/*package com.codefinity.microcontinuum.identityaccess.resource;
+package com.codefinity.microcontinuum.identityaccess.resource;
 
-import javax.websocket.server.PathParam;
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
-import javax.ws.rs.WebApplicationException;
-import javax.ws.rs.core.Context;
-import javax.ws.rs.core.UriInfo;
-import javax.xml.ws.Response;
+import javax.servlet.http.HttpServletRequest;
 
-import org.springframework.web.util.UriBuilder;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.codefinity.microcontinuum.common.media.Link;
-import com.codefinity.microcontinuum.common.media.OvationsMediaType;
 import com.codefinity.microcontinuum.common.notification.NotificationLog;
-import com.codefinity.microcontinuum.common.serializer.ObjectSerializer;
 import com.codefinity.microcontinuum.identityaccess.application.representation.NotificationLogRepresentation;
 
-@Path("/notifications")
+@RequestMapping("/notifications")
 public class NotificationResource extends AbstractResource {
 
     public NotificationResource() {
         super();
     }
 
-    @GET
-    @Produces({ OvationsMediaType.ID_OVATION_TYPE })
-    public Response getCurrentNotificationLog(
-            @Context UriInfo aUriInfo) {
+    @RequestMapping(value="/", method=RequestMethod.GET)
+    public ResponseEntity<NotificationLogRepresentation>  getCurrentNotificationLog(
+    		HttpServletRequest request) {
 
         NotificationLog currentNotificationLog =
             this.notificationApplicationService()
                 .currentNotificationLog();
+        
+        String uriInfo = request.getContextPath();
 
         if (currentNotificationLog == null) {
-            throw new WebApplicationException(Response.Status.NOT_FOUND);
+        	return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
         }
 
-        Response response =
-            this.currentNotificationLogResponse(
-                    currentNotificationLog,
-                    aUriInfo);
+        NotificationLogRepresentation log =
+                new NotificationLogRepresentation(currentNotificationLog);
 
-        return response;
+
+        return new ResponseEntity<NotificationLogRepresentation>(log, HttpStatus.OK);
     }
 
-    @GET
-    @Path("{notificationId}")
-    @Produces({ OvationsMediaType.ID_OVATION_TYPE })
-    public Response getNotificationLog(
-            @PathParam("notificationId") String aNotificationId,
-            @Context UriInfo aUriInfo) {
+    @RequestMapping(value="/{notificationId}", method=RequestMethod.GET)
+    public ResponseEntity<NotificationLogRepresentation>  getNotificationLog(
+    		@PathVariable String notificationId,
+    		HttpServletRequest request) {
 
         NotificationLog notificationLog =
             this.notificationApplicationService()
-                .notificationLog(aNotificationId);
+                .notificationLog(notificationId);
 
         if (notificationLog == null) {
-            throw new WebApplicationException(Response.Status.NOT_FOUND);
+        	return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
         }
 
-        Response response =
-            this.notificationLogResponse(
-                    notificationLog,
-                    aUriInfo);
+        NotificationLogRepresentation log =
+                new NotificationLogRepresentation(notificationLog);
 
-        return response;
+        return new ResponseEntity<NotificationLogRepresentation>(log, HttpStatus.OK);
     }
 
-    private Response currentNotificationLogResponse(
+    
+    
+/*    private Response currentNotificationLogResponse(
             NotificationLog aCurrentNotificationLog,
             UriInfo aUriInfo) {
 
@@ -114,9 +106,9 @@ public class NotificationResource extends AbstractResource {
                 .build();
 
         return response;
-    }
+    }*/
 
-    private Link linkFor(
+/*    private Link linkFor(
             String aRelationship,
             String anId,
             UriInfo aUriInfo) {
@@ -173,6 +165,5 @@ public class NotificationResource extends AbstractResource {
                     "self",
                     aNotificationLog.notificationLogId(),
                     aUriInfo);
-    }
+    }*/
 }
-*/
