@@ -1,49 +1,38 @@
-/*package com.codefinity.microcontinuum.identityaccess.resource;
+package com.codefinity.microcontinuum.identityaccess.resource;
 
 import javax.websocket.server.PathParam;
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
-import javax.ws.rs.WebApplicationException;
-import javax.xml.ws.Response;
 
-import org.jboss.resteasy.annotations.cache.Cache;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.codefinity.microcontinuum.common.media.OvationsMediaType;
-import com.codefinity.microcontinuum.common.serializer.ObjectSerializer;
 import com.codefinity.microcontinuum.identityaccess.application.ApplicationServiceRegistry;
 import com.codefinity.microcontinuum.identityaccess.application.IdentityApplicationService;
 import com.codefinity.microcontinuum.identityaccess.domain.model.identity.Tenant;
 
-@Path("/tenants")
+@RequestMapping("/tenants")
 public class TenantResource {
 
     public TenantResource() {
         super();
     }
 
-    @GET
-    @Path("{tenantId}")
-    @Produces({ OvationsMediaType.ID_OVATION_TYPE })
-    @Cache(maxAge=3600)
-    public Response getTenant(
+    @RequestMapping(value="/{tenantId}", method=RequestMethod.GET)
+    public ResponseEntity<Tenant>  getTenant(
             @PathParam("tenantId") String aTenantId) {
 
         Tenant tenant = this.identityApplicationService().tenant(aTenantId);
 
         if (tenant == null) {
-            throw new WebApplicationException(Response.Status.NOT_FOUND);
+        	
+        	return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
         }
 
-        String tenantRepresentation = ObjectSerializer.instance().serialize(tenant);
-
-        Response response = Response.ok(tenantRepresentation).build();
-
-        return response;
+        return new ResponseEntity<Tenant>(tenant, HttpStatus.OK);
     }
 
     private IdentityApplicationService identityApplicationService() {
         return ApplicationServiceRegistry.identityApplicationService();
     }
 }
-*/
