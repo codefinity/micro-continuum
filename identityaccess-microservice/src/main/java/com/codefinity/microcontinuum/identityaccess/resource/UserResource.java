@@ -1,47 +1,47 @@
 package com.codefinity.microcontinuum.identityaccess.resource;
 
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
 
-import com.codefinity.microcontinuum.identityaccess.application.command.AuthenticateUserCommand;
-import com.codefinity.microcontinuum.identityaccess.application.representation.UserInRoleRepresentation;
-import com.codefinity.microcontinuum.identityaccess.application.representation.UserRepresentation;
-import com.codefinity.microcontinuum.identityaccess.domain.model.identity.User;
 import com.codefinity.microcontinuum.identityaccess.domain.model.identity.UserDescriptor;
+import com.codefinity.microcontinuum.identityaccess.dto.SignInDto;
 
-@RequestMapping("/tenants/{tenantId}/users")
+@RestController
+@RequestMapping("/tenants/{tenantid}/users")
 public class UserResource extends AbstractResource {
 
     public UserResource() {
         super();
     }
 
-    @RequestMapping(value="{username}/autenticatedWith/{password}", method=RequestMethod.GET)
+    @RequestMapping(value="/authenticate", method=RequestMethod.POST)
     public ResponseEntity<UserDescriptor> getAuthenticUser(
-    		@PathVariable String tenantId,
-    		@PathVariable String username,
-    		@PathVariable String password) {
+    		@PathVariable String tenantid,
+    		@RequestBody SignInDto signInDto) {
+    	
+    	return null;
 
-        UserDescriptor userDescriptor =
+/*        UserDescriptor userDescriptor =
                 this.identityApplicationService()
                     .authenticateUser(
                             new AuthenticateUserCommand(
-                                    tenantId,
-                                    username,
-                                    password));
+                                    tenantid,
+                                    signInDto.getUsername(),
+                                    signInDto.getPassword()));*/
 
-        if (userDescriptor.isNullDescriptor()) {
+        /*if (userDescriptor.isNullDescriptor()) {
         	
         	return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
         }
 
-        return new ResponseEntity<UserDescriptor>(userDescriptor, HttpStatus.OK);
+        return new ResponseEntity<UserDescriptor>(userDescriptor, HttpStatus.OK);*/
     }
 
-    @RequestMapping(value="/username", method=RequestMethod.GET)
+    /*@RequestMapping(value="/username", method=RequestMethod.GET)
     public ResponseEntity<UserRepresentation> getUser(
     		@PathVariable String tenantId,
     		@PathVariable String username) {
@@ -85,6 +85,6 @@ public class UserResource extends AbstractResource {
         }
 
         return new ResponseEntity<UserInRoleRepresentation>(userInRoleRepresentation, HttpStatus.OK);
-    }
+    }*/
 
 }

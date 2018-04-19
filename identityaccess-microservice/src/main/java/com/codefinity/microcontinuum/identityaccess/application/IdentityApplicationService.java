@@ -1,7 +1,7 @@
 package com.codefinity.microcontinuum.identityaccess.application;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.transaction.annotation.Transactional;
+//import org.springframework.transaction.annotation.Transactional;
 
 import com.codefinity.microcontinuum.identityaccess.application.command.ActivateTenantCommand;
 import com.codefinity.microcontinuum.identityaccess.application.command.AddGroupToGroupCommand;
@@ -40,7 +40,7 @@ import com.codefinity.microcontinuum.identityaccess.domain.model.identity.User;
 import com.codefinity.microcontinuum.identityaccess.domain.model.identity.UserDescriptor;
 import com.codefinity.microcontinuum.identityaccess.domain.model.identity.UserRepository;
 
-@Transactional
+////@Transactional
 public class IdentityApplicationService {
 
     @Autowired
@@ -67,14 +67,14 @@ public class IdentityApplicationService {
         // IdentityAccessEventProcessor.register();
     }
 
-    @Transactional
+    //@Transactional
     public void activateTenant(ActivateTenantCommand aCommand) {
         Tenant tenant = this.existingTenant(aCommand.getTenantId());
 
         tenant.activate();
     }
 
-    @Transactional
+    //@Transactional
     public void addGroupToGroup(AddGroupToGroupCommand aCommand) {
         Group parentGroup =
                 this.existingGroup(
@@ -89,7 +89,7 @@ public class IdentityApplicationService {
         parentGroup.addGroup(childGroup, this.groupMemberService());
     }
 
-    @Transactional
+    //@Transactional
     public void addUserToGroup(AddUserToGroupCommand aCommand) {
         Group group =
                 this.existingGroup(
@@ -104,7 +104,7 @@ public class IdentityApplicationService {
         group.addUser(user);
     }
 
-    @Transactional(readOnly=true)
+    //@Transactional(readOnly=true)
     public UserDescriptor authenticateUser(AuthenticateUserCommand aCommand) {
         UserDescriptor userDescriptor =
                 this.authenticationService()
@@ -116,14 +116,14 @@ public class IdentityApplicationService {
         return userDescriptor;
     }
 
-    @Transactional
+    //@Transactional
     public void deactivateTenant(DeactivateTenantCommand aCommand) {
         Tenant tenant = this.existingTenant(aCommand.getTenantId());
 
         tenant.deactivate();
     }
 
-    @Transactional
+    //@Transactional
     public void changeUserContactInformation(ChangeContactInfoCommand aCommand) {
         User user = this.existingUser(aCommand.getTenantId(), aCommand.getUsername());
 
@@ -141,7 +141,7 @@ public class IdentityApplicationService {
                         new Telephone(aCommand.getSecondaryTelephone())));
     }
 
-    @Transactional
+    //@Transactional
     public void changeUserEmailAddress(ChangeEmailAddressCommand aCommand) {
         User user = this.existingUser(aCommand.getTenantId(), aCommand.getUsername());
 
@@ -152,7 +152,7 @@ public class IdentityApplicationService {
                     .changeEmailAddress(new EmailAddress(aCommand.getEmailAddress())));
     }
 
-    @Transactional
+    //@Transactional
     public void changeUserPostalAddress(ChangePostalAddressCommand aCommand) {
         User user = this.existingUser(aCommand.getTenantId(), aCommand.getUsername());
 
@@ -169,7 +169,7 @@ public class IdentityApplicationService {
                                     aCommand.getAddressCountryCode())));
     }
 
-    @Transactional
+    //@Transactional
     public void changeUserPrimaryTelephone(ChangePrimaryTelephoneCommand aCommand) {
         User user = this.existingUser(aCommand.getTenantId(), aCommand.getUsername());
 
@@ -180,7 +180,7 @@ public class IdentityApplicationService {
                     .changePrimaryTelephone(new Telephone(aCommand.getTelephone())));
     }
 
-    @Transactional
+    //@Transactional
     public void changeUserSecondaryTelephone(ChangeSecondaryTelephoneCommand aCommand) {
         User user = this.existingUser(aCommand.getTenantId(), aCommand.getUsername());
 
@@ -191,21 +191,21 @@ public class IdentityApplicationService {
                     .changeSecondaryTelephone(new Telephone(aCommand.getTelephone())));
     }
 
-    @Transactional
+    //@Transactional
     public void changeUserPassword(ChangeUserPasswordCommand aCommand) {
         User user = this.existingUser(aCommand.getTenantId(), aCommand.getUsername());
 
         user.changePassword(aCommand.getCurrentPassword(), aCommand.getChangedPassword());
     }
 
-    @Transactional
+    //@Transactional
     public void changeUserPersonalName(ChangeUserPersonalNameCommand aCommand) {
         User user = this.existingUser(aCommand.getTenantId(), aCommand.getUsername());
 
         user.person().changeName(new FullName(aCommand.getFirstName(), aCommand.getLastName()));
     }
 
-    @Transactional
+    //@Transactional
     public void defineUserEnablement(DefineUserEnablementCommand aCommand) {
         User user = this.existingUser(aCommand.getTenantId(), aCommand.getUsername());
 
@@ -216,7 +216,7 @@ public class IdentityApplicationService {
                         aCommand.getEndDate()));
     }
 
-    @Transactional(readOnly=true)
+    //@Transactional(readOnly=true)
     public Group group(String aTenantId, String aGroupName) {
         Group group =
                 this.groupRepository()
@@ -225,7 +225,7 @@ public class IdentityApplicationService {
         return group;
     }
 
-    @Transactional(readOnly=true)
+    //@Transactional(readOnly=true)
     public boolean isGroupMember(String aTenantId, String aGroupName, String aUsername) {
         Group group =
                 this.existingGroup(
@@ -240,7 +240,7 @@ public class IdentityApplicationService {
         return group.isMember(user, this.groupMemberService());
     }
 
-    @Transactional
+    //@Transactional
     public Group provisionGroup(ProvisionGroupCommand aCommand) {
         Tenant tenant = this.existingTenant(aCommand.getTenantId());
 
@@ -254,7 +254,7 @@ public class IdentityApplicationService {
         return group;
     }
 
-    @Transactional
+    //@Transactional
     public Tenant provisionTenant(ProvisionTenantCommand aCommand) {
 
         return
@@ -275,7 +275,7 @@ public class IdentityApplicationService {
                         new Telephone(aCommand.getSecondaryTelephone()));
     }
 
-    @Transactional
+    //@Transactional
     public User registerUser(RegisterUserCommand aCommand) {
         Tenant tenant = this.existingTenant(aCommand.getTenantId());
 
@@ -311,7 +311,7 @@ public class IdentityApplicationService {
         return user;
     }
 
-    @Transactional
+    //@Transactional
     public void removeGroupFromGroup(RemoveGroupFromGroupCommand aCommand) {
         Group parentGroup =
                 this.existingGroup(
@@ -326,7 +326,7 @@ public class IdentityApplicationService {
         parentGroup.removeGroup(childGroup);
     }
 
-    @Transactional
+    //@Transactional
     public void removeUserFromGroup(RemoveUserFromGroupCommand aCommand) {
         Group group =
                 this.existingGroup(
@@ -341,7 +341,7 @@ public class IdentityApplicationService {
         group.removeUser(user);
     }
 
-    @Transactional(readOnly=true)
+    //@Transactional(readOnly=true)
     public Tenant tenant(String aTenantId) {
         Tenant tenant =
                 this.tenantRepository()
@@ -350,7 +350,7 @@ public class IdentityApplicationService {
         return tenant;
     }
 
-    @Transactional(readOnly=true)
+    //@Transactional(readOnly=true)
     public User user(String aTenantId, String aUsername) {
         User user =
                 this.userRepository()
@@ -361,7 +361,7 @@ public class IdentityApplicationService {
         return user;
     }
 
-    @Transactional(readOnly=true)
+    //@Transactional(readOnly=true)
     public UserDescriptor userDescriptor(
             String aTenantId,
             String aUsername) {

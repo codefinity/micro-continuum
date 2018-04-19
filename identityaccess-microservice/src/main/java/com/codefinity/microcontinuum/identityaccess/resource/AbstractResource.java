@@ -1,15 +1,6 @@
 package com.codefinity.microcontinuum.identityaccess.resource;
 
-import java.math.BigInteger;
-import java.security.MessageDigest;
-
 import org.springframework.http.CacheControl;
-
-import com.codefinity.microcontinuum.identityaccess.application.AccessApplicationService;
-import com.codefinity.microcontinuum.identityaccess.application.ApplicationServiceRegistry;
-import com.codefinity.microcontinuum.identityaccess.application.IdentityApplicationService;
-import com.codefinity.microcontinuum.identityaccess.application.NotificationApplicationService;
-import com.codefinity.microcontinuum.identityaccess.domain.model.identity.User;
 
 public class AbstractResource {
 
@@ -17,9 +8,9 @@ public class AbstractResource {
         super();
     }
 
-    protected AccessApplicationService accessApplicationService() {
+    /*protected AccessApplicationService accessApplicationService() {
         return ApplicationServiceRegistry.accessApplicationService();
-    }
+    }*/
 
     protected CacheControl cacheControlFor(int aNumberOfSeconds) {
         /*CacheControl cacheControl = new CacheControl();
@@ -29,13 +20,13 @@ public class AbstractResource {
     	return null;
     }
 
-    protected IdentityApplicationService identityApplicationService() {
+    /*protected IdentityApplicationService identityApplicationService() {
         return ApplicationServiceRegistry.identityApplicationService();
     }
 
     protected NotificationApplicationService notificationApplicationService() {
         return ApplicationServiceRegistry.notificationApplicationService();
-    }
+    }*/
 
     /*protected EntityTag userETag(User aUser) {
 

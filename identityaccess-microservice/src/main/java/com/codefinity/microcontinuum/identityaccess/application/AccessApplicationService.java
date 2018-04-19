@@ -1,7 +1,7 @@
 package com.codefinity.microcontinuum.identityaccess.application;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.transaction.annotation.Transactional;
+//import org.springframework.transaction.annotation.Transactional;
 
 import com.codefinity.microcontinuum.identityaccess.application.command.AssignUserToRoleCommand;
 import com.codefinity.microcontinuum.identityaccess.application.command.ProvisionRoleCommand;
@@ -33,7 +33,7 @@ public class AccessApplicationService {
         super();
     }
 
-    @Transactional
+    //@Transactional
     public void assignUserToRole(AssignUserToRoleCommand aCommand) {
 
         TenantId tenantId = new TenantId(aCommand.getTenantId());
@@ -57,7 +57,7 @@ public class AccessApplicationService {
         }
     }
 
-    @Transactional(readOnly=true)
+    //@Transactional(readOnly=true)
     public boolean isUserInRole(
             String aTenantId,
             String aUsername,
@@ -68,7 +68,7 @@ public class AccessApplicationService {
         return user != null;
     }
 
-    @Transactional
+    //@Transactional
     public void provisionRole(ProvisionRoleCommand aCommand) {
 
         TenantId tenantId = new TenantId(aCommand.getTenantId());
@@ -84,7 +84,7 @@ public class AccessApplicationService {
         this.roleRepository().add(role);
     }
 
-    @Transactional(readOnly=true)
+    //@Transactional(readOnly=true)
     public User userInRole(
             String aTenantId,
             String aUsername,

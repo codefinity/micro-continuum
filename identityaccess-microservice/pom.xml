@@ -53,10 +53,10 @@
 		</dependency>
 
 		<!-- Security -->
-		<dependency>
+		<!-- <dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
-		</dependency>
+		</dependency> -->
 		
 		<!-- JWT -->
 		<dependency>
@@ -82,8 +82,6 @@
 			<groupId>com.codefinity.microcontinuum</groupId>
 			<artifactId>common</artifactId>
 			<version>1.0</version>
-         	<!-- <scope>system</scope>
-         	<systemPath>../common/target/common-1.0.jar</systemPath> -->
 		</dependency>
 		
 		<!-- <dependency>

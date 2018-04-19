@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.codefinity.microcontinuum.identityaccess.domain.model.identity.Group;
 
-
 @RequestMapping("/tenants/{tenantId}/groups")
 public class GroupResource extends AbstractResource {
 

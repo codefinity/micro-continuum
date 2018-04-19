@@ -27,7 +27,7 @@ public class WebSecurityConfigurer extends WebSecurityConfigurerAdapter {
 
 		http.antMatcher("/api/**")
 			.authorizeRequests()
-			.antMatchers("/api/authenticate")
+			.antMatchers("/api/authenticate","/tenants/**/*")
 			.permitAll()
 			.antMatchers("/api/**/*")
 			.hasAuthority("ROLE_USER");
