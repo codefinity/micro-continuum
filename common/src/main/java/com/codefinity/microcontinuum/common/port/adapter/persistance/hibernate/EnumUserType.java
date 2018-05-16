@@ -1,4 +1,4 @@
-package com.codefinity.microcontinuum.common.port.adapter.persistance.hibernate;
+/*package com.codefinity.microcontinuum.common.port.adapter.persistance.hibernate;
 
 import java.io.Serializable;
 import java.sql.PreparedStatement;
@@ -82,3 +82,4 @@ public class EnumUserType<E extends Enum<E>> implements UserType {
         return x.equals(y);
     }
 }
+*/

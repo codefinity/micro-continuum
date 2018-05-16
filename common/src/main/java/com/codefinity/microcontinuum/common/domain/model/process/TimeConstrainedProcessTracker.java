@@ -1,4 +1,4 @@
-package com.codefinity.microcontinuum.common.domain.model.process;
+/*package com.codefinity.microcontinuum.common.domain.model.process;
 
 import java.lang.reflect.Constructor;
 import java.util.Date;
@@ -285,3 +285,4 @@ public class TimeConstrainedProcessTracker extends AssertionConcern {
         return this.retryCount() >= this.totalRetriesPermitted();
     }
 }
+*/

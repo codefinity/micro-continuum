@@ -1,4 +1,4 @@
-package com.codefinity.microcontinuum.identityaccess.resource;
+/*package com.codefinity.microcontinuum.identityaccess.resource;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -60,7 +60,7 @@ public class NotificationResource extends AbstractResource {
 
     
     
-/*    private Response currentNotificationLogResponse(
+    private Response currentNotificationLogResponse(
             NotificationLog aCurrentNotificationLog,
             UriInfo aUriInfo) {
 
@@ -106,9 +106,9 @@ public class NotificationResource extends AbstractResource {
                 .build();
 
         return response;
-    }*/
+    }
 
-/*    private Link linkFor(
+    private Link linkFor(
             String aRelationship,
             String anId,
             UriInfo aUriInfo) {
@@ -165,5 +165,6 @@ public class NotificationResource extends AbstractResource {
                     "self",
                     aNotificationLog.notificationLogId(),
                     aUriInfo);
-    }*/
+    }
 }
+*/

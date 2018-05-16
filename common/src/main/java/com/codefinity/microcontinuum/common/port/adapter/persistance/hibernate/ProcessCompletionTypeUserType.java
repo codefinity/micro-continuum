@@ -1,4 +1,4 @@
-package com.codefinity.microcontinuum.common.port.adapter.persistance.hibernate;
+/*package com.codefinity.microcontinuum.common.port.adapter.persistance.hibernate;
 
 import com.codefinity.microcontinuum.common.domain.model.process.Process.ProcessCompletionType;
 
@@ -7,3 +7,4 @@ public class ProcessCompletionTypeUserType extends EnumUserType<ProcessCompletio
         super(ProcessCompletionType.class);
     }
 }
+*/

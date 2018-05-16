@@ -1,4 +1,4 @@
-package com.codefinity.microcontinuum.common.event;
+/*package com.codefinity.microcontinuum.common.event;
 
 import com.codefinity.microcontinuum.common.domain.model.DomainEvent;
 import com.codefinity.microcontinuum.common.serializer.AbstractSerializer;
@@ -39,3 +39,4 @@ public class EventSerializer extends AbstractSerializer {
         this(false, false);
     }
 }
+*/

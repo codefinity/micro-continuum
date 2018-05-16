@@ -1,4 +1,4 @@
-package com.codefinity.microcontinuum.common.port.adapter.persistance.eventsourcing;
+/*package com.codefinity.microcontinuum.common.port.adapter.persistance.eventsourcing;
 
 import java.util.List;
 
@@ -35,3 +35,4 @@ public class DefaultEventStream implements EventStream {
         this.version = aVersion;
     }
 }
+*/

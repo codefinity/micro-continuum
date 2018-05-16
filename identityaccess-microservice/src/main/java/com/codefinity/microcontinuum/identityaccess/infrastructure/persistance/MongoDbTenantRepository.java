@@ -1,4 +1,5 @@
 package com.codefinity.microcontinuum.identityaccess.infrastructure.persistance;
+/*package com.codefinity.microcontinuum.identityaccess.infrastructure.persistance;
 
 import java.util.UUID;
 
@@ -41,27 +42,28 @@ public class HibernateTenantRepository
 
     @Override
     public Tenant tenantNamed(String aName) {
-        /*Query query = this.session().createQuery(
+        Query query = this.session().createQuery(
                 "from com.saasovation.identityaccess.domain.model.identity.Tenant as _obj_ "
                 + "where _obj_.name = ?");
 
         query.setParameter(0, aName, Hibernate.STRING);
 
-        return (Tenant) query.uniqueResult();*/
+        return (Tenant) query.uniqueResult();
     	
     	return null;
     }
 
     @Override
     public Tenant tenantOfId(TenantId aTenantId) {
-        /*Query query = this.session().createQuery(
+        Query query = this.session().createQuery(
                 "from com.saasovation.identityaccess.domain.model.identity.Tenant as _obj_ "
                 + "where _obj_.tenantId = ?");
 
         query.setParameter(0, aTenantId);
 
-        return (Tenant) query.uniqueResult();*/
+        return (Tenant) query.uniqueResult();
     	
     	return null;
     }
 }
+*/

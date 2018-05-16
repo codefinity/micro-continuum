@@ -1,4 +1,4 @@
-package com.codefinity.microcontinuum.common.port.adapter.notification;
+/*package com.codefinity.microcontinuum.common.port.adapter.notification;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -149,3 +149,4 @@ public class RabbitMQNotificationPublisher implements NotificationPublisher {
         this.publishedNotificationTrackerStore = publishedNotificationTrackerStore;
     }
 }
+*/

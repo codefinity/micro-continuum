@@ -1,4 +1,4 @@
-package com.codefinity.microcontinuum.common.serializer;
+/*package com.codefinity.microcontinuum.common.serializer;
 
 import java.util.Properties;
 
@@ -36,3 +36,4 @@ public class PropertiesSerializer extends AbstractSerializer {
         return object.getAsString();
     }
 }
+*/

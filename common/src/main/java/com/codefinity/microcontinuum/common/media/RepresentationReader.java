@@ -1,4 +1,4 @@
-package com.codefinity.microcontinuum.common.media;
+/*package com.codefinity.microcontinuum.common.media;
 
 import com.google.gson.JsonObject;
 
@@ -12,3 +12,4 @@ public class RepresentationReader extends AbstractJSONMediaReader {
         super(aRepresentationObject);
     }
 }
+*/

@@ -1,4 +1,4 @@
-package com.codefinity.microcontinuum.common.port.adapter.persistance.eventsourcing.hashmap;
+/*package com.codefinity.microcontinuum.common.port.adapter.persistance.eventsourcing.hashmap;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,11 +13,11 @@ import com.codefinity.microcontinuum.common.event.sourcing.EventStream;
 import com.codefinity.microcontinuum.common.event.sourcing.EventStreamId;
 import com.codefinity.microcontinuum.common.port.adapter.persistance.eventsourcing.DefaultEventStream;
 
-/**
+*//**
  * I am an EventStore backed by a HashMap.
  *
  * @author Vaughn Vernon
- */
+ *//*
 public class HashMapEventStore implements EventStore {
 
     private static HashMapEventStore instance;
@@ -279,3 +279,4 @@ public class HashMapEventStore implements EventStore {
         }
     }
 }
+*/

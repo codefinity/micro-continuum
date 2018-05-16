@@ -1,4 +1,4 @@
-package com.codefinity.microcontinuum.common.port.adapter.persistance.leveldb;
+/*package com.codefinity.microcontinuum.common.port.adapter.persistance.leveldb;
 
 import java.io.IOException;
 import java.lang.reflect.Type;
@@ -239,3 +239,4 @@ public class LevelDBUnitOfWork {
         return allValues;
     }
 }
+*/

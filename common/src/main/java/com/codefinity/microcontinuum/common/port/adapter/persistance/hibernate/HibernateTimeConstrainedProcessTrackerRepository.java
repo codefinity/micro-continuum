@@ -1,4 +1,4 @@
-package com.codefinity.microcontinuum.common.port.adapter.persistance.hibernate;
+/*package com.codefinity.microcontinuum.common.port.adapter.persistance.hibernate;
 
 import java.util.Collection;
 import java.util.Date;
@@ -101,3 +101,4 @@ public class HibernateTimeConstrainedProcessTrackerRepository
         return (TimeConstrainedProcessTracker) query.uniqueResult();
     }
 }
+*/

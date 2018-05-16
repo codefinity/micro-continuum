@@ -1,4 +1,4 @@
-package com.codefinity.microcontinuum.common.domain.model.process;
+/*package com.codefinity.microcontinuum.common.domain.model.process;
 
 import java.util.Date;
 
@@ -42,3 +42,4 @@ public interface Process {
 
     public int totalRetriesPermitted();
 }
+*/

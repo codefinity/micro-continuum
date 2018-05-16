@@ -1,4 +1,4 @@
-package com.codefinity.microcontinuum.common.event;
+/*package com.codefinity.microcontinuum.common.event;
 
 import java.util.Date;
 
@@ -117,3 +117,4 @@ public class StoredEvent extends AssertionConcern {
         this.typeName = aTypeName;
     }
 }
+*/

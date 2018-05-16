@@ -1,4 +1,4 @@
-package com.codefinity.microcontinuum.common.port.adapter.persistance.eventsourcing.mysql;
+/*package com.codefinity.microcontinuum.common.port.adapter.persistance.eventsourcing.mysql;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -384,3 +384,4 @@ public class MySQLJDBCEventStore implements EventStore, ApplicationContextAware 
                 anApplicationContext.getBean("mysqlJdbcEventStore");
     }
 }
+*/

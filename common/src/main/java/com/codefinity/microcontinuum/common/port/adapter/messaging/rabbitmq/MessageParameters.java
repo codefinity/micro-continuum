@@ -1,14 +1,14 @@
-package com.codefinity.microcontinuum.common.port.adapter.messaging.rabbitmq;
+/*package com.codefinity.microcontinuum.common.port.adapter.messaging.rabbitmq;
 
 import java.util.Date;
 
 import com.rabbitmq.client.AMQP.BasicProperties;
 
-/**
+*//**
  * I am a set of message parameters.
  *
  * @author Vaughn Vernon
- */
+ *//*
 public class MessageParameters {
 
     private BasicProperties properties;
@@ -82,3 +82,4 @@ public class MessageParameters {
         this.properties = aProperties;
     }
 }
+*/

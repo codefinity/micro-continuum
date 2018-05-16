@@ -1,4 +1,4 @@
-package com.codefinity.microcontinuum.common.serializer;
+/*package com.codefinity.microcontinuum.common.serializer;
 
 import java.lang.reflect.Type;
 import java.util.Date;
@@ -65,3 +65,4 @@ public class AbstractSerializer {
         }
     }
 }
+*/

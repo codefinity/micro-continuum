@@ -1,4 +1,5 @@
 package com.codefinity.microcontinuum.identityaccess.infrastructure.persistance;
+/*package com.codefinity.microcontinuum.identityaccess.infrastructure.persistance;
 
 import java.util.Collection;
 
@@ -36,7 +37,7 @@ public class HibernateUserRepository
             String aFirstNamePrefix,
             String aLastNamePrefix) {
 
-        /*if (aFirstNamePrefix.endsWith("%") || aLastNamePrefix.endsWith("%")) {
+        if (aFirstNamePrefix.endsWith("%") || aLastNamePrefix.endsWith("%")) {
             throw new IllegalArgumentException("Name prefixes must not include %.");
         }
 
@@ -50,7 +51,7 @@ public class HibernateUserRepository
         query.setParameter(1, aFirstNamePrefix + "%", Hibernate.STRING);
         query.setParameter(2, aLastNamePrefix + "%", Hibernate.STRING);
 
-        return query.list();*/
+        return query.list();
     	
     	return null;
     }
@@ -66,7 +67,7 @@ public class HibernateUserRepository
             String aUsername,
             String anEncryptedPassword) {
 
-        /*Query query = this.session().createQuery(
+        Query query = this.session().createQuery(
                 "from com.saasovation.identityaccess.domain.model.identity.User as _obj_ "
                 + "where _obj_.tenantId = ? "
                   + "and _obj_.username = ? "
@@ -76,7 +77,7 @@ public class HibernateUserRepository
         query.setParameter(1, aUsername, Hibernate.STRING);
         query.setParameter(2, anEncryptedPassword, Hibernate.STRING);
 
-        return (User) query.uniqueResult();*/
+        return (User) query.uniqueResult();
     		
     	return null;
     }
@@ -86,7 +87,7 @@ public class HibernateUserRepository
             TenantId aTenantId,
             String aUsername) {
 
-        /*Query query = this.session().createQuery(
+        Query query = this.session().createQuery(
                 "from com.saasovation.identityaccess.domain.model.identity.User as _obj_ "
                 + "where _obj_.tenantId = ? "
                   + "and _obj_.username = ?");
@@ -94,8 +95,9 @@ public class HibernateUserRepository
         query.setParameter(0, aTenantId);
         query.setParameter(1, aUsername, Hibernate.STRING);
 
-        return (User) query.uniqueResult();*/
+        return (User) query.uniqueResult();
     	
     	return null;
     }
 }
+*/

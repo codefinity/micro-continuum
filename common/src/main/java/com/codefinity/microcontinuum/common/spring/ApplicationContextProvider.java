@@ -1,4 +1,4 @@
-package com.codefinity.microcontinuum.common.spring;
+/*package com.codefinity.microcontinuum.common.spring;
 
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
@@ -27,3 +27,4 @@ public class ApplicationContextProvider implements ApplicationContextAware {
         }
     }
 }
+*/

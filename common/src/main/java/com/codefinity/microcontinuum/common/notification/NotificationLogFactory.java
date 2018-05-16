@@ -1,4 +1,4 @@
-package com.codefinity.microcontinuum.common.notification;
+/*package com.codefinity.microcontinuum.common.notification;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -112,3 +112,4 @@ public class NotificationLogFactory {
         this.eventStore = anEventStore;
     }
 }
+*/

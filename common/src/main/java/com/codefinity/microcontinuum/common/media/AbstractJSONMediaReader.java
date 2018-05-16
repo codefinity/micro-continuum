@@ -1,4 +1,4 @@
-package com.codefinity.microcontinuum.common.media;
+/*package com.codefinity.microcontinuum.common.media;
 
 import java.math.BigDecimal;
 import java.util.Date;
@@ -220,3 +220,4 @@ public abstract class AbstractJSONMediaReader {
         }
     }
 }
+*/

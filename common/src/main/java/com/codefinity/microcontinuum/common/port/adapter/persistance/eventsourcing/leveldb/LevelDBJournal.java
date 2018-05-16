@@ -1,4 +1,4 @@
-package com.codefinity.microcontinuum.common.port.adapter.persistance.eventsourcing.leveldb;
+/*package com.codefinity.microcontinuum.common.port.adapter.persistance.eventsourcing.leveldb;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -384,3 +384,4 @@ public class LevelDBJournal {
                 journalSequenceBytes);
     }
 }
+*/

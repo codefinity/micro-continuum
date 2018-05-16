@@ -1,4 +1,4 @@
-package com.codefinity.microcontinuum.identityaccess.application;
+/*package com.codefinity.microcontinuum.identityaccess.application;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jmx.export.notification.NotificationPublisher;
@@ -49,3 +49,4 @@ public class NotificationApplicationService {
         return this.notificationPublisher;
     }
 }
+*/

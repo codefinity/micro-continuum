@@ -1,4 +1,4 @@
-package com.codefinity.microcontinuum.common.port.adapter.messaging.rabbitmq;
+/*package com.codefinity.microcontinuum.common.port.adapter.messaging.rabbitmq;
 
 import java.io.IOException;
 import java.util.Arrays;
@@ -13,84 +13,84 @@ import com.rabbitmq.client.Envelope;
 import com.rabbitmq.client.QueueingConsumer.Delivery;
 import com.rabbitmq.client.ShutdownSignalException;
 
-/**
+*//**
  * I am a message consumer, which facilitates receiving messages
  * from a Queue. A MessageListener or a client may close me,
  * terminating message consumption.
  *
  * @author Vaughn Vernon
- */
+ *//*
 public class MessageConsumer {
 
-    /** My autoAcknowledged property. */
+    *//** My autoAcknowledged property. *//*
     private boolean autoAcknowledged;
 
-    /** My closed property, which indicates I have been closed. */
+    *//** My closed property, which indicates I have been closed. *//*
     private boolean closed;
 
-    /** My messageTypes, which indicates the messages of types I accept. */
+    *//** My messageTypes, which indicates the messages of types I accept. *//*
     private Set<String> messageTypes;
 
-    /** My queue, which is where my messages come from. */
+    *//** My queue, which is where my messages come from. *//*
     private Queue queue;
 
-    /** My tag, which is produced by the broker. */
+    *//** My tag, which is produced by the broker. *//*
     private String tag;
 
-    /**
+    *//**
      * Answers a new auto-acknowledged MessageConsumer, which means all
      * messages received are automatically considered acknowledged as
      * received from the broker.
      * @param aQueue the Queue from which messages are received
      * @return MessageConsumer
-     */
+     *//*
     public static MessageConsumer autoAcknowledgedInstance(Queue aQueue) {
         return MessageConsumer.instance(aQueue, true);
     }
 
-    /**
+    *//**
      * Answers a new MessageConsumer with manual acknowledgment.
      * @param aQueue the Queue from which messages are received
      * @return MessageConsumer
-     */
+     *//*
     public static MessageConsumer instance(Queue aQueue) {
         return new MessageConsumer(aQueue, false);
     }
 
-    /**
+    *//**
      * Answers a new MessageConsumer with acknowledgment managed per
      * isAutoAcknowledged.
      * @param aQueue the Queue from which messages are received
      * @param isAutoAcknowledged the boolean indicating whether or not auto-acknowledgment is used
      * @return MessageConsumer
-     */
+     *//*
     public static MessageConsumer instance(
             Queue aQueue,
             boolean isAutoAcknowledged) {
         return new MessageConsumer(aQueue, isAutoAcknowledged);
     }
 
-    /**
+    *//**
      * Closes me, which closes my queue.
-     */
+     *//*
     public void close() {
         this.setClosed(true);
 
         this.queue().close();
     }
 
-    /**
+    *//**
      * Answers whether or not I have been closed.
      * @return boolean
-     */
+     *//*
     public boolean isClosed() {
         return this.closed;
     }
 
-    /**
+    *//**
      * Ensure an equalization of message distribution
      * across all consumers of this queue.
-     */
+     *//*
     public void equalizeMessageDistribution() {
         try {
             this.queue().channel().basicQos(1);
@@ -99,17 +99,17 @@ public class MessageConsumer {
         }
     }
 
-    /**
+    *//**
      * Receives all messages on a separate thread and dispatches
      * them to aMessageListener until I am closed or until the
      * broker is shut down.
      * @param aMessageListener the MessageListener that handles messages
-     */
+     *//*
     public void receiveAll(final MessageListener aMessageListener) {
         this.receiveFor(aMessageListener);
     }
 
-    /**
+    *//**
      * Receives only messages of types included in aMessageTypes
      * on a separate thread and dispatches them to aMessageListener
      * until I am closed or until the broker is shut down. The type
@@ -117,7 +117,7 @@ public class MessageConsumer {
      * message's type is null, the message is filtered out.
      * @param aMessageTypes the String[] indicating filtered message types
      * @param aMessageListener the MessageListener that handles messages
-     */
+     *//*
     public void receiveOnly(
             final String[] aMessageTypes,
             final MessageListener aMessageListener) {
@@ -131,19 +131,19 @@ public class MessageConsumer {
         this.receiveFor(aMessageListener);
     }
 
-    /**
+    *//**
      * Answers my tag, which was produced by the broker.
      * @return String
-     */
+     *//*
     public String tag() {
         return this.tag;
     }
 
-    /**
+    *//**
      * Constructs my default state.
      * @param aQueue the Queue from which I receive messages
      * @param isAutoAcknowledged the boolean indicating whether or not auto-acknowledgment is used
-     */
+     *//*
     protected MessageConsumer(
             Queue aQueue,
             boolean isAutoAcknowledged) {
@@ -157,51 +157,51 @@ public class MessageConsumer {
         this.setAutoAcknowledged(isAutoAcknowledged);
     }
 
-    /**
+    *//**
      * Answers my autoAcknowledged.
      * @return boolean
-     */
+     *//*
     private boolean isAutoAcknowledged() {
         return this.autoAcknowledged;
     }
 
-    /**
+    *//**
      * Sets my autoAcknowledged.
      * @param isAutoAcknowledged the boolean to set as my autoAcknowledged
-     */
+     *//*
     private void setAutoAcknowledged(boolean isAutoAcknowledged) {
         this.autoAcknowledged = isAutoAcknowledged;
     }
 
-    /**
+    *//**
      * Sets my closed.
      * @param aClosed the boolean to set as my closed
-     */
+     *//*
     private void setClosed(boolean aClosed) {
         this.closed = aClosed;
     }
 
-    /**
+    *//**
      * Answers my queue.
      * @return Queue
-     */
+     *//*
     protected Queue queue() {
         return this.queue;
     }
 
-    /**
+    *//**
      * Answers my messageTypes.
      * @return Set<String>
-     */
+     *//*
     private Set<String> messageTypes() {
         return this.messageTypes;
     }
 
-    /**
+    *//**
      * Registers aMessageListener with the channel indirectly using
      * a DispatchingConsumer.
      * @param aMessageListener the MessageListener
-     */
+     *//*
     private void receiveFor(MessageListener aMessageListener) {
         Queue queue = this.queue();
         Channel channel = queue.channel();
@@ -220,26 +220,26 @@ public class MessageConsumer {
         }
     }
 
-    /**
+    *//**
      * Sets my messageTypes.
      * @param aMessageTypes the Set<String> to set as my messageTypes
-     */
+     *//*
     private void setMessageTypes(Set<String> aMessageTypes) {
         this.messageTypes = aMessageTypes;
     }
 
-    /**
+    *//**
      * Sets my queue.
      * @param aQueue the Queue to set as my queue
-     */
+     *//*
     private void setQueue(Queue aQueue) {
         this.queue = aQueue;
     }
 
-    /**
+    *//**
      * Sets my tag.
      * @param aTag the String to set as my tag
-     */
+     *//*
     private void setTag(String aTag) {
         this.tag = aTag;
     }
@@ -356,20 +356,21 @@ public class MessageConsumer {
             return filtered;
         }
 
-        /**
+        *//**
          * Answers my messageListener.
          * @return MessageListener
-         */
+         *//*
         private MessageListener messageListener() {
             return messageListener;
         }
 
-        /**
+        *//**
          * Sets my messageListener.
          * @param messageListener the MessageListener to set as my messageListener
-         */
+         *//*
         private void setMessageListener(MessageListener messageListener) {
             this.messageListener = messageListener;
         }
     }
 }
+*/

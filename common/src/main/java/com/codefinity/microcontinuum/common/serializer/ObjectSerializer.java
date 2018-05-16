@@ -1,4 +1,4 @@
-package com.codefinity.microcontinuum.common.serializer;
+/*package com.codefinity.microcontinuum.common.serializer;
 
 import java.lang.reflect.Type;
 
@@ -44,3 +44,4 @@ public class ObjectSerializer extends AbstractSerializer {
         this(false, false);
     }
 }
+*/

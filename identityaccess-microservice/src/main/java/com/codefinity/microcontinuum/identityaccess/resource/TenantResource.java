@@ -1,4 +1,4 @@
-package com.codefinity.microcontinuum.identityaccess.resource;
+/*package com.codefinity.microcontinuum.identityaccess.resource;
 
 import javax.websocket.server.PathParam;
 
@@ -36,3 +36,4 @@ public class TenantResource {
         return ApplicationServiceRegistry.identityApplicationService();
     }
 }
+*/

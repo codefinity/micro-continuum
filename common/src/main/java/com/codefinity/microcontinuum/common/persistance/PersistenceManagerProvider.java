@@ -1,4 +1,4 @@
-package com.codefinity.microcontinuum.common.persistance;
+/*package com.codefinity.microcontinuum.common.persistance;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -43,3 +43,4 @@ public class PersistenceManagerProvider {
         this.hibernateSession = aHibernateSession;
     }
 }
+*/

@@ -1,3 +1,6 @@
+//Marked for deletion.
+//Dependency injection used instead.
+
 package com.codefinity.microcontinuum.identityaccess.resource;
 
 import org.springframework.http.CacheControl;

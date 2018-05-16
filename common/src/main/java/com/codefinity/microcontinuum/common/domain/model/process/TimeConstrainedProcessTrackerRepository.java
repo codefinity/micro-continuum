@@ -1,4 +1,4 @@
-package com.codefinity.microcontinuum.common.domain.model.process;
+/*package com.codefinity.microcontinuum.common.domain.model.process;
 
 import java.util.Collection;
 
@@ -16,3 +16,4 @@ public interface TimeConstrainedProcessTrackerRepository {
 
     public TimeConstrainedProcessTracker trackerOfProcessId(String aTenantId, ProcessId aProcessId);
 }
+*/

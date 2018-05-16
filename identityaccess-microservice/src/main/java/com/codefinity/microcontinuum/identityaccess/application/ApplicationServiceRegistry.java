@@ -1,4 +1,7 @@
-package com.codefinity.microcontinuum.identityaccess.application;
+//Marked for deletion
+//Dependency Injection used Instead
+
+/*package com.codefinity.microcontinuum.identityaccess.application;
 
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
@@ -30,3 +33,4 @@ public class ApplicationServiceRegistry implements ApplicationContextAware  {
         }
     }
 }
+*/

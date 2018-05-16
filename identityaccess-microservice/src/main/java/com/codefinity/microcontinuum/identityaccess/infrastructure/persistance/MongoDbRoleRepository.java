@@ -1,4 +1,5 @@
 package com.codefinity.microcontinuum.identityaccess.infrastructure.persistance;
+/*package com.codefinity.microcontinuum.identityaccess.infrastructure.persistance;
 
 import java.util.Collection;
 
@@ -32,13 +33,13 @@ public class HibernateRoleRepository
     @Override
     @SuppressWarnings("unchecked")
     public Collection<Role> allRoles(TenantId aTenantId) {
-        /*Query query = this.session().createQuery(
+        Query query = this.session().createQuery(
                 "from com.saasovation.identityaccess.domain.model.access.Role as _obj_ "
                 + "where _obj_.tenantId = ?");
 
         query.setParameter(0, aTenantId);
 
-        return (Collection<Role>) query.list();*/
+        return (Collection<Role>) query.list();
     	
     	return null;
     }
@@ -50,7 +51,7 @@ public class HibernateRoleRepository
 
     @Override
     public Role roleNamed(TenantId aTenantId, String aRoleName) {
-        /*Query query = this.session().createQuery(
+        Query query = this.session().createQuery(
                 "from com.saasovation.identityaccess.domain.model.access.Role as _obj_ "
                 + "where _obj_.tenantId = ? "
                   + "and _obj_.name = ?");
@@ -58,8 +59,9 @@ public class HibernateRoleRepository
         query.setParameter(0, aTenantId);
         query.setParameter(1, aRoleName, Hibernate.STRING);
 
-        return (Role) query.uniqueResult();*/
+        return (Role) query.uniqueResult();
     	
     	return null;
     }
 }
+*/

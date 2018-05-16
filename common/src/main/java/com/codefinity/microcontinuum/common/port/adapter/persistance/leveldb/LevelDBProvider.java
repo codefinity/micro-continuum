@@ -1,4 +1,4 @@
-package com.codefinity.microcontinuum.common.port.adapter.persistance.leveldb;
+/*package com.codefinity.microcontinuum.common.port.adapter.persistance.leveldb;
 
 import java.io.File;
 import java.io.IOException;
@@ -132,3 +132,4 @@ public class LevelDBProvider {
         }
     }
 }
+*/

@@ -1,4 +1,4 @@
-package com.codefinity.microcontinuum.common.domain.model.process;
+/*package com.codefinity.microcontinuum.common.domain.model.process;
 
 import java.util.Date;
 
@@ -66,3 +66,4 @@ public class ProcessTimedOut implements DomainEvent {
         return this.retryCount() >= this.totalRetriesPermitted();
     }
 }
+*/

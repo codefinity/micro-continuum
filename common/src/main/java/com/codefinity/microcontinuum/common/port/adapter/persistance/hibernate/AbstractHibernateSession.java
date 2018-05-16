@@ -1,4 +1,4 @@
-package com.codefinity.microcontinuum.common.port.adapter.persistance.hibernate;
+/*package com.codefinity.microcontinuum.common.port.adapter.persistance.hibernate;
 
 import org.hibernate.Session;
 
@@ -48,3 +48,4 @@ public abstract class AbstractHibernateSession {
         this.sessionProvider = aSessionProvider;
     }
 }
+*/

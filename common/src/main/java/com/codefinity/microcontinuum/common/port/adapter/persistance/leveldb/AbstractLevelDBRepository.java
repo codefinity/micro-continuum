@@ -1,4 +1,4 @@
-package com.codefinity.microcontinuum.common.port.adapter.persistance.leveldb;
+/*package com.codefinity.microcontinuum.common.port.adapter.persistance.leveldb;
 
 import org.iq80.leveldb.DB;
 
@@ -39,3 +39,4 @@ public abstract class AbstractLevelDBRepository {
         this.setDatabasePath(aDirectoryPath);
     }
 }
+*/

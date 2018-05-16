@@ -1,4 +1,4 @@
-package com.codefinity.microcontinuum.common.port.adapter.persistance.eventsourcing.leveldb;
+/*package com.codefinity.microcontinuum.common.port.adapter.persistance.eventsourcing.leveldb;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,12 +13,12 @@ import com.codefinity.microcontinuum.common.event.sourcing.EventStream;
 import com.codefinity.microcontinuum.common.event.sourcing.EventStreamId;
 import com.codefinity.microcontinuum.common.port.adapter.persistance.eventsourcing.DefaultEventStream;
 
-/**
+*//**
  * I am an EventStore for LevelDB. I am a pure Java implementation
  * using the org.iq80 (Dain Sundstrom) implementation of LevelDB.
  *
  * @author Vaughn Vernon
- */
+ *//*
 public class LevelDBEventStore implements EventStore {
 
     private static LevelDBEventStore instance;
@@ -280,3 +280,4 @@ public class LevelDBEventStore implements EventStore {
         }
     }
 }
+*/

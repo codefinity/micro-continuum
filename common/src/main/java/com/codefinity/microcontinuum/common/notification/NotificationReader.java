@@ -1,4 +1,4 @@
-package com.codefinity.microcontinuum.common.notification;
+/*package com.codefinity.microcontinuum.common.notification;
 
 import java.math.BigDecimal;
 import java.util.Date;
@@ -108,3 +108,4 @@ public class NotificationReader extends AbstractJSONMediaReader {
         this.event = anEvent;
     }
 }
+*/

@@ -1,4 +1,4 @@
-package com.codefinity.microcontinuum.common.port.adapter.persistance.eventsourcing.leveldb;
+/*package com.codefinity.microcontinuum.common.port.adapter.persistance.eventsourcing.leveldb;
 
 import java.util.Map.Entry;
 
@@ -139,3 +139,4 @@ public class LevelDBJournalRepairTool {
         return requiresRepair;
     }
 }
+*/

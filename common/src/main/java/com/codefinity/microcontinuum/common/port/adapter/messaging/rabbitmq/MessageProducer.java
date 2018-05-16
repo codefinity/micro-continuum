@@ -1,4 +1,4 @@
-package com.codefinity.microcontinuum.common.port.adapter.messaging.rabbitmq;
+/*package com.codefinity.microcontinuum.common.port.adapter.messaging.rabbitmq;
 
 import java.io.IOException;
 
@@ -6,41 +6,41 @@ import com.codefinity.microcontinuum.common.port.adapter.messaging.MessageExcept
 import com.rabbitmq.client.AMQP.BasicProperties;
 import com.rabbitmq.client.MessageProperties;
 
-/**
+*//**
  * I am a message producer, which facilitates sending messages to a BrokerChannel.
  * A BrokerChannel may be either an Exchange or a Queue.
  *
  * @author Vaughn Vernon
- */
+ *//*
 public class MessageProducer {
 
-    /** My brokerChannel, which is where I send messages. */
+    *//** My brokerChannel, which is where I send messages. *//*
     private BrokerChannel brokerChannel;
 
-    /**
+    *//**
      * Answers a new instance of a MessageProducer.
      * @param aBrokerChannel the BrokerChannel where messages are to be sent
      * @return MessageProducer
-     */
+     *//*
     public static MessageProducer instance(BrokerChannel aBrokerChannel) {
         return new MessageProducer(aBrokerChannel);
     }
 
-    /**
+    *//**
      * Closes me, which closes my broker channel.
-     */
+     *//*
     public void close() {
         this.brokerChannel().close();
     }
 
-    /**
+    *//**
      * Answers the receiver after sending aTextMessage to my channel.
      * This is a producer ignorance way to use either an exchange or
      * a queue channel without requiring it to pass specific parameters.
      * By answering myself I allow for sending message bursts.
      * @param aTextMessage the String text message to send
      * @return MessageProducer
-     */
+     *//*
     public MessageProducer send(String aTextMessage) {
         try {
             this.brokerChannel().channel().basicPublish(
@@ -55,7 +55,7 @@ public class MessageProducer {
         return this;
     }
 
-    /**
+    *//**
      * Answers the receiver after sending aTextMessage to my channel
      * with aMessageParameters as the message basic properties.
      * This is a producer ignorance way to use either an exchange or
@@ -64,7 +64,7 @@ public class MessageProducer {
      * @param aTextMessage the String text message to send
      * @param aMessageParameters the MessageParameters
      * @return MessageProducer
-     */
+     *//*
     public MessageProducer send(
             String aTextMessage,
             MessageParameters aMessageParameters) {
@@ -84,7 +84,7 @@ public class MessageProducer {
         return this;
     }
 
-    /**
+    *//**
      * Answers the receiver after sending aTextMessage to my channel with
      * aRoutingKey and aMessageParameters. This is a producer ignorance way
      * to use an exchange without requiring it to pass the exchange name.
@@ -93,7 +93,7 @@ public class MessageProducer {
      * @param aTextMessage the String text message to send
      * @param aMessageParameters the MessageParameters
      * @return MessageProducer
-     */
+     *//*
     public MessageProducer send(
             String aRoutingKey,
             String aTextMessage,
@@ -114,7 +114,7 @@ public class MessageProducer {
         return this;
     }
 
-    /**
+    *//**
      * Answers the receiver after sending aTextMessage to my channel
      * with anExchange and aRoutingKey. By answering myself I allow
      * for sending message bursts.
@@ -123,7 +123,7 @@ public class MessageProducer {
      * @param aTextMessage the String text message to send
      * @param aMessageParameters the MessageParameters
      * @return MessageProducer
-     */
+     *//*
     public MessageProducer send(
             String anExchange,
             String aRoutingKey,
@@ -145,14 +145,14 @@ public class MessageProducer {
         return this;
     }
 
-    /**
+    *//**
      * Answers the receiver after sending aBinaryMessage to my channel.
      * This is a producer ignorance way to use either an exchange or
      * a queue channel without requiring it to pass specific parameters.
      * By answering myself I allow for sending message bursts.
      * @param aBinaryMessage the byte[] binary message to send
      * @return MessageProducer
-     */
+     *//*
     public MessageProducer send(byte[] aBinaryMessage) {
         try {
             this.brokerChannel().channel().basicPublish(
@@ -167,7 +167,7 @@ public class MessageProducer {
         return this;
     }
 
-    /**
+    *//**
      * Answers the receiver after sending aBinaryMessage to my channel.
      * This is a producer ignorance way to use either an exchange or
      * a queue channel without requiring it to pass specific parameters.
@@ -175,7 +175,7 @@ public class MessageProducer {
      * @param aBinaryMessage the byte[] binary message to send
      * @param aMessageParameters the MessageParameters
      * @return MessageProducer
-     */
+     *//*
     public MessageProducer send(
             byte[] aBinaryMessage,
             MessageParameters aMessageParameters) {
@@ -195,7 +195,7 @@ public class MessageProducer {
         return this;
     }
 
-    /**
+    *//**
      * Answers the receiver after sending aBinaryMessage to my channel with
      * aRoutingKey. This is a producer ignorance way to use an exchange
      * without requiring it to pass the exchange name. By answering
@@ -204,7 +204,7 @@ public class MessageProducer {
      * @param aBinaryMessage the byte[] binary message to send
      * @param aMessageParameters the MessageParameters
      * @return MessageProducer
-     */
+     *//*
     public MessageProducer send(
             String aRoutingKey,
             byte[] aBinaryMessage,
@@ -225,7 +225,7 @@ public class MessageProducer {
         return this;
     }
 
-    /**
+    *//**
      * Answers the receiver after sending aBinaryMessage to my channel
      * with anExchange and aRoutingKey. By answering myself I allow
      * for sending message bursts.
@@ -234,7 +234,7 @@ public class MessageProducer {
      * @param aBinaryMessage the byte[] binary message to send
      * @param aMessageParameters the MessageParameters
      * @return MessageProducer
-     */
+     *//*
     public MessageProducer send(
             String anExchange,
             String aRoutingKey,
@@ -256,35 +256,35 @@ public class MessageProducer {
         return this;
     }
 
-    /**
+    *//**
      * Constructs my default state.
      * @param aBrokerChannel the BrokerChannel to which I send messages
-     */
+     *//*
     protected MessageProducer(BrokerChannel aBrokerChannel) {
         super();
         this.setBrokerChannel(aBrokerChannel);
     }
 
-    /**
+    *//**
      * Answers my brokerChannel.
      * @return BrokerChannel
-     */
+     *//*
     protected BrokerChannel brokerChannel() {
         return this.brokerChannel;
     }
 
-    /**
+    *//**
      * Sets my brokerChannel.
      * @param aBrokerChannel the BrokerChannel to set as my brokerChannel
-     */
+     *//*
     private void setBrokerChannel(BrokerChannel aBrokerChannel) {
         this.brokerChannel = aBrokerChannel;
     }
 
-    /**
+    *//**
      * Checks aMessageParameters for validity.
      * @param aMessageParameters the MessageParameters to check
-     */
+     *//*
     private void check(MessageParameters aMessageParameters) {
         if (this.brokerChannel().isDurable()) {
             if (!aMessageParameters.isDurable()) {
@@ -297,11 +297,11 @@ public class MessageProducer {
         }
     }
 
-    /**
+    *//**
      * Answers the binary durability BasicProperties according
      * to the brokerChannel's durability.
      * @return BasicProperties
-     */
+     *//*
     private BasicProperties binaryDurability() {
         BasicProperties durability = null;
         if (this.brokerChannel().isDurable()) {
@@ -310,11 +310,11 @@ public class MessageProducer {
         return durability;
     }
 
-    /**
+    *//**
      * Answers the text durability BasicProperties according
      * to the brokerChannel's durability.
      * @return BasicProperties
-     */
+     *//*
     private BasicProperties textDurability() {
         BasicProperties durability = null;
         if (this.brokerChannel().isDurable()) {
@@ -323,3 +323,4 @@ public class MessageProducer {
         return durability;
     }
 }
+*/

@@ -1,4 +1,4 @@
-package com.codefinity.microcontinuum.common.spring;
+/*package com.codefinity.microcontinuum.common.spring;
 
 import java.sql.Connection;
 
@@ -53,3 +53,4 @@ public class SpringHibernateSessionProvider {
         this.sessionFactory = aSessionFactory;
     }
 }
+*/

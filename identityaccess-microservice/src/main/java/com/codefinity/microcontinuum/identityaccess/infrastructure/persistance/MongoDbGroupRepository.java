@@ -1,4 +1,5 @@
 package com.codefinity.microcontinuum.identityaccess.infrastructure.persistance;
+/*package com.codefinity.microcontinuum.identityaccess.infrastructure.persistance;
 
 import java.util.Collection;
 
@@ -30,21 +31,21 @@ public class HibernateGroupRepository
     @Override
     @SuppressWarnings("unchecked")
     public Collection<Group> allGroups(TenantId aTenantId) {
-        /*Query query = this.session().createQuery(
+        Query query = this.session().createQuery(
                 "from com.saasovation.identityaccess.domain.model.identity.Group as _obj_ "
                 + "where _obj_.tenantId = ? "
                   + "and _obj_.name not like '" + Group.ROLE_GROUP_PREFIX + "%'");
 
         query.setParameter(0, aTenantId);
 
-        return (Collection<Group>) query.list();*/
+        return (Collection<Group>) query.list();
     	
     	return null;
     }
 
     @Override
     public Group groupNamed(TenantId aTenantId, String aName) {
-        /*if (aName.startsWith(Group.ROLE_GROUP_PREFIX)) {
+        if (aName.startsWith(Group.ROLE_GROUP_PREFIX)) {
             throw new IllegalArgumentException("May not find internal groups.");
         }
 
@@ -56,7 +57,7 @@ public class HibernateGroupRepository
         query.setParameter(0, aTenantId);
         query.setParameter(1, aName, org.hibernate.Hibernate.STRING);
 
-        return (Group) query.uniqueResult();*/
+        return (Group) query.uniqueResult();
     	
     	return null;
     }
@@ -66,3 +67,4 @@ public class HibernateGroupRepository
         this.session().delete(aGroup);
     }
 }
+*/

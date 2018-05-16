@@ -1,4 +1,4 @@
-package com.codefinity.microcontinuum.common.port.adapter.notification;
+/*package com.codefinity.microcontinuum.common.port.adapter.notification;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -130,3 +130,4 @@ public class SlothMQNotificationPublisher implements NotificationPublisher {
         this.publishedNotificationTrackerStore = publishedNotificationTrackerStore;
     }
 }
+*/

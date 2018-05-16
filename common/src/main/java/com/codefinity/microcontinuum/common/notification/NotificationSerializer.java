@@ -1,4 +1,4 @@
-package com.codefinity.microcontinuum.common.notification;
+/*package com.codefinity.microcontinuum.common.notification;
 
 import com.codefinity.microcontinuum.common.serializer.AbstractSerializer;
 
@@ -38,3 +38,4 @@ public class NotificationSerializer extends AbstractSerializer {
         this(false, false);
     }
 }
+*/

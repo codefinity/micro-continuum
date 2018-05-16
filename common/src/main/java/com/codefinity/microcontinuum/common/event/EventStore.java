@@ -1,4 +1,4 @@
-package com.codefinity.microcontinuum.common.event;
+/*package com.codefinity.microcontinuum.common.event;
 
 import java.util.List;
 
@@ -16,3 +16,4 @@ public interface EventStore {
 
     public long countStoredEvents();
 }
+*/

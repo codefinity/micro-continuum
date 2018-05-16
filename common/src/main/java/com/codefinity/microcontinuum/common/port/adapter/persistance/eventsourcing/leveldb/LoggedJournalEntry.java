@@ -1,4 +1,4 @@
-package com.codefinity.microcontinuum.common.port.adapter.persistance.eventsourcing.leveldb;
+/*package com.codefinity.microcontinuum.common.port.adapter.persistance.eventsourcing.leveldb;
 
 public class LoggedJournalEntry {
 
@@ -81,3 +81,4 @@ public class LoggedJournalEntry {
         this.value = aValue;
     }
 }
+*/

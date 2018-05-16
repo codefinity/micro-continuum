@@ -1,4 +1,4 @@
-package com.codefinity.microcontinuum.identityaccess.resource;
+/*package com.codefinity.microcontinuum.identityaccess.resource;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -32,3 +32,4 @@ public class GroupResource extends AbstractResource {
     }
 
 }
+*/
